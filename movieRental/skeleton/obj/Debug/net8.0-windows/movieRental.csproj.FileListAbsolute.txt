@@ -1,0 +1,16 @@
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\skeleton.Form1.resources
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.GenerateResource.cache
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfoInputs.cache
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfo.cs
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.CoreCompileInputs.cache
+C:\Users\moses\Desktop\skel\skeleton\skeleton\bin\Debug\net8.0-windows\movieRental.exe
+C:\Users\moses\Desktop\skel\skeleton\skeleton\bin\Debug\net8.0-windows\movieRental.deps.json
+C:\Users\moses\Desktop\skel\skeleton\skeleton\bin\Debug\net8.0-windows\movieRental.runtimeconfig.json
+C:\Users\moses\Desktop\skel\skeleton\skeleton\bin\Debug\net8.0-windows\movieRental.dll
+C:\Users\moses\Desktop\skel\skeleton\skeleton\bin\Debug\net8.0-windows\movieRental.pdb
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.dll
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\refint\movieRental.dll
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.pdb
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.genruntimeconfig.cache
+C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
