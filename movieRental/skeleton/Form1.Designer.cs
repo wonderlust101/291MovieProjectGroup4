@@ -147,7 +147,7 @@
             ForeColor = Color.FromArgb(118, 119, 141);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Movie Rental System";
             Load += formLoad;
             ResumeLayout(false);
             PerformLayout();
