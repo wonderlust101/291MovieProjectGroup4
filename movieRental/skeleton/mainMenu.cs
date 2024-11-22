@@ -16,5 +16,25 @@ namespace movieRental
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void empLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
