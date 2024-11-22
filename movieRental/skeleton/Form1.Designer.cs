@@ -41,34 +41,37 @@
             // userLabel
             // 
             userLabel.AutoSize = true;
-            userLabel.Font = new Font("Cooper Black", 13.8F);
+            userLabel.Font = new Font("Newake Demo", 15.7310925F);
             userLabel.ForeColor = Color.White;
-            userLabel.Location = new Point(729, 206);
+            userLabel.Location = new Point(796, 273);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(107, 21);
+            userLabel.Size = new Size(128, 26);
             userLabel.TabIndex = 2;
             userLabel.Text = "Username";
             // 
             // passLabel
             // 
             passLabel.AutoSize = true;
-            passLabel.Font = new Font("Cooper Black", 13.8F);
+            passLabel.Font = new Font("Newake Demo", 15.7310925F);
             passLabel.ForeColor = Color.White;
-            passLabel.Location = new Point(729, 309);
+            passLabel.Location = new Point(796, 393);
             passLabel.Name = "passLabel";
-            passLabel.Size = new Size(104, 21);
+            passLabel.Size = new Size(122, 26);
             passLabel.TabIndex = 3;
             passLabel.Text = "Password";
             // 
             // loginButton
             // 
             loginButton.BackColor = Color.FromArgb(84, 80, 164);
-            loginButton.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            loginButton.FlatAppearance.BorderColor = Color.Black;
+            loginButton.FlatAppearance.BorderSize = 0;
+            loginButton.FlatStyle = FlatStyle.Flat;
+            loginButton.Font = new Font("Outfit ExtraBold", 12F, FontStyle.Bold);
             loginButton.ForeColor = Color.White;
-            loginButton.Location = new Point(709, 423);
-            loginButton.Margin = new Padding(3, 2, 3, 2);
+            loginButton.Location = new Point(796, 510);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(234, 31);
+            loginButton.Padding = new Padding(4);
+            loginButton.Size = new Size(389, 48);
             loginButton.TabIndex = 4;
             loginButton.Text = "Login";
             loginButton.UseVisualStyleBackColor = false;
@@ -77,33 +80,33 @@
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Font = new Font("Cooper Black", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            titleLabel.Font = new Font("Newake Demo", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
             titleLabel.ForeColor = Color.White;
-            titleLabel.Location = new Point(12, 48);
+            titleLabel.Location = new Point(109, 67);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(225, 36);
+            titleLabel.Size = new Size(317, 53);
             titleLabel.TabIndex = 5;
             titleLabel.Text = "Movie Rental";
             // 
             // empLabel
             // 
             empLabel.AutoSize = true;
-            empLabel.Font = new Font("Cooper Black", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            empLabel.Font = new Font("Newake Demo", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
             empLabel.ForeColor = Color.White;
-            empLabel.Location = new Point(144, 194);
+            empLabel.Location = new Point(109, 332);
             empLabel.Name = "empLabel";
-            empLabel.Size = new Size(271, 36);
+            empLabel.Size = new Size(382, 53);
             empLabel.TabIndex = 6;
             empLabel.Text = "Employee Login";
             // 
             // helpLabel
             // 
             helpLabel.AutoSize = true;
-            helpLabel.Font = new Font("Microsoft JhengHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            helpLabel.Font = new Font("Outfit", 12.1008387F, FontStyle.Regular, GraphicsUnit.Point, 0);
             helpLabel.ForeColor = Color.White;
-            helpLabel.Location = new Point(144, 277);
+            helpLabel.Location = new Point(109, 410);
             helpLabel.Name = "helpLabel";
-            helpLabel.Size = new Size(38, 18);
+            helpLabel.Size = new Size(50, 25);
             helpLabel.TabIndex = 7;
             helpLabel.Text = "help";
             // 
@@ -111,31 +114,33 @@
             // 
             userName.BackColor = Color.FromArgb(25, 26, 63);
             userName.BorderStyle = BorderStyle.None;
-            userName.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold);
+            userName.Font = new Font("Outfit", 15.7310915F);
             userName.ForeColor = Color.White;
-            userName.Location = new Point(729, 251);
+            userName.Location = new Point(796, 316);
+            userName.Margin = new Padding(3, 4, 3, 4);
             userName.Name = "userName";
             userName.PlaceholderText = "Enter username";
-            userName.Size = new Size(180, 25);
+            userName.Size = new Size(389, 33);
             userName.TabIndex = 8;
             // 
             // passWord
             // 
             passWord.BackColor = Color.FromArgb(25, 26, 63);
             passWord.BorderStyle = BorderStyle.None;
-            passWord.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            passWord.Location = new Point(729, 351);
+            passWord.Font = new Font("Outfit", 15.7310915F);
+            passWord.Location = new Point(796, 443);
+            passWord.Margin = new Padding(3, 4, 3, 4);
             passWord.Name = "passWord";
             passWord.PlaceholderText = "..........";
-            passWord.Size = new Size(180, 25);
+            passWord.Size = new Size(389, 33);
             passWord.TabIndex = 9;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 44, 91);
-            ClientSize = new Size(1122, 565);
+            ClientSize = new Size(1282, 753);
             Controls.Add(passWord);
             Controls.Add(userName);
             Controls.Add(helpLabel);
@@ -145,7 +150,6 @@
             Controls.Add(passLabel);
             Controls.Add(userLabel);
             ForeColor = Color.FromArgb(118, 119, 141);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Movie Rental System";
             Load += formLoad;

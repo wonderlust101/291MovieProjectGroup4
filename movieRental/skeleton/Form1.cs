@@ -37,20 +37,26 @@ namespace skeleton
 
                     object result = cmd.ExecuteScalar();
 
-                    if (result != null && result.ToString() == name)
+                    // TODO: Remove test code below before submission
+                    if (name == "test")
+                    {
+                        var mainMenuControl = new mainMenu();
+
+                        this.Controls.Clear();
+                        this.Controls.Add(mainMenuControl);
+                    }
+
+                    else if (result != null && result.ToString() == name)
                     {
                         MessageBox.Show($"{name} inside database !");
                         var mainMenuControl = new mainMenu();
 
                         this.Controls.Clear();
                         this.Controls.Add(mainMenuControl);
-
                     }
-
                     else
                     {
                         MessageBox.Show($"{name} not in database !");
-
                     }
 
                 }

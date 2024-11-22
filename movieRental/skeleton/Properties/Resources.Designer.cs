@@ -63,29 +63,9 @@ namespace movieRental.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap clipboard {
+        internal static System.Drawing.Bitmap customers {
             get {
-                object obj = ResourceManager.GetObject("clipboard", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap emp {
-            get {
-                object obj = ResourceManager.GetObject("emp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap film {
-            get {
-                object obj = ResourceManager.GetObject("film", resourceCulture);
+                object obj = ResourceManager.GetObject("customers", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +83,9 @@ namespace movieRental.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logout2 {
+        internal static System.Drawing.Bitmap movies {
             get {
-                object obj = ResourceManager.GetObject("logout2", resourceCulture);
+                object obj = ResourceManager.GetObject("movies", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +93,19 @@ namespace movieRental.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap people {
+        internal static System.Drawing.Bitmap rental {
             get {
-                object obj = ResourceManager.GetObject("people", resourceCulture);
+                object obj = ResourceManager.GetObject("rental", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report {
+            get {
+                object obj = ResourceManager.GetObject("report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
