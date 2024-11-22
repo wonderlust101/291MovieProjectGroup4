@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\moses\\Desktop\\skel\\movieRental\\",
+  "WorkspaceRootPath": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\skel\\movierental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\mainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\mainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\skel\\movierental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,27 +35,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\moses\\Desktop\\skel\\movieRental\\skeleton\\Form1.cs",
-              "RelativeDocumentMoniker": "skeleton\\Form1.cs",
-              "ToolTip": "C:\\Users\\moses\\Desktop\\skel\\movieRental\\skeleton\\Form1.cs",
-              "RelativeToolTip": "skeleton\\Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Title": "mainMenu.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.Designer.cs",
+              "RelativeDocumentMoniker": "skeleton\\mainMenu.Designer.cs",
+              "ToolTip": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.Designer.cs",
+              "RelativeToolTip": "skeleton\\mainMenu.Designer.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAjwIYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T00:28:39.752Z",
+              "WhenOpened": "2024-11-21T00:20:42.765Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "mainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.cs",
+              "RelativeDocumentMoniker": "skeleton\\mainMenu.cs",
+              "ToolTip": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.cs [Design]",
+              "RelativeToolTip": "skeleton\\mainMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T23:35:16.657Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\moses\\Desktop\\skel\\movieRental\\skeleton\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs",
               "RelativeDocumentMoniker": "skeleton\\Form1.cs",
-              "ToolTip": "C:\\Users\\moses\\Desktop\\skel\\movieRental\\skeleton\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs [Design]",
               "RelativeToolTip": "skeleton\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T00:06:39.943Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs",
+              "RelativeDocumentMoniker": "skeleton\\Form1.cs",
+              "ToolTip": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs",
+              "RelativeToolTip": "skeleton\\Form1.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowC0AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T00:28:39.752Z",
+              "EditorCaption": ""
             }
           ]
         }

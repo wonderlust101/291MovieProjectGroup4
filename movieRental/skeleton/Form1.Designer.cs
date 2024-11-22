@@ -54,7 +54,7 @@
             passLabel.AutoSize = true;
             passLabel.Font = new Font("Cooper Black", 13.8F);
             passLabel.ForeColor = Color.White;
-            passLabel.Location = new Point(729, 298);
+            passLabel.Location = new Point(729, 309);
             passLabel.Name = "passLabel";
             passLabel.Size = new Size(104, 21);
             passLabel.TabIndex = 3;
@@ -65,7 +65,7 @@
             loginButton.BackColor = Color.FromArgb(84, 80, 164);
             loginButton.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             loginButton.ForeColor = Color.White;
-            loginButton.Location = new Point(729, 414);
+            loginButton.Location = new Point(709, 423);
             loginButton.Margin = new Padding(3, 2, 3, 2);
             loginButton.Name = "loginButton";
             loginButton.Size = new Size(234, 31);
@@ -112,6 +112,7 @@
             userName.BackColor = Color.FromArgb(25, 26, 63);
             userName.BorderStyle = BorderStyle.None;
             userName.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold);
+            userName.ForeColor = Color.White;
             userName.Location = new Point(729, 251);
             userName.Name = "userName";
             userName.PlaceholderText = "Enter username";
@@ -146,7 +147,7 @@
             ForeColor = Color.FromArgb(118, 119, 141);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Movie Rental System";
             Load += formLoad;
             ResumeLayout(false);
             PerformLayout();
