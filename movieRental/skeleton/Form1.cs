@@ -7,9 +7,8 @@ namespace skeleton
 {
     public partial class Form1 : Form
     {
-        private string connectionString = "Server=DESKTOP-8ND5I5M\\MSSQLSERVER01;Database=MovieRentalSystem;Trusted_Connection=True;";
-        //string connectionString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
-        // Sorry wasn't sure how to use ^ revert for your use
+        string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
+
 
         public int AccountID = default;
         public string? UserName = default;
@@ -102,6 +101,7 @@ namespace skeleton
             AccountCreation form = new AccountCreation();
             form.ShowDialog();
         }
+
     }
 }
 
