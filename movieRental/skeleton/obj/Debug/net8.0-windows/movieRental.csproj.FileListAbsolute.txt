@@ -72,3 +72,32 @@ F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-win
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.pdb
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.genruntimeconfig.cache
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.exe
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.deps.json
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.runtimeconfig.json
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.pdb
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.AssemblyReference.cache
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.mainMenu.resources
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.Properties.Resources.resources
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.GenerateResource.cache
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfoInputs.cache
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfo.cs
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.sourcelink.json
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRen.99647C79.Up2Date
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\refint\movieRental.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.pdb
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.genruntimeconfig.cache
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\skeleton.Form1.resources
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.CustomerMenu.resources
+C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AccountCreation.resources

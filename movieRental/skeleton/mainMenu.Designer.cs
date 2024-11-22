@@ -28,183 +28,161 @@
         /// </summary>
         private void InitializeComponent()
         {
-            empButton = new PictureBox();
+            CustomersButton = new PictureBox();
             panel1 = new Panel();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            dataGridView1 = new DataGridView();
+            LogOutButton = new PictureBox();
+            ReportsButton = new PictureBox();
+            EmpRentalsButton = new PictureBox();
+            EmpMovieButton = new PictureBox();
+            EmpDataView = new DataGridView();
             dataGridView2 = new DataGridView();
-            pictureBox2 = new PictureBox();
-            customerLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)empButton).BeginInit();
+            EmpTabName = new Label();
+            ((System.ComponentModel.ISupportInitialize)CustomersButton).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LogOutButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ReportsButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmpRentalsButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmpMovieButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmpDataView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // empButton
+            // CustomersButton
             // 
-            empButton.Image = Properties.Resources.customers;
-            empButton.Location = new Point(12, 14);
-            empButton.Margin = new Padding(3, 4, 3, 4);
-            empButton.Name = "empButton";
-            empButton.Size = new Size(40, 40);
-            empButton.SizeMode = PictureBoxSizeMode.CenterImage;
-            empButton.TabIndex = 0;
-            empButton.TabStop = false;
+            CustomersButton.Image = Properties.Resources.customers;
+            CustomersButton.Location = new Point(10, 10);
+            CustomersButton.Name = "CustomersButton";
+            CustomersButton.Size = new Size(35, 30);
+            CustomersButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            CustomersButton.TabIndex = 0;
+            CustomersButton.TabStop = false;
+            CustomersButton.Click += CustomersButton_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(40, 44, 91);
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(empButton);
-            panel1.Location = new Point(23, 21);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Controls.Add(LogOutButton);
+            panel1.Controls.Add(ReportsButton);
+            panel1.Controls.Add(EmpRentalsButton);
+            panel1.Controls.Add(EmpMovieButton);
+            panel1.Controls.Add(CustomersButton);
+            panel1.Location = new Point(20, 16);
             panel1.Name = "panel1";
-            panel1.Size = new Size(63, 766);
+            panel1.Size = new Size(55, 574);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
-            // pictureBox5
+            // LogOutButton
             // 
-            pictureBox5.Image = Properties.Resources.logout;
-            pictureBox5.Location = new Point(12, 696);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(40, 40);
-            pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
+            LogOutButton.Image = Properties.Resources.logout;
+            LogOutButton.Location = new Point(10, 522);
+            LogOutButton.Name = "LogOutButton";
+            LogOutButton.Size = new Size(35, 30);
+            LogOutButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            LogOutButton.TabIndex = 4;
+            LogOutButton.TabStop = false;
+            LogOutButton.Click += LogOutButton_Click;
             // 
-            // pictureBox4
+            // ReportsButton
             // 
-            pictureBox4.Image = Properties.Resources.report;
-            pictureBox4.Location = new Point(12, 317);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(40, 40);
-            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            ReportsButton.Image = Properties.Resources.report;
+            ReportsButton.Location = new Point(10, 238);
+            ReportsButton.Name = "ReportsButton";
+            ReportsButton.Size = new Size(35, 30);
+            ReportsButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            ReportsButton.TabIndex = 3;
+            ReportsButton.TabStop = false;
+            ReportsButton.Click += ReportsButton_Click;
             // 
-            // pictureBox3
+            // EmpRentalsButton
             // 
-            pictureBox3.Image = Properties.Resources.rental;
-            pictureBox3.Location = new Point(12, 216);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 40);
-            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            EmpRentalsButton.Image = Properties.Resources.rental;
+            EmpRentalsButton.Location = new Point(10, 162);
+            EmpRentalsButton.Name = "EmpRentalsButton";
+            EmpRentalsButton.Size = new Size(35, 30);
+            EmpRentalsButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            EmpRentalsButton.TabIndex = 2;
+            EmpRentalsButton.TabStop = false;
+            EmpRentalsButton.Click += EmpRentalsButton_Click;
             // 
-            // pictureBox1
+            // EmpMovieButton
             // 
-            pictureBox1.Image = Properties.Resources.movies;
-            pictureBox1.Location = new Point(12, 110);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 40);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            EmpMovieButton.Image = Properties.Resources.movies;
+            EmpMovieButton.Location = new Point(10, 82);
+            EmpMovieButton.Name = "EmpMovieButton";
+            EmpMovieButton.Size = new Size(35, 30);
+            EmpMovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            EmpMovieButton.TabIndex = 1;
+            EmpMovieButton.TabStop = false;
+            EmpMovieButton.Click += EmpMovieButton_Click;
             // 
-            // dataGridView1
+            // EmpDataView
             // 
-            dataGridView1.BackgroundColor = Color.FromArgb(40, 44, 91);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(103, 131);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1182, 656);
-            dataGridView1.TabIndex = 4;
+            EmpDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            EmpDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmpDataView.Location = new Point(90, 98);
+            EmpDataView.Name = "EmpDataView";
+            EmpDataView.RowHeadersWidth = 51;
+            EmpDataView.Size = new Size(1034, 492);
+            EmpDataView.TabIndex = 4;
             // 
             // dataGridView2
             // 
             dataGridView2.BackgroundColor = Color.FromArgb(40, 44, 91);
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(103, 21);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
+            dataGridView2.Location = new Point(90, 16);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1182, 92);
+            dataGridView2.Size = new Size(1034, 69);
             dataGridView2.TabIndex = 6;
             // 
-            // pictureBox2
+            // EmpTabName
             // 
-            pictureBox2.Anchor = AnchorStyles.Top;
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = Properties.Resources.customers;
-            pictureBox2.Location = new Point(121, 45);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(48, 48);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
-            // 
-            // customerLabel
-            // 
-            customerLabel.AutoSize = true;
-            customerLabel.BackColor = Color.FromArgb(40, 44, 91);
-            customerLabel.Font = new Font("Newake Demo", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            customerLabel.ForeColor = Color.White;
-            customerLabel.Location = new Point(193, 42);
-            customerLabel.Name = "customerLabel";
-            customerLabel.Size = new Size(245, 53);
-            customerLabel.TabIndex = 7;
-            customerLabel.Text = "Customer";
-            customerLabel.Click += customerLabel_Click;
+            EmpTabName.AutoSize = true;
+            EmpTabName.BackColor = Color.FromArgb(40, 44, 91);
+            EmpTabName.Font = new Font("Microsoft Sans Serif", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmpTabName.ForeColor = Color.White;
+            EmpTabName.Location = new Point(102, 26);
+            EmpTabName.Name = "EmpTabName";
+            EmpTabName.Size = new Size(209, 51);
+            EmpTabName.TabIndex = 7;
+            EmpTabName.Text = "Customer";
+            EmpTabName.Click += customerLabel_Click;
             // 
             // mainMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 26, 63);
-            Controls.Add(customerLabel);
-            Controls.Add(pictureBox2);
+            Controls.Add(EmpTabName);
             Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(EmpDataView);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "mainMenu";
-            Size = new Size(1301, 805);
+            Size = new Size(1138, 604);
             Load += mainMenu_Load;
-            ((System.ComponentModel.ISupportInitialize)empButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CustomersButton).EndInit();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogOutButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ReportsButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmpRentalsButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmpMovieButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmpDataView).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox empButton;
+        private PictureBox CustomersButton;
         private Panel panel1;
-        private DataGridView dataGridView1;
+        private DataGridView EmpDataView;
         private DataGridView dataGridView2;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private Label customerLabel;
+        private PictureBox LogOutButton;
+        private PictureBox ReportsButton;
+        private PictureBox EmpRentalsButton;
+        private PictureBox EmpMovieButton;
+        private Label EmpTabName;
     }
 }

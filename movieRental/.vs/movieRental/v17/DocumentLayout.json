@@ -1,22 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\",
+  "WorkspaceRootPath": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\alan\\source\\repos\\291movieprojectgroup4\\movierental\\skeleton\\accountcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\accountcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\alan\\source\\repos\\291movieprojectgroup4\\movierental\\skeleton\\accountcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\accountcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\alan\\source\\repos\\291movieprojectgroup4\\movierental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\alan\\source\\repos\\291movieprojectgroup4\\movierental\\skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\alan\\source\\repos\\291movieprojectgroup4\\movierental\\skeleton\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\alan\\source\\repos\\291movieprojectgroup4\\movierental\\skeleton\\customermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\customermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\alan\\source\\repos\\291movieprojectgroup4\\movierental\\skeleton\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,15 +50,99 @@
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountCreation.cs",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\AccountCreation.cs",
+              "RelativeDocumentMoniker": "skeleton\\AccountCreation.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\AccountCreation.cs",
+              "RelativeToolTip": "skeleton\\AccountCreation.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T15:22:54.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountCreation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\AccountCreation.cs",
+              "RelativeDocumentMoniker": "skeleton\\AccountCreation.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\AccountCreation.cs [Design]",
+              "RelativeToolTip": "skeleton\\AccountCreation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T15:04:06.77Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Movie.cs",
+              "RelativeDocumentMoniker": "skeleton\\Movie.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Movie.cs",
+              "RelativeToolTip": "skeleton\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T14:31:36.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "mainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.cs",
+              "RelativeDocumentMoniker": "skeleton\\mainMenu.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.cs",
+              "RelativeToolTip": "skeleton\\mainMenu.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAA2wBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T14:16:36.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\CustomerMenu.cs",
+              "RelativeDocumentMoniker": "skeleton\\CustomerMenu.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\CustomerMenu.cs [Design]",
+              "RelativeToolTip": "skeleton\\CustomerMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T14:01:46.848Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Form1.cs",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs",
               "RelativeDocumentMoniker": "skeleton\\Form1.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs",
+              "RelativeToolTip": "skeleton\\Form1.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAIAzwGYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T02:59:40.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs",
+              "RelativeDocumentMoniker": "skeleton\\Form1.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Form1.cs [Design]",
               "RelativeToolTip": "skeleton\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T03:46:22.054Z",
@@ -46,40 +150,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "mainMenu.cs [Design]",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\mainMenu.cs",
-              "RelativeDocumentMoniker": "skeleton\\mainMenu.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\mainMenu.cs [Design]",
-              "RelativeToolTip": "skeleton\\mainMenu.cs [Design]",
+              "DocumentIndex": 8,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Customer.cs",
+              "RelativeDocumentMoniker": "skeleton\\Customer.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\Customer.cs",
+              "RelativeToolTip": "skeleton\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T03:45:24.488Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Form1.cs",
-              "RelativeDocumentMoniker": "skeleton\\Form1.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Form1.cs",
-              "RelativeToolTip": "skeleton\\Form1.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T02:59:40.113Z",
+              "WhenOpened": "2024-11-22T14:24:54.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Program.cs",
-              "RelativeDocumentMoniker": "skeleton\\Program.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Program.cs",
-              "RelativeToolTip": "skeleton\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "mainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.cs",
+              "RelativeDocumentMoniker": "skeleton\\mainMenu.cs",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\291MovieProjectGroup4\\movieRental\\skeleton\\mainMenu.cs [Design]",
+              "RelativeToolTip": "skeleton\\mainMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T02:54:04.662Z"
+              "WhenOpened": "2024-11-22T03:45:24.488Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
