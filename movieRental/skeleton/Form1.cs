@@ -1,6 +1,7 @@
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using movieRental;
 
 namespace skeleton
 {
@@ -39,6 +40,11 @@ namespace skeleton
                     if (result != null && result.ToString() == name)
                     {
                         MessageBox.Show($"{name} inside database !");
+                        var mainMenuControl = new mainMenu();
+
+                        this.Controls.Clear();
+                        this.Controls.Add(mainMenuControl);
+
                     }
 
                     else
