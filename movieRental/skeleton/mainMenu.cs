@@ -10,14 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
+using System.Configuration;
 
 namespace movieRental
 {
     public partial class mainMenu : UserControl
     {
-        private string connectionString = "Server=DESKTOP-8ND5I5M\\MSSQLSERVER01;Database=MovieRentalSystem;Trusted_Connection=True;";
-        //string connectionString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
-        // Sorry wasn't sure how to use ^ revert for your use
+        private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
         public List<Customer> Customers;
         public List<Movie> Movies;

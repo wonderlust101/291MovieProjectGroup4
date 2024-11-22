@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = movieRental
-build_property.ProjectDir = C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\
+build_property.ProjectDir = C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
