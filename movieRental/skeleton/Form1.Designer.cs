@@ -36,27 +36,28 @@
             helpLabel = new Label();
             userName = new TextBox();
             passWord = new TextBox();
+            CreateAccount = new Button();
             SuspendLayout();
             // 
             // userLabel
             // 
             userLabel.AutoSize = true;
-            userLabel.Font = new Font("Newake Demo", 15.7310925F);
+            userLabel.Font = new Font("Microsoft Sans Serif", 15.7310925F);
             userLabel.ForeColor = Color.White;
-            userLabel.Location = new Point(796, 273);
+            userLabel.Location = new Point(795, 273);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(128, 26);
+            userLabel.Size = new Size(139, 31);
             userLabel.TabIndex = 2;
             userLabel.Text = "Username";
             // 
             // passLabel
             // 
             passLabel.AutoSize = true;
-            passLabel.Font = new Font("Newake Demo", 15.7310925F);
+            passLabel.Font = new Font("Microsoft Sans Serif", 15.7310925F);
             passLabel.ForeColor = Color.White;
-            passLabel.Location = new Point(796, 393);
+            passLabel.Location = new Point(795, 393);
             passLabel.Name = "passLabel";
-            passLabel.Size = new Size(122, 26);
+            passLabel.Size = new Size(134, 31);
             passLabel.TabIndex = 3;
             passLabel.Text = "Password";
             // 
@@ -66,11 +67,11 @@
             loginButton.FlatAppearance.BorderColor = Color.Black;
             loginButton.FlatAppearance.BorderSize = 0;
             loginButton.FlatStyle = FlatStyle.Flat;
-            loginButton.Font = new Font("Outfit ExtraBold", 12F, FontStyle.Bold);
+            loginButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             loginButton.ForeColor = Color.White;
-            loginButton.Location = new Point(796, 510);
+            loginButton.Location = new Point(795, 509);
             loginButton.Name = "loginButton";
-            loginButton.Padding = new Padding(4);
+            loginButton.Padding = new Padding(5, 4, 5, 4);
             loginButton.Size = new Size(389, 48);
             loginButton.TabIndex = 4;
             loginButton.Text = "Login";
@@ -80,33 +81,33 @@
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Font = new Font("Newake Demo", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            titleLabel.Font = new Font("Microsoft Sans Serif", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
             titleLabel.ForeColor = Color.White;
             titleLabel.Location = new Point(109, 67);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(317, 53);
+            titleLabel.Size = new Size(343, 63);
             titleLabel.TabIndex = 5;
             titleLabel.Text = "Movie Rental";
             // 
             // empLabel
             // 
             empLabel.AutoSize = true;
-            empLabel.Font = new Font("Newake Demo", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            empLabel.Font = new Font("Microsoft Sans Serif", 32.0672226F, FontStyle.Regular, GraphicsUnit.Point, 0);
             empLabel.ForeColor = Color.White;
-            empLabel.Location = new Point(109, 332);
+            empLabel.Location = new Point(109, 300);
             empLabel.Name = "empLabel";
-            empLabel.Size = new Size(382, 53);
+            empLabel.Size = new Size(160, 63);
             empLabel.TabIndex = 6;
-            empLabel.Text = "Employee Login";
+            empLabel.Text = "Login";
             // 
             // helpLabel
             // 
             helpLabel.AutoSize = true;
-            helpLabel.Font = new Font("Outfit", 12.1008387F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            helpLabel.Font = new Font("Microsoft Sans Serif", 12.1008387F, FontStyle.Regular, GraphicsUnit.Point, 0);
             helpLabel.ForeColor = Color.White;
-            helpLabel.Location = new Point(109, 410);
+            helpLabel.Location = new Point(109, 411);
             helpLabel.Name = "helpLabel";
-            helpLabel.Size = new Size(50, 25);
+            helpLabel.Size = new Size(53, 25);
             helpLabel.TabIndex = 7;
             helpLabel.Text = "help";
             // 
@@ -114,33 +115,45 @@
             // 
             userName.BackColor = Color.FromArgb(25, 26, 63);
             userName.BorderStyle = BorderStyle.None;
-            userName.Font = new Font("Outfit", 15.7310915F);
+            userName.Font = new Font("Microsoft Sans Serif", 15.7310915F);
             userName.ForeColor = Color.White;
-            userName.Location = new Point(796, 316);
+            userName.Location = new Point(795, 316);
             userName.Margin = new Padding(3, 4, 3, 4);
             userName.Name = "userName";
             userName.PlaceholderText = "Enter username";
-            userName.Size = new Size(389, 33);
+            userName.Size = new Size(389, 30);
             userName.TabIndex = 8;
             // 
             // passWord
             // 
             passWord.BackColor = Color.FromArgb(25, 26, 63);
             passWord.BorderStyle = BorderStyle.None;
-            passWord.Font = new Font("Outfit", 15.7310915F);
-            passWord.Location = new Point(796, 443);
+            passWord.Font = new Font("Microsoft Sans Serif", 15.7310915F);
+            passWord.Location = new Point(795, 443);
             passWord.Margin = new Padding(3, 4, 3, 4);
             passWord.Name = "passWord";
             passWord.PlaceholderText = "..........";
-            passWord.Size = new Size(389, 33);
+            passWord.Size = new Size(389, 30);
             passWord.TabIndex = 9;
+            // 
+            // CreateAccount
+            // 
+            CreateAccount.Location = new Point(795, 584);
+            CreateAccount.Margin = new Padding(3, 4, 3, 4);
+            CreateAccount.Name = "CreateAccount";
+            CreateAccount.Size = new Size(389, 31);
+            CreateAccount.TabIndex = 11;
+            CreateAccount.Text = "Create New Account";
+            CreateAccount.UseVisualStyleBackColor = true;
+            CreateAccount.Click += CreateAccount_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 44, 91);
-            ClientSize = new Size(1282, 753);
+            ClientSize = new Size(1305, 800);
+            Controls.Add(CreateAccount);
             Controls.Add(passWord);
             Controls.Add(userName);
             Controls.Add(helpLabel);
@@ -166,5 +179,6 @@
         private Label helpLabel;
         private TextBox userName;
         private TextBox passWord;
+        private Button CreateAccount;
     }
 }
