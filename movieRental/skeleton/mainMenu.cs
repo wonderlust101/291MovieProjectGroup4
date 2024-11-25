@@ -90,9 +90,9 @@ namespace movieRental
                                 AccountNumber = myReader.GetInt32(7),
                                 CreationDate = myReader.GetDateTime(12)
                             });
-                           
+
                         }
-                        
+
                         myReader.Close();
                     }
                     catch (Exception exception)
@@ -119,35 +119,66 @@ namespace movieRental
 
         }
 
-        private void customerLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LogOutButton_Click(object sender, EventArgs e)
         {
         }
 
         private void CustomersButton_Click(object sender, EventArgs e)
         {
+            //Menu Styles
+            ResetContainerColors();
+            CustomersContainer.BackColor = Color.FromArgb(84, 80, 164);
+
+            // Header Styles
             EmpTabName.Text = "Customers";
+            SectionIcon.Image = Properties.Resources.customers;
+
+
             EmpDataView.DataSource = Customers;
         }
 
-        private void EmpMovieButton_Click(object sender, EventArgs e)
+        private void MoviesButton_Click(object sender, EventArgs e)
         {
+            //Menu Styles
+            ResetContainerColors();
+            MoviesContainer.BackColor = Color.FromArgb(84, 80, 164);
+
+            // Header Styles
             EmpTabName.Text = "Movies";
+            SectionIcon.Image = Properties.Resources.movies;
+
             EmpDataView.DataSource = Movies;
         }
 
-        private void EmpRentalsButton_Click(object sender, EventArgs e)
+        private void RentalsButton_Click(object sender, EventArgs e)
         {
+            //Menu Styles
+            ResetContainerColors();
+            RentalContainer.BackColor = Color.FromArgb(84, 80, 164);
+
+
+            // Header Styles
             EmpTabName.Text = "Rentals";
+            SectionIcon.Image = Properties.Resources.rental;
         }
 
         private void ReportsButton_Click(object sender, EventArgs e)
         {
+            //Menu Styles
+            ResetContainerColors();
+            ReportsContainer.BackColor = Color.FromArgb(84, 80, 164);
+
+            // Header Styles
             EmpTabName.Text = "Reports";
+            SectionIcon.Image = Properties.Resources.report;
+        }
+
+        private void ResetContainerColors()
+        {
+            CustomersContainer.BackColor = Color.Transparent; // Default or original color
+            MoviesContainer.BackColor = Color.Transparent;
+            RentalContainer.BackColor = Color.Transparent;
+            ReportsContainer.BackColor = Color.Transparent;
         }
     }
 }
