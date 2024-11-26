@@ -19,11 +19,13 @@ namespace skeleton
         public string? UserType = default;
 
         // Custom Fonts
-        private Font newakeFontS36;
-        private Font newakeFontS16;
-        private Font newakeFontS14;
-        private Font outfitFontS14;
+        private Font outfitFontS30Bold;
+        private Font outfitFontS14Bold;
+        private Font outfitFontS12Bold;
+
         private Font outfitFontS16;
+        private Font outfitFontS14;
+        private Font outfitFontS12;
 
         public Form1()
         {
@@ -39,38 +41,34 @@ namespace skeleton
         //Custom Fonts
         private void LoadCustomFont()
         {
-            PrivateFontCollection pfcNewake = new PrivateFontCollection();
             PrivateFontCollection pfcOutfit = new PrivateFontCollection();
-
-            string newakeFontPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Newake-Font-Demo.otf");
             string outfitFontPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Outfit-VariableFont_wght.ttf");
-
-            pfcNewake.AddFontFile(newakeFontPath);
             pfcOutfit.AddFontFile(outfitFontPath);
 
-            newakeFontS36 = new Font(pfcNewake.Families[0], 36f, FontStyle.Regular);
-            newakeFontS16 = new Font(pfcNewake.Families[0], 16f, FontStyle.Regular);
-            newakeFontS14 = new Font(pfcNewake.Families[0], 14f, FontStyle.Regular);
+            outfitFontS30Bold = new Font(pfcOutfit.Families[0], 30f, FontStyle.Bold);
+            outfitFontS14Bold = new Font(pfcOutfit.Families[0], 14f, FontStyle.Bold);
+            outfitFontS12Bold = new Font(pfcOutfit.Families[0], 12f, FontStyle.Bold);
 
             outfitFontS16 = new Font(pfcOutfit.Families[0], 16f, FontStyle.Regular);
             outfitFontS14 = new Font(pfcOutfit.Families[0], 14f, FontStyle.Regular);
+            outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
         }
 
         private void ApplyFonts()
         {
-            titleLabel.Font = newakeFontS36;
+            titleLabel.Font = outfitFontS30Bold;
 
-            empLabel.Font = newakeFontS36;
-            helpLabel.Font = outfitFontS14;
+            empLabel.Font = outfitFontS30Bold;
+            helpLabel.Font = outfitFontS12;
 
-            userLabel.Font = newakeFontS16;
-            userName.Font = outfitFontS16;
+            userLabel.Font = outfitFontS14Bold;
+            userName.Font = outfitFontS14;
 
-            passLabel.Font = newakeFontS16;
-            passWord.Font = outfitFontS16;
+            passLabel.Font = outfitFontS14Bold;
+            passWord.Font = outfitFontS14;
 
-            loginButton.Font = newakeFontS14;
-            CreateAccount.Font = newakeFontS14;
+            loginButton.Font = outfitFontS14Bold;
+            CreateAccount.Font = outfitFontS14Bold;
         }
 
         private void loginClick(object sender, EventArgs e)
@@ -192,6 +190,16 @@ namespace skeleton
         }
 
         private void tableLayoutPanel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void userName__TextChanged(object sender, EventArgs e)
         {
 
         }

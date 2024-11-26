@@ -30,13 +30,9 @@
         {
             userLabel = new Label();
             passLabel = new Label();
-            loginButton = new Button();
             titleLabel = new Label();
             empLabel = new Label();
             helpLabel = new Label();
-            userName = new TextBox();
-            passWord = new TextBox();
-            CreateAccount = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel6 = new TableLayoutPanel();
@@ -44,10 +40,14 @@
             tableLayoutPanel5 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel7 = new TableLayoutPanel();
-            tableLayoutPanel4 = new TableLayoutPanel();
             pictureBox2 = new PictureBox();
+            userName = new CustomControls.RoundedTextBox.RoundedTextBox();
+            tableLayoutPanel4 = new TableLayoutPanel();
             tableLayoutPanel8 = new TableLayoutPanel();
             pictureBox3 = new PictureBox();
+            passWord = new CustomControls.RoundedTextBox.RoundedTextBox();
+            loginButton = new CustomControls.RoundedButton.RoundedButton();
+            CreateAccount = new CustomControls.RoundedButton.RoundedButton();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
@@ -55,8 +55,8 @@
             tableLayoutPanel5.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
@@ -67,9 +67,10 @@
             userLabel.AutoSize = true;
             userLabel.Font = new Font("Microsoft Sans Serif", 15.7310925F);
             userLabel.ForeColor = Color.White;
-            userLabel.Location = new Point(62, 16);
+            userLabel.Location = new Point(37, 16);
+            userLabel.Margin = new Padding(0);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(439, 30);
+            userLabel.Size = new Size(467, 30);
             userLabel.TabIndex = 2;
             userLabel.Text = "Username";
             // 
@@ -79,29 +80,12 @@
             passLabel.AutoSize = true;
             passLabel.Font = new Font("Microsoft Sans Serif", 15.7310925F);
             passLabel.ForeColor = Color.White;
-            passLabel.Location = new Point(68, 16);
+            passLabel.Location = new Point(37, 16);
+            passLabel.Margin = new Padding(0);
             passLabel.Name = "passLabel";
-            passLabel.Size = new Size(433, 30);
+            passLabel.Size = new Size(467, 30);
             passLabel.TabIndex = 3;
             passLabel.Text = "Password";
-            // 
-            // loginButton
-            // 
-            loginButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            loginButton.BackColor = Color.FromArgb(84, 80, 164);
-            loginButton.FlatAppearance.BorderColor = Color.Black;
-            loginButton.FlatAppearance.BorderSize = 0;
-            loginButton.FlatStyle = FlatStyle.Flat;
-            loginButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            loginButton.ForeColor = Color.White;
-            loginButton.Location = new Point(3, 301);
-            loginButton.Name = "loginButton";
-            loginButton.Padding = new Padding(5, 4, 5, 4);
-            loginButton.Size = new Size(510, 45);
-            loginButton.TabIndex = 4;
-            loginButton.Text = "Login";
-            loginButton.UseVisualStyleBackColor = false;
-            loginButton.Click += loginClick;
             // 
             // titleLabel
             // 
@@ -142,50 +126,6 @@
             helpLabel.TabIndex = 7;
             helpLabel.Text = "help";
             helpLabel.Click += helpLabel_Click;
-            // 
-            // userName
-            // 
-            userName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            userName.BackColor = Color.FromArgb(25, 26, 63);
-            userName.BorderStyle = BorderStyle.None;
-            userName.Font = new Font("Microsoft Sans Serif", 15.7310915F);
-            userName.ForeColor = Color.White;
-            userName.Location = new Point(3, 87);
-            userName.Margin = new Padding(3, 4, 3, 4);
-            userName.Name = "userName";
-            userName.PlaceholderText = "Enter username";
-            userName.Size = new Size(504, 30);
-            userName.TabIndex = 8;
-            // 
-            // passWord
-            // 
-            passWord.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            passWord.BackColor = Color.FromArgb(25, 26, 63);
-            passWord.BorderStyle = BorderStyle.None;
-            passWord.Font = new Font("Microsoft Sans Serif", 15.7310915F);
-            passWord.Location = new Point(3, 87);
-            passWord.Margin = new Padding(3, 4, 3, 4);
-            passWord.Name = "passWord";
-            passWord.PlaceholderText = "..........";
-            passWord.Size = new Size(504, 30);
-            passWord.TabIndex = 9;
-            // 
-            // CreateAccount
-            // 
-            CreateAccount.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            CreateAccount.BackColor = Color.FromArgb(84, 80, 164);
-            CreateAccount.FlatAppearance.BorderSize = 0;
-            CreateAccount.FlatStyle = FlatStyle.Flat;
-            CreateAccount.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            CreateAccount.ForeColor = Color.White;
-            CreateAccount.Location = new Point(3, 376);
-            CreateAccount.Margin = new Padding(3, 4, 3, 4);
-            CreateAccount.Name = "CreateAccount";
-            CreateAccount.Size = new Size(510, 45);
-            CreateAccount.TabIndex = 11;
-            CreateAccount.Text = "Create New Account";
-            CreateAccount.UseVisualStyleBackColor = false;
-            CreateAccount.Click += CreateAccount_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -264,8 +204,8 @@
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.Controls.Add(tableLayoutPanel3, 0, 0);
             tableLayoutPanel5.Controls.Add(tableLayoutPanel4, 0, 1);
-            tableLayoutPanel5.Controls.Add(CreateAccount, 0, 3);
             tableLayoutPanel5.Controls.Add(loginButton, 0, 2);
+            tableLayoutPanel5.Controls.Add(CreateAccount, 0, 3);
             tableLayoutPanel5.Location = new Point(720, 204);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 4;
@@ -283,8 +223,8 @@
             tableLayoutPanel3.AutoSize = true;
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Controls.Add(userName, 0, 1);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel7, 0, 0);
+            tableLayoutPanel3.Controls.Add(userName, 0, 1);
             tableLayoutPanel3.Location = new Point(3, 3);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
@@ -309,14 +249,48 @@
             tableLayoutPanel7.Size = new Size(504, 62);
             tableLayoutPanel7.TabIndex = 17;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox2.Image = movieRental.Properties.Resources.username;
+            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(31, 56);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // userName
+            // 
+            userName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            userName.BackColor = Color.FromArgb(25, 26, 63);
+            userName.BorderColor = Color.FromArgb(25, 26, 63);
+            userName.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            userName.BorderRadius = 25;
+            userName.BorderSize = 2;
+            userName.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userName.ForeColor = Color.White;
+            userName.Location = new Point(0, 77);
+            userName.Margin = new Padding(0);
+            userName.Multiline = false;
+            userName.Name = "userName";
+            userName.Padding = new Padding(20, 15, 20, 15);
+            userName.PasswordChar = false;
+            userName.PlaceholderColor = Color.DarkGray;
+            userName.PlaceholderText = "";
+            userName.Size = new Size(510, 51);
+            userName.TabIndex = 18;
+            userName.UnderlinedStyle = false;
+            userName._TextChanged += userName__TextChanged;
+            // 
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.AutoSize = true;
             tableLayoutPanel4.ColumnCount = 1;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Controls.Add(passWord, 0, 1);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel8, 0, 0);
+            tableLayoutPanel4.Controls.Add(passWord, 0, 1);
             tableLayoutPanel4.Location = new Point(3, 146);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
@@ -324,17 +298,6 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Size = new Size(510, 137);
             tableLayoutPanel4.TabIndex = 14;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox2.Image = movieRental.Properties.Resources.username;
-            pictureBox2.Location = new Point(3, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(53, 56);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
             // 
             // tableLayoutPanel8
             // 
@@ -351,16 +314,79 @@
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel8.Size = new Size(504, 62);
             tableLayoutPanel8.TabIndex = 17;
+            tableLayoutPanel8.Paint += tableLayoutPanel8_Paint;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = movieRental.Properties.Resources.password;
             pictureBox3.Location = new Point(3, 3);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(59, 56);
+            pictureBox3.Size = new Size(31, 56);
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
+            // 
+            // passWord
+            // 
+            passWord.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            passWord.BackColor = Color.FromArgb(25, 26, 63);
+            passWord.BorderColor = Color.FromArgb(25, 26, 63);
+            passWord.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            passWord.BorderRadius = 25;
+            passWord.BorderSize = 2;
+            passWord.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passWord.ForeColor = Color.White;
+            passWord.Location = new Point(0, 77);
+            passWord.Margin = new Padding(0);
+            passWord.Multiline = false;
+            passWord.Name = "passWord";
+            passWord.Padding = new Padding(20, 15, 20, 15);
+            passWord.PasswordChar = true;
+            passWord.PlaceholderColor = Color.DarkGray;
+            passWord.PlaceholderText = "********";
+            passWord.Size = new Size(510, 51);
+            passWord.TabIndex = 18;
+            passWord.UnderlinedStyle = false;
+            // 
+            // loginButton
+            // 
+            loginButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            loginButton.BackColor = Color.FromArgb(84, 80, 164);
+            loginButton.BackgroundColor = Color.FromArgb(84, 80, 164);
+            loginButton.BorderColor = Color.FromArgb(84, 80, 164);
+            loginButton.BorderRadius = 25;
+            loginButton.BorderSize = 0;
+            loginButton.FlatAppearance.BorderSize = 0;
+            loginButton.FlatStyle = FlatStyle.Flat;
+            loginButton.ForeColor = Color.White;
+            loginButton.Location = new Point(3, 298);
+            loginButton.Name = "loginButton";
+            loginButton.Size = new Size(510, 50);
+            loginButton.TabIndex = 15;
+            loginButton.Text = "Login";
+            loginButton.TextColor = Color.White;
+            loginButton.UseVisualStyleBackColor = false;
+            loginButton.Click += loginClick;
+            // 
+            // CreateAccount
+            // 
+            CreateAccount.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            CreateAccount.BackColor = Color.FromArgb(84, 80, 164);
+            CreateAccount.BackgroundColor = Color.FromArgb(84, 80, 164);
+            CreateAccount.BorderColor = Color.FromArgb(84, 80, 164);
+            CreateAccount.BorderRadius = 25;
+            CreateAccount.BorderSize = 0;
+            CreateAccount.FlatAppearance.BorderSize = 0;
+            CreateAccount.FlatStyle = FlatStyle.Flat;
+            CreateAccount.ForeColor = Color.White;
+            CreateAccount.Location = new Point(3, 373);
+            CreateAccount.Name = "CreateAccount";
+            CreateAccount.Size = new Size(510, 50);
+            CreateAccount.TabIndex = 16;
+            CreateAccount.Text = "Create a New Account";
+            CreateAccount.TextColor = Color.White;
+            CreateAccount.UseVisualStyleBackColor = false;
+            CreateAccount.Click += CreateAccount_Click;
             // 
             // Form1
             // 
@@ -383,12 +409,11 @@
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel5.PerformLayout();
             tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
             tableLayoutPanel7.ResumeLayout(false);
             tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tableLayoutPanel8.ResumeLayout(false);
             tableLayoutPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -399,13 +424,9 @@
         #endregion
         private Label userLabel;
         private Label passLabel;
-        private Button loginButton;
         private Label titleLabel;
         private Label empLabel;
         private Label helpLabel;
-        private TextBox userName;
-        private TextBox passWord;
-        private Button CreateAccount;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
@@ -417,5 +438,9 @@
         private PictureBox pictureBox2;
         private TableLayoutPanel tableLayoutPanel8;
         private PictureBox pictureBox3;
+        private CustomControls.RoundedButton.RoundedButton loginButton;
+        private CustomControls.RoundedButton.RoundedButton CreateAccount;
+        private CustomControls.RoundedTextBox.RoundedTextBox userName;
+        private CustomControls.RoundedTextBox.RoundedTextBox passWord;
     }
 }

@@ -200,13 +200,14 @@
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
             tableLayoutPanel12.Controls.Add(tableLayoutPanel13, 1, 1);
-            tableLayoutPanel12.Location = new Point(3, 3);
+            tableLayoutPanel12.Location = new Point(0, 0);
+            tableLayoutPanel12.Margin = new Padding(0);
             tableLayoutPanel12.Name = "tableLayoutPanel12";
             tableLayoutPanel12.RowCount = 3;
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel12.Size = new Size(1123, 640);
+            tableLayoutPanel12.Size = new Size(1129, 646);
             tableLayoutPanel12.TabIndex = 5;
             // 
             // tableLayoutPanel13
@@ -221,7 +222,7 @@
             tableLayoutPanel13.RowCount = 2;
             tableLayoutPanel13.RowStyles.Add(new RowStyle());
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.Size = new Size(1101, 618);
+            tableLayoutPanel13.Size = new Size(1107, 624);
             tableLayoutPanel13.TabIndex = 0;
             // 
             // EmpDataView
@@ -229,11 +230,10 @@
             EmpDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             EmpDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
             EmpDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            EmpDataView.Location = new Point(3, 85);
-            EmpDataView.Margin = new Padding(3, 4, 3, 4);
+            EmpDataView.Location = new Point(3, 84);
             EmpDataView.Name = "EmpDataView";
             EmpDataView.RowHeadersWidth = 51;
-            EmpDataView.Size = new Size(1095, 529);
+            EmpDataView.Size = new Size(1101, 537);
             EmpDataView.TabIndex = 4;
             // 
             // tableLayoutPanel14
@@ -249,7 +249,7 @@
             tableLayoutPanel14.Name = "tableLayoutPanel14";
             tableLayoutPanel14.RowCount = 1;
             tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.Size = new Size(1095, 75);
+            tableLayoutPanel14.Size = new Size(1101, 75);
             tableLayoutPanel14.TabIndex = 5;
             // 
             // AddCustomerButton
@@ -273,7 +273,7 @@
             SearchBox.BorderStyle = BorderStyle.None;
             SearchBox.Font = new Font("Microsoft Sans Serif", 15.7310915F);
             SearchBox.ForeColor = Color.White;
-            SearchBox.Location = new Point(698, 22);
+            SearchBox.Location = new Point(704, 22);
             SearchBox.Name = "SearchBox";
             SearchBox.Size = new Size(394, 30);
             SearchBox.TabIndex = 1;
