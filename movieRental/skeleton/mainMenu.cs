@@ -180,5 +180,25 @@ namespace movieRental
             RentalContainer.BackColor = Color.Transparent;
             ReportsContainer.BackColor = Color.Transparent;
         }
+
+        private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void roundedPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
