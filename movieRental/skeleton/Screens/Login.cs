@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace skeleton
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
@@ -23,11 +23,10 @@ namespace skeleton
         private Font outfitFontS14Bold;
         private Font outfitFontS12Bold;
 
-        private Font outfitFontS16;
         private Font outfitFontS14;
         private Font outfitFontS12;
 
-        public Form1()
+        public Login()
         {
             if (string.IsNullOrEmpty(connectionString))
             {
@@ -49,7 +48,6 @@ namespace skeleton
             outfitFontS14Bold = new Font(pfcOutfit.Families[0], 14f, FontStyle.Bold);
             outfitFontS12Bold = new Font(pfcOutfit.Families[0], 12f, FontStyle.Bold);
 
-            outfitFontS16 = new Font(pfcOutfit.Families[0], 16f, FontStyle.Regular);
             outfitFontS14 = new Font(pfcOutfit.Families[0], 14f, FontStyle.Regular);
             outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
         }
@@ -67,8 +65,8 @@ namespace skeleton
             passLabel.Font = outfitFontS14Bold;
             passWord.Font = outfitFontS14;
 
-            loginButton.Font = outfitFontS14Bold;
-            CreateAccount.Font = outfitFontS14Bold;
+            loginButton.Font = outfitFontS12Bold;
+            CreateAccount.Font = outfitFontS12Bold;
         }
 
         private void loginClick(object sender, EventArgs e)
@@ -77,10 +75,15 @@ namespace skeleton
             string password = passWord.Text;
             if (name == "test")
             {
-                var mainMenuControl = new mainMenu();
+                customerScreen customerScreenInstance = new customerScreen();
+                Form parentForm = this.FindForm();
 
-                this.Controls.Clear();
-                this.Controls.Add(mainMenuControl);
+                if (parentForm != null)
+                {
+                    parentForm.Controls.Clear();
+                    parentForm.Controls.Add(customerScreenInstance);
+                    customerScreenInstance.Dock = DockStyle.Fill;
+                }
             }
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -118,20 +121,17 @@ namespace skeleton
                     if (UserType == "Employee")
                     {
                         MessageBox.Show($"Welcome back {name}!");
-                        mainMenuControl = new mainMenu();
+                        customerScreen customerScreenInstance = new customerScreen();
+                        Form parentForm = this.FindForm();
 
-                        this.Controls.Clear();
-                        this.Controls.Add(mainMenuControl);
+                        if (parentForm != null)
+                        {
+                            parentForm.Controls.Clear();
+                            parentForm.Controls.Add(customerScreenInstance);
+                            customerScreenInstance.Dock = DockStyle.Fill;
+                        }
                         return;
                     }
-
-                    MessageBox.Show($"Welcome back {name}!");
-                    mainMenuControl = new CustomerMenu();
-                    this.Controls.Clear();
-                    this.Controls.Add(mainMenuControl);
-                    return;
-
-
                 }
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class mainMenu
+    partial class reportScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,17 +35,17 @@
             LogOutButton = new PictureBox();
             LogoutLabel = new Label();
             ReportsContainer = new CustomControls.RoundedPanel.RoundedPanel();
-            pictureBox3 = new PictureBox();
-            label3 = new Label();
+            ReportsButton = new PictureBox();
+            ReportLabel = new Label();
             CustomersContainer = new CustomControls.RoundedPanel.RoundedPanel();
             CustomersButton = new PictureBox();
             CustomerLabel = new Label();
             RentalContainer = new CustomControls.RoundedPanel.RoundedPanel();
-            pictureBox2 = new PictureBox();
-            label2 = new Label();
+            RentalButton = new PictureBox();
+            RentalLabel = new Label();
             MoviesContainer = new CustomControls.RoundedPanel.RoundedPanel();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
+            MovieButton = new PictureBox();
+            MovieLabel = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
             roundedPanel1 = new CustomControls.RoundedPanel.RoundedPanel();
             EmpTabName = new Label();
@@ -62,13 +62,13 @@
             LogOutContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LogOutButton).BeginInit();
             ReportsContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ReportsButton).BeginInit();
             CustomersContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CustomersButton).BeginInit();
             RentalContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)RentalButton).BeginInit();
             MoviesContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)MovieButton).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
@@ -185,14 +185,14 @@
             // ReportsContainer
             // 
             ReportsContainer.Anchor = AnchorStyles.None;
-            ReportsContainer.BackColor = Color.Transparent;
+            ReportsContainer.BackColor = Color.FromArgb(84, 80, 164);
             ReportsContainer.BorderColor = Color.Transparent;
             ReportsContainer.BorderRadius = 10;
             ReportsContainer.BorderSize = 0;
             ReportsContainer.ColumnCount = 1;
             ReportsContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            ReportsContainer.Controls.Add(pictureBox3, 0, 0);
-            ReportsContainer.Controls.Add(label3, 0, 1);
+            ReportsContainer.Controls.Add(ReportsButton, 0, 0);
+            ReportsContainer.Controls.Add(ReportLabel, 0, 1);
             ReportsContainer.ForeColor = Color.Transparent;
             ReportsContainer.Location = new Point(10, 377);
             ReportsContainer.Name = "ReportsContainer";
@@ -202,33 +202,33 @@
             ReportsContainer.Size = new Size(80, 85);
             ReportsContainer.TabIndex = 8;
             // 
-            // pictureBox3
+            // ReportsButton
             // 
-            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox3.Image = Properties.Resources.report;
-            pictureBox3.Location = new Point(3, 4);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(74, 52);
-            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
+            ReportsButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ReportsButton.Image = Properties.Resources.report;
+            ReportsButton.Location = new Point(3, 4);
+            ReportsButton.Margin = new Padding(3, 4, 3, 4);
+            ReportsButton.Name = "ReportsButton";
+            ReportsButton.Size = new Size(74, 52);
+            ReportsButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            ReportsButton.TabIndex = 0;
+            ReportsButton.TabStop = false;
             // 
-            // label3
+            // ReportLabel
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(3, 60);
-            label3.Name = "label3";
-            label3.Size = new Size(74, 25);
-            label3.TabIndex = 1;
-            label3.Text = "Reports";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            ReportLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ReportLabel.ForeColor = SystemColors.Control;
+            ReportLabel.Location = new Point(3, 60);
+            ReportLabel.Name = "ReportLabel";
+            ReportLabel.Size = new Size(74, 25);
+            ReportLabel.TabIndex = 1;
+            ReportLabel.Text = "Reports";
+            ReportLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CustomersContainer
             // 
             CustomersContainer.Anchor = AnchorStyles.None;
-            CustomersContainer.BackColor = Color.FromArgb(84, 80, 164);
+            CustomersContainer.BackColor = Color.Transparent;
             CustomersContainer.BackgroundImageLayout = ImageLayout.None;
             CustomersContainer.BorderColor = Color.Transparent;
             CustomersContainer.BorderRadius = 10;
@@ -279,8 +279,8 @@
             RentalContainer.BorderSize = 0;
             RentalContainer.ColumnCount = 1;
             RentalContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            RentalContainer.Controls.Add(pictureBox2, 0, 0);
-            RentalContainer.Controls.Add(label2, 0, 1);
+            RentalContainer.Controls.Add(RentalButton, 0, 0);
+            RentalContainer.Controls.Add(RentalLabel, 0, 1);
             RentalContainer.ForeColor = Color.Transparent;
             RentalContainer.Location = new Point(10, 257);
             RentalContainer.Name = "RentalContainer";
@@ -290,28 +290,29 @@
             RentalContainer.Size = new Size(80, 85);
             RentalContainer.TabIndex = 7;
             // 
-            // pictureBox2
+            // RentalButton
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox2.Image = Properties.Resources.rental;
-            pictureBox2.Location = new Point(3, 4);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(74, 52);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            RentalButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            RentalButton.Image = Properties.Resources.rental;
+            RentalButton.Location = new Point(3, 4);
+            RentalButton.Margin = new Padding(3, 4, 3, 4);
+            RentalButton.Name = "RentalButton";
+            RentalButton.Size = new Size(74, 52);
+            RentalButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            RentalButton.TabIndex = 0;
+            RentalButton.TabStop = false;
+            RentalButton.Click += RentalsButton_Click;
             // 
-            // label2
+            // RentalLabel
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(3, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(74, 25);
-            label2.TabIndex = 1;
-            label2.Text = "Rental";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            RentalLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            RentalLabel.ForeColor = SystemColors.Control;
+            RentalLabel.Location = new Point(3, 60);
+            RentalLabel.Name = "RentalLabel";
+            RentalLabel.Size = new Size(74, 25);
+            RentalLabel.TabIndex = 1;
+            RentalLabel.Text = "Rental";
+            RentalLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MoviesContainer
             // 
@@ -322,8 +323,8 @@
             MoviesContainer.BorderSize = 0;
             MoviesContainer.ColumnCount = 1;
             MoviesContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            MoviesContainer.Controls.Add(pictureBox1, 0, 0);
-            MoviesContainer.Controls.Add(label1, 0, 1);
+            MoviesContainer.Controls.Add(MovieButton, 0, 0);
+            MoviesContainer.Controls.Add(MovieLabel, 0, 1);
             MoviesContainer.ForeColor = Color.Transparent;
             MoviesContainer.Location = new Point(10, 137);
             MoviesContainer.Name = "MoviesContainer";
@@ -333,29 +334,30 @@
             MoviesContainer.Size = new Size(80, 85);
             MoviesContainer.TabIndex = 6;
             // 
-            // pictureBox1
+            // MovieButton
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.Image = Properties.Resources.movies;
-            pictureBox1.Location = new Point(3, 4);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(74, 52);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            MovieButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            MovieButton.Image = Properties.Resources.movies;
+            MovieButton.Location = new Point(3, 4);
+            MovieButton.Margin = new Padding(3, 4, 3, 4);
+            MovieButton.Name = "MovieButton";
+            MovieButton.Size = new Size(74, 52);
+            MovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
+            MovieButton.TabIndex = 0;
+            MovieButton.TabStop = false;
+            MovieButton.Click += MoviesButton_Click;
             // 
-            // label1
+            // MovieLabel
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(3, 60);
-            label1.Name = "label1";
-            label1.Size = new Size(74, 25);
-            label1.TabIndex = 1;
-            label1.Text = "Movies";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+            MovieLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            MovieLabel.ForeColor = SystemColors.Control;
+            MovieLabel.Location = new Point(3, 60);
+            MovieLabel.Name = "MovieLabel";
+            MovieLabel.Size = new Size(74, 25);
+            MovieLabel.TabIndex = 1;
+            MovieLabel.Text = "Movies";
+            MovieLabel.TextAlign = ContentAlignment.MiddleCenter;
+            
             // 
             // tableLayoutPanel3
             // 
@@ -406,13 +408,13 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Customers";
+            EmpTabName.Text = "Report";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.customers;
+            SectionIcon.Image = Properties.Resources.report;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -530,7 +532,7 @@
             addCustomerButton.TextColor = Color.White;
             addCustomerButton.UseVisualStyleBackColor = false;
             // 
-            // mainMenu
+            // reportScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -538,9 +540,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "mainMenu";
+            Name = "reportScreen";
             Size = new Size(1301, 805);
-            Load += mainMenu_Load;
+            Load += reportScreen_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -549,13 +551,13 @@
             LogOutContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)LogOutButton).EndInit();
             ReportsContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ReportsButton).EndInit();
             CustomersContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)CustomersButton).EndInit();
             RentalContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RentalButton).EndInit();
             MoviesContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MovieButton).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             roundedPanel1.ResumeLayout(false);
             roundedPanel1.PerformLayout();
@@ -569,8 +571,6 @@
         }
 
         #endregion
-        private TableLayoutPanel LogOutContainer;
-
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
@@ -579,27 +579,33 @@
         private Label EmpTabName;
 
         private PictureBox CustomersButton;
+        private PictureBox MovieButton;
+        private PictureBox ReportsButton;
+        private PictureBox RentalButton;
         private PictureBox LogOutButton;
 
-        private Label CustomerLabel;
-        private Label LogoutLabel;
-        private DataGridView EmpDataView;
-        private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
-        private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
-        private TableLayoutPanel tableLayoutPanel4;
-        private TableLayoutPanel tableLayoutPanel6;
-        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private CustomControls.RoundedButton.RoundedButton addCustomerButton;
         private CustomControls.RoundedPanel.RoundedPanel CustomersContainer;
         private CustomControls.RoundedPanel.RoundedPanel ReportsContainer;
-        private PictureBox pictureBox3;
-        private Label label3;
         private CustomControls.RoundedPanel.RoundedPanel RentalContainer;
-        private PictureBox pictureBox2;
-        private Label label2;
         private CustomControls.RoundedPanel.RoundedPanel MoviesContainer;
-        private PictureBox pictureBox1;
-        private Label label1;
+        private TableLayoutPanel LogOutContainer;
+
+        private Label CustomerLabel;
+        private Label MovieLabel;
+        private Label RentalLabel;
+        private Label ReportLabel;
+        private Label LogoutLabel;
+
+        private DataGridView EmpDataView;
+
+        private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
+
+        private TableLayoutPanel tableLayoutPanel4;
+        private TableLayoutPanel tableLayoutPanel6;
+
+        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
+        private CustomControls.RoundedButton.RoundedButton addCustomerButton;
     }
 }

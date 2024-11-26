@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="AccountCreation.cs">
+    <Compile Update="Screens\AccountCreation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Components\RoundedButton.cs">
@@ -13,13 +13,10 @@
     <Compile Update="Components\RoundedTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="CustomerMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="Screens\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="mainMenu.cs">
+    <Compile Update="Screens\customerScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

@@ -23,6 +23,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Screens\reportScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\rentalScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\moviesScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
