@@ -13,11 +13,16 @@
     <Compile Update="Components\RoundedTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Screens\Login.cs">
+    <Compile Update="Screens\login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Screens\customerScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Components\RoundedTextBox.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

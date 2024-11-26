@@ -15,26 +15,27 @@ using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class customerScreen : UserControl
+    public partial class editCustomer : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
-        //Data
-        public List<Customer> Customers;
+        // Data
+        public List<Movie> Movies;
 
         // Custom Fonts
         private Font outfitFontS30Bold;
+        private Font outfitFontS14Bold;
         private Font outfitFontS10Bold;
         private Font outfitFontS8Bold;
 
         private Font outfitFontS12;
+        private Font outfitFontS14;
 
-        public customerScreen()
+        public editCustomer()
         {
             InitializeComponent();
 
-            Customers = RetrieveCustomers();
-            EmpDataView.DataSource = Customers;
+            Movies = RetrieveMovies();
 
             LoadCustomFont();
             ApplyFonts();
@@ -48,10 +49,12 @@ namespace movieRental
             pfcOutfit.AddFontFile(outfitFontPath);
 
             outfitFontS30Bold = new Font(pfcOutfit.Families[0], 30f, FontStyle.Bold);
+            outfitFontS14Bold = new Font(pfcOutfit.Families[0], 14f, FontStyle.Bold);
             outfitFontS10Bold = new Font(pfcOutfit.Families[0], 10f, FontStyle.Bold);
             outfitFontS8Bold = new Font(pfcOutfit.Families[0], 8f, FontStyle.Bold);
 
             outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
+            outfitFontS14 = new Font(pfcOutfit.Families[0], 14f, FontStyle.Regular);
         }
 
         private void ApplyFonts()
@@ -64,18 +67,36 @@ namespace movieRental
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
 
-            customerSearch.Font = outfitFontS12;
-            addCustomer.Font = outfitFontS10Bold;
+            FirstNameLabel.Font = outfitFontS14Bold;
+            LastNameLabel.Font = outfitFontS14Bold;
+            AddressLabel.Font = outfitFontS14Bold;
+            CityLabel.Font = outfitFontS14Bold;
+            ProvinceLabel.Font = outfitFontS14Bold;
+            PostalCodeLabel.Font = outfitFontS14Bold;
+            EmailLabel.Font = outfitFontS14Bold;
+            PhoneLabel.Font = outfitFontS14Bold;
+
+            FirstNameInput.Font = outfitFontS14;
+            LastNameInput.Font = outfitFontS14;
+            AddressInput.Font = outfitFontS14;
+            CityInput.Font = outfitFontS14;
+            ProvinceInput.Font = outfitFontS14;
+            PostalCodeInput.Font = outfitFontS14;
+            EmailInput.Font = outfitFontS14;
+            PhoneNumberInput.Font = outfitFontS14;
+
+            deleteCustomerButton.Font = outfitFontS10Bold;
+            saveChangesButton.Font = outfitFontS10Bold;
         }
 
         // Data Source
-        private List<Customer>? RetrieveCustomers()
+        private List<Movie> RetrieveMovies()
         {
-            var customers = new List<Customer>();
+            var movies = new List<Movie>();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                String nameQuery = "SELECT * FROM Customer";
+                String nameQuery = "SELECT * FROM Movie";
                 using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
                 {
 
@@ -85,12 +106,12 @@ namespace movieRental
 
                         while (myReader.Read())
                         {
-                            customers.Add(new Customer()
+                            movies.Add(new Movie()
                             {
-                                Name = myReader.GetString(1) + " " + myReader.GetString(2),
-                                Email = myReader.GetString(8),
-                                AccountNumber = myReader.GetInt32(7),
-                                CreationDate = myReader.GetDateTime(12)
+                                Title = myReader.GetString(1),
+                                Genre = myReader.GetString(2),
+                                Fee = myReader.GetDecimal(3),
+                                TotalCopies = myReader.GetInt32(4)
                             });
 
                         }
@@ -103,7 +124,7 @@ namespace movieRental
                     }
                 }
             }
-            return customers;
+            return movies;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -116,7 +137,7 @@ namespace movieRental
 
         }
 
-        private void customerScreen_Load(object sender, EventArgs e)
+        private void editCustomer_Load(object sender, EventArgs e)
         {
 
         }
@@ -202,17 +223,9 @@ namespace movieRental
 
         }
 
-        private void addCustomer_Click(object sender, EventArgs e)
+        private void roundedTextBox1__TextChanged(object sender, EventArgs e)
         {
-            addCustomer addCustomerInstance = new addCustomer();
-            Form parentForm = this.FindForm();
 
-            if (parentForm != null)
-            {
-                parentForm.Controls.Clear();
-                parentForm.Controls.Add(addCustomerInstance);
-                addCustomerInstance.Dock = DockStyle.Fill;
-            }
         }
     }
 }

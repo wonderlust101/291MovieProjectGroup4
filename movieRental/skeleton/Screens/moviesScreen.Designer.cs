@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class customerScreen
+    partial class moviesScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -54,8 +54,8 @@
             tableLayoutPanel4 = new TableLayoutPanel();
             EmpDataView = new DataGridView();
             tableLayoutPanel6 = new TableLayoutPanel();
-            customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addCustomer = new CustomControls.RoundedButton.RoundedButton();
+            movieSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
+            addMovieButton = new CustomControls.RoundedButton.RoundedButton();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -229,7 +229,7 @@
             // CustomersContainer
             // 
             CustomersContainer.Anchor = AnchorStyles.None;
-            CustomersContainer.BackColor = Color.FromArgb(84, 80, 164);
+            CustomersContainer.BackColor = Color.Transparent;
             CustomersContainer.BackgroundImageLayout = ImageLayout.None;
             CustomersContainer.BorderColor = Color.Transparent;
             CustomersContainer.BorderRadius = 10;
@@ -318,7 +318,7 @@
             // MoviesContainer
             // 
             MoviesContainer.Anchor = AnchorStyles.None;
-            MoviesContainer.BackColor = Color.Transparent;
+            MoviesContainer.BackColor = Color.FromArgb(84, 80, 164);
             MoviesContainer.BorderColor = Color.Transparent;
             MoviesContainer.BorderRadius = 10;
             MoviesContainer.BorderSize = 0;
@@ -346,7 +346,6 @@
             MovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
             MovieButton.TabIndex = 0;
             MovieButton.TabStop = false;
-            MovieButton.Click += MoviesButton_Click;
             // 
             // MovieLabel
             // 
@@ -408,14 +407,13 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Customer";
+            EmpTabName.Text = "Movies";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
-            EmpTabName.Click += EmpTabName_Click;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.customers;
+            SectionIcon.Image = Properties.Resources.movies;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -481,8 +479,8 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
-            tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
-            tableLayoutPanel6.Controls.Add(addCustomer, 0, 0);
+            tableLayoutPanel6.Controls.Add(movieSearch, 2, 0);
+            tableLayoutPanel6.Controls.Add(addMovieButton, 0, 0);
             tableLayoutPanel6.Location = new Point(0, 0);
             tableLayoutPanel6.Margin = new Padding(0);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -491,50 +489,49 @@
             tableLayoutPanel6.Size = new Size(1133, 60);
             tableLayoutPanel6.TabIndex = 5;
             // 
-            // customerSearch
+            // movieSearch
             // 
-            customerSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            customerSearch.BackColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            customerSearch.BorderRadius = 26;
-            customerSearch.BorderSize = 2;
-            customerSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            customerSearch.ForeColor = Color.White;
-            customerSearch.Location = new Point(730, 4);
-            customerSearch.Margin = new Padding(0);
-            customerSearch.Multiline = false;
-            customerSearch.Name = "customerSearch";
-            customerSearch.Padding = new Padding(20, 15, 20, 15);
-            customerSearch.PasswordChar = false;
-            customerSearch.PlaceholderColor = Color.DarkGray;
-            customerSearch.PlaceholderText = "Search for a customer";
-            customerSearch.Size = new Size(403, 51);
-            customerSearch.TabIndex = 0;
-            customerSearch.UnderlinedStyle = false;
+            movieSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            movieSearch.BackColor = Color.FromArgb(25, 26, 63);
+            movieSearch.BorderColor = Color.FromArgb(25, 26, 63);
+            movieSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            movieSearch.BorderRadius = 26;
+            movieSearch.BorderSize = 2;
+            movieSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            movieSearch.ForeColor = Color.White;
+            movieSearch.Location = new Point(730, 4);
+            movieSearch.Margin = new Padding(0);
+            movieSearch.Multiline = false;
+            movieSearch.Name = "movieSearch";
+            movieSearch.Padding = new Padding(20, 15, 20, 15);
+            movieSearch.PasswordChar = false;
+            movieSearch.PlaceholderColor = Color.DarkGray;
+            movieSearch.PlaceholderText = "Search for a movie";
+            movieSearch.Size = new Size(403, 51);
+            movieSearch.TabIndex = 0;
+            movieSearch.UnderlinedStyle = false;
             // 
-            // addCustomer
+            // addMovieButton
             // 
-            addCustomer.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addCustomer.BackColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BackgroundColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BorderColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BorderRadius = 26;
-            addCustomer.BorderSize = 0;
-            addCustomer.FlatAppearance.BorderSize = 0;
-            addCustomer.FlatStyle = FlatStyle.Flat;
-            addCustomer.ForeColor = Color.White;
-            addCustomer.Location = new Point(0, 5);
-            addCustomer.Margin = new Padding(0);
-            addCustomer.Name = "addCustomer";
-            addCustomer.Size = new Size(267, 50);
-            addCustomer.TabIndex = 1;
-            addCustomer.Text = "Add Customer";
-            addCustomer.TextColor = Color.White;
-            addCustomer.UseVisualStyleBackColor = false;
-            addCustomer.Click += addCustomer_Click;
+            addMovieButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addMovieButton.BackColor = Color.FromArgb(84, 80, 164);
+            addMovieButton.BackgroundColor = Color.FromArgb(84, 80, 164);
+            addMovieButton.BorderColor = Color.FromArgb(84, 80, 164);
+            addMovieButton.BorderRadius = 26;
+            addMovieButton.BorderSize = 0;
+            addMovieButton.FlatAppearance.BorderSize = 0;
+            addMovieButton.FlatStyle = FlatStyle.Flat;
+            addMovieButton.ForeColor = Color.White;
+            addMovieButton.Location = new Point(0, 5);
+            addMovieButton.Margin = new Padding(0);
+            addMovieButton.Name = "addMovieButton";
+            addMovieButton.Size = new Size(267, 50);
+            addMovieButton.TabIndex = 1;
+            addMovieButton.Text = "Add Movie";
+            addMovieButton.TextColor = Color.White;
+            addMovieButton.UseVisualStyleBackColor = false;
             // 
-            // customerScreen
+            // moviesScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -542,9 +539,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "customerScreen";
+            Name = "moviesScreen";
             Size = new Size(1301, 805);
-            Load += customerScreen_Load;
+            Load += moviesScreen_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -607,7 +604,7 @@
         private TableLayoutPanel tableLayoutPanel4;
         private TableLayoutPanel tableLayoutPanel6;
 
-        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private CustomControls.RoundedButton.RoundedButton addCustomer;
+        private CustomControls.RoundedTextBox.RoundedTextBox movieSearch;
+        private CustomControls.RoundedButton.RoundedButton addMovieButton;
     }
 }

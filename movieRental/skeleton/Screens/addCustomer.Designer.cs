@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class customerScreen
+    partial class addCustomer
     {
         /// <summary> 
         /// Required designer variable.
@@ -52,10 +52,28 @@
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            EmpDataView = new DataGridView();
+            addCustomerButton = new CustomControls.RoundedButton.RoundedButton();
+            tableLayoutPanel9 = new TableLayoutPanel();
+            EmailLabel = new Label();
+            PhoneLabel = new Label();
+            EmailInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            PhoneNumberInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            addPhoneNumberButton = new CustomControls.RoundedButton.RoundedButton();
+            tableLayoutPanel8 = new TableLayoutPanel();
+            CityLabel = new Label();
+            ProvinceLabel = new Label();
+            PostalCodeLabel = new Label();
+            CityInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            ProvinceInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            PostalCodeInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            AddressLabel = new Label();
+            AddressInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel6 = new TableLayoutPanel();
-            customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addCustomer = new CustomControls.RoundedButton.RoundedButton();
+            FirstNameLabel = new Label();
+            LastNameLabel = new Label();
+            FirstNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            LastNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -74,7 +92,9 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).BeginInit();
+            tableLayoutPanel9.SuspendLayout();
+            tableLayoutPanel8.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             SuspendLayout();
             // 
@@ -346,7 +366,6 @@
             MovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
             MovieButton.TabIndex = 0;
             MovieButton.TabStop = false;
-            MovieButton.Click += MoviesButton_Click;
             // 
             // MovieLabel
             // 
@@ -408,14 +427,14 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Customer";
+            EmpTabName.Text = "Add Customer";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
             EmpTabName.Click += EmpTabName_Click;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.customers;
+            SectionIcon.Image = Properties.Resources.addCustomer;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -450,91 +469,422 @@
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.ColumnCount = 1;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(EmpDataView, 0, 1);
+            tableLayoutPanel4.Controls.Add(addCustomerButton, 0, 5);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel9, 0, 3);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel8, 0, 2);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel7, 0, 1);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 0);
-            tableLayoutPanel4.Location = new Point(19, 19);
+            tableLayoutPanel4.Location = new Point(16, 16);
+            tableLayoutPanel4.Margin = new Padding(0);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel4.RowCount = 6;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(1133, 650);
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel4.Size = new Size(1139, 656);
             tableLayoutPanel4.TabIndex = 0;
             tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
-            // EmpDataView
+            // addCustomerButton
             // 
-            EmpDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EmpDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            EmpDataView.BorderStyle = BorderStyle.None;
-            EmpDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            EmpDataView.Location = new Point(0, 68);
-            EmpDataView.Margin = new Padding(0, 8, 0, 0);
-            EmpDataView.Name = "EmpDataView";
-            EmpDataView.RowHeadersWidth = 51;
-            EmpDataView.Size = new Size(1133, 582);
-            EmpDataView.TabIndex = 4;
+            addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addCustomerButton.BackColor = Color.MediumSlateBlue;
+            addCustomerButton.BackgroundColor = Color.MediumSlateBlue;
+            addCustomerButton.BorderColor = Color.Transparent;
+            addCustomerButton.BorderRadius = 26;
+            addCustomerButton.BorderSize = 0;
+            addCustomerButton.FlatAppearance.BorderSize = 0;
+            addCustomerButton.FlatStyle = FlatStyle.Flat;
+            addCustomerButton.ForeColor = Color.White;
+            addCustomerButton.Location = new Point(0, 601);
+            addCustomerButton.Margin = new Padding(0);
+            addCustomerButton.Name = "addCustomerButton";
+            addCustomerButton.Size = new Size(1139, 50);
+            addCustomerButton.TabIndex = 1;
+            addCustomerButton.Text = "Add Customer";
+            addCustomerButton.TextColor = Color.White;
+            addCustomerButton.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel9
+            // 
+            tableLayoutPanel9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel9.AutoSize = true;
+            tableLayoutPanel9.ColumnCount = 3;
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.99999F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.0000076F));
+            tableLayoutPanel9.Controls.Add(EmailLabel, 0, 0);
+            tableLayoutPanel9.Controls.Add(PhoneLabel, 2, 0);
+            tableLayoutPanel9.Controls.Add(EmailInput, 0, 2);
+            tableLayoutPanel9.Controls.Add(PhoneNumberInput, 2, 2);
+            tableLayoutPanel9.Controls.Add(addPhoneNumberButton, 2, 3);
+            tableLayoutPanel9.Location = new Point(0, 318);
+            tableLayoutPanel9.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel9.Name = "tableLayoutPanel9";
+            tableLayoutPanel9.RowCount = 6;
+            tableLayoutPanel9.RowStyles.Add(new RowStyle());
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle());
+            tableLayoutPanel9.RowStyles.Add(new RowStyle());
+            tableLayoutPanel9.RowStyles.Add(new RowStyle());
+            tableLayoutPanel9.RowStyles.Add(new RowStyle());
+            tableLayoutPanel9.Size = new Size(1139, 128);
+            tableLayoutPanel9.TabIndex = 4;
+            // 
+            // EmailLabel
+            // 
+            EmailLabel.AutoSize = true;
+            EmailLabel.Font = new Font("Segoe UI", 13.915966F);
+            EmailLabel.ForeColor = Color.White;
+            EmailLabel.Location = new Point(3, 0);
+            EmailLabel.Name = "EmailLabel";
+            EmailLabel.Size = new Size(79, 31);
+            EmailLabel.TabIndex = 1;
+            EmailLabel.Text = "E-mail";
+            // 
+            // PhoneLabel
+            // 
+            PhoneLabel.AutoSize = true;
+            PhoneLabel.Font = new Font("Segoe UI", 13.915966F);
+            PhoneLabel.ForeColor = Color.White;
+            PhoneLabel.Location = new Point(580, 0);
+            PhoneLabel.Name = "PhoneLabel";
+            PhoneLabel.Size = new Size(168, 31);
+            PhoneLabel.TabIndex = 2;
+            PhoneLabel.Text = "Phone Number";
+            // 
+            // EmailInput
+            // 
+            EmailInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            EmailInput.BackColor = Color.FromArgb(25, 26, 63);
+            EmailInput.BorderColor = Color.FromArgb(25, 26, 63);
+            EmailInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            EmailInput.BorderRadius = 26;
+            EmailInput.BorderSize = 2;
+            EmailInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailInput.ForeColor = Color.White;
+            EmailInput.Location = new Point(0, 39);
+            EmailInput.Margin = new Padding(0);
+            EmailInput.Multiline = false;
+            EmailInput.Name = "EmailInput";
+            EmailInput.Padding = new Padding(20, 15, 20, 15);
+            EmailInput.PasswordChar = false;
+            EmailInput.PlaceholderColor = Color.DarkGray;
+            EmailInput.PlaceholderText = "example@domain.com";
+            EmailInput.Size = new Size(561, 51);
+            EmailInput.TabIndex = 20;
+            EmailInput.UnderlinedStyle = false;
+            // 
+            // PhoneNumberInput
+            // 
+            PhoneNumberInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            PhoneNumberInput.BackColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput.BorderColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            PhoneNumberInput.BorderRadius = 26;
+            PhoneNumberInput.BorderSize = 2;
+            PhoneNumberInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PhoneNumberInput.ForeColor = Color.White;
+            PhoneNumberInput.Location = new Point(577, 39);
+            PhoneNumberInput.Margin = new Padding(0);
+            PhoneNumberInput.Multiline = false;
+            PhoneNumberInput.Name = "PhoneNumberInput";
+            PhoneNumberInput.Padding = new Padding(20, 15, 20, 15);
+            PhoneNumberInput.PasswordChar = false;
+            PhoneNumberInput.PlaceholderColor = Color.DarkGray;
+            PhoneNumberInput.PlaceholderText = "(780) 123-4567";
+            PhoneNumberInput.Size = new Size(562, 51);
+            PhoneNumberInput.TabIndex = 21;
+            PhoneNumberInput.UnderlinedStyle = false;
+            // 
+            // addPhoneNumberButton
+            // 
+            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addPhoneNumberButton.BackColor = Color.MediumSlateBlue;
+            addPhoneNumberButton.BackgroundColor = Color.MediumSlateBlue;
+            addPhoneNumberButton.BorderColor = Color.Transparent;
+            addPhoneNumberButton.BorderRadius = 16;
+            addPhoneNumberButton.BorderSize = 0;
+            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
+            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
+            addPhoneNumberButton.ForeColor = Color.White;
+            addPhoneNumberButton.Location = new Point(577, 98);
+            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
+            addPhoneNumberButton.Name = "addPhoneNumberButton";
+            addPhoneNumberButton.Size = new Size(562, 30);
+            addPhoneNumberButton.TabIndex = 22;
+            addPhoneNumberButton.Text = "Add Phone Number";
+            addPhoneNumberButton.TextColor = Color.White;
+            addPhoneNumberButton.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel8
+            // 
+            tableLayoutPanel8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel8.AutoSize = true;
+            tableLayoutPanel8.ColumnCount = 5;
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
+            tableLayoutPanel8.Controls.Add(CityLabel, 0, 0);
+            tableLayoutPanel8.Controls.Add(ProvinceLabel, 2, 0);
+            tableLayoutPanel8.Controls.Add(PostalCodeLabel, 4, 0);
+            tableLayoutPanel8.Controls.Add(CityInput, 0, 2);
+            tableLayoutPanel8.Controls.Add(ProvinceInput, 2, 2);
+            tableLayoutPanel8.Controls.Add(PostalCodeInput, 4, 2);
+            tableLayoutPanel8.Location = new Point(0, 212);
+            tableLayoutPanel8.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel8.Name = "tableLayoutPanel8";
+            tableLayoutPanel8.RowCount = 3;
+            tableLayoutPanel8.RowStyles.Add(new RowStyle());
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle());
+            tableLayoutPanel8.Size = new Size(1139, 90);
+            tableLayoutPanel8.TabIndex = 3;
+            // 
+            // CityLabel
+            // 
+            CityLabel.AutoSize = true;
+            CityLabel.Font = new Font("Segoe UI", 13.915966F);
+            CityLabel.ForeColor = Color.White;
+            CityLabel.Location = new Point(3, 0);
+            CityLabel.Name = "CityLabel";
+            CityLabel.Size = new Size(53, 31);
+            CityLabel.TabIndex = 1;
+            CityLabel.Text = "City";
+            // 
+            // ProvinceLabel
+            // 
+            ProvinceLabel.AutoSize = true;
+            ProvinceLabel.Font = new Font("Segoe UI", 13.915966F);
+            ProvinceLabel.ForeColor = Color.White;
+            ProvinceLabel.Location = new Point(387, 0);
+            ProvinceLabel.Name = "ProvinceLabel";
+            ProvinceLabel.Size = new Size(101, 31);
+            ProvinceLabel.TabIndex = 2;
+            ProvinceLabel.Text = "Province";
+            // 
+            // PostalCodeLabel
+            // 
+            PostalCodeLabel.AutoSize = true;
+            PostalCodeLabel.Font = new Font("Segoe UI", 13.915966F);
+            PostalCodeLabel.ForeColor = Color.White;
+            PostalCodeLabel.Location = new Point(772, 0);
+            PostalCodeLabel.Name = "PostalCodeLabel";
+            PostalCodeLabel.Size = new Size(134, 31);
+            PostalCodeLabel.TabIndex = 3;
+            PostalCodeLabel.Text = "Postal Code";
+            // 
+            // CityInput
+            // 
+            CityInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            CityInput.BackColor = Color.FromArgb(25, 26, 63);
+            CityInput.BorderColor = Color.FromArgb(25, 26, 63);
+            CityInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            CityInput.BorderRadius = 26;
+            CityInput.BorderSize = 2;
+            CityInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CityInput.ForeColor = Color.White;
+            CityInput.Location = new Point(0, 39);
+            CityInput.Margin = new Padding(0);
+            CityInput.Multiline = false;
+            CityInput.Name = "CityInput";
+            CityInput.Padding = new Padding(20, 15, 20, 15);
+            CityInput.PasswordChar = false;
+            CityInput.PlaceholderColor = Color.DarkGray;
+            CityInput.PlaceholderText = "Edmonton";
+            CityInput.Size = new Size(368, 51);
+            CityInput.TabIndex = 20;
+            CityInput.UnderlinedStyle = false;
+            // 
+            // ProvinceInput
+            // 
+            ProvinceInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            ProvinceInput.BackColor = Color.FromArgb(25, 26, 63);
+            ProvinceInput.BorderColor = Color.FromArgb(25, 26, 63);
+            ProvinceInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            ProvinceInput.BorderRadius = 26;
+            ProvinceInput.BorderSize = 2;
+            ProvinceInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ProvinceInput.ForeColor = Color.White;
+            ProvinceInput.Location = new Point(384, 39);
+            ProvinceInput.Margin = new Padding(0);
+            ProvinceInput.Multiline = false;
+            ProvinceInput.Name = "ProvinceInput";
+            ProvinceInput.Padding = new Padding(20, 15, 20, 15);
+            ProvinceInput.PasswordChar = false;
+            ProvinceInput.PlaceholderColor = Color.DarkGray;
+            ProvinceInput.PlaceholderText = "Alberta";
+            ProvinceInput.Size = new Size(369, 51);
+            ProvinceInput.TabIndex = 21;
+            ProvinceInput.UnderlinedStyle = false;
+            // 
+            // PostalCodeInput
+            // 
+            PostalCodeInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            PostalCodeInput.BackColor = Color.FromArgb(25, 26, 63);
+            PostalCodeInput.BorderColor = Color.FromArgb(25, 26, 63);
+            PostalCodeInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            PostalCodeInput.BorderRadius = 26;
+            PostalCodeInput.BorderSize = 2;
+            PostalCodeInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PostalCodeInput.ForeColor = Color.White;
+            PostalCodeInput.Location = new Point(769, 39);
+            PostalCodeInput.Margin = new Padding(0);
+            PostalCodeInput.Multiline = false;
+            PostalCodeInput.Name = "PostalCodeInput";
+            PostalCodeInput.Padding = new Padding(20, 15, 20, 15);
+            PostalCodeInput.PasswordChar = false;
+            PostalCodeInput.PlaceholderColor = Color.DarkGray;
+            PostalCodeInput.PlaceholderText = "T1T 1T1";
+            PostalCodeInput.Size = new Size(370, 51);
+            PostalCodeInput.TabIndex = 22;
+            PostalCodeInput.UnderlinedStyle = false;
+            // 
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel7.AutoSize = true;
+            tableLayoutPanel7.ColumnCount = 1;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Controls.Add(AddressLabel, 0, 0);
+            tableLayoutPanel7.Controls.Add(AddressInput, 0, 2);
+            tableLayoutPanel7.Location = new Point(0, 106);
+            tableLayoutPanel7.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 3;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle());
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle());
+            tableLayoutPanel7.Size = new Size(1139, 90);
+            tableLayoutPanel7.TabIndex = 2;
+            // 
+            // AddressLabel
+            // 
+            AddressLabel.AutoSize = true;
+            AddressLabel.Font = new Font("Segoe UI", 13.915966F);
+            AddressLabel.ForeColor = Color.White;
+            AddressLabel.Location = new Point(3, 0);
+            AddressLabel.Name = "AddressLabel";
+            AddressLabel.Size = new Size(97, 31);
+            AddressLabel.TabIndex = 1;
+            AddressLabel.Text = "Address";
+            // 
+            // AddressInput
+            // 
+            AddressInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            AddressInput.BackColor = Color.FromArgb(25, 26, 63);
+            AddressInput.BorderColor = Color.FromArgb(25, 26, 63);
+            AddressInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            AddressInput.BorderRadius = 26;
+            AddressInput.BorderSize = 2;
+            AddressInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddressInput.ForeColor = Color.White;
+            AddressInput.Location = new Point(0, 39);
+            AddressInput.Margin = new Padding(0);
+            AddressInput.Multiline = false;
+            AddressInput.Name = "AddressInput";
+            AddressInput.Padding = new Padding(20, 15, 20, 15);
+            AddressInput.PasswordChar = false;
+            AddressInput.PlaceholderColor = Color.DarkGray;
+            AddressInput.PlaceholderText = "1234 56 Street";
+            AddressInput.Size = new Size(1139, 51);
+            AddressInput.TabIndex = 20;
+            AddressInput.UnderlinedStyle = false;
             // 
             // tableLayoutPanel6
             // 
-            tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel6.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel6.AutoSize = true;
             tableLayoutPanel6.ColumnCount = 3;
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
-            tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
-            tableLayoutPanel6.Controls.Add(addCustomer, 0, 0);
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel6.Controls.Add(FirstNameLabel, 0, 0);
+            tableLayoutPanel6.Controls.Add(LastNameLabel, 2, 0);
+            tableLayoutPanel6.Controls.Add(FirstNameInput, 0, 2);
+            tableLayoutPanel6.Controls.Add(LastNameInput, 2, 2);
             tableLayoutPanel6.Location = new Point(0, 0);
-            tableLayoutPanel6.Margin = new Padding(0);
+            tableLayoutPanel6.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 1;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new Size(1133, 60);
-            tableLayoutPanel6.TabIndex = 5;
+            tableLayoutPanel6.RowCount = 3;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle());
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle());
+            tableLayoutPanel6.Size = new Size(1139, 90);
+            tableLayoutPanel6.TabIndex = 1;
             // 
-            // customerSearch
+            // FirstNameLabel
             // 
-            customerSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            customerSearch.BackColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            customerSearch.BorderRadius = 26;
-            customerSearch.BorderSize = 2;
-            customerSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            customerSearch.ForeColor = Color.White;
-            customerSearch.Location = new Point(730, 4);
-            customerSearch.Margin = new Padding(0);
-            customerSearch.Multiline = false;
-            customerSearch.Name = "customerSearch";
-            customerSearch.Padding = new Padding(20, 15, 20, 15);
-            customerSearch.PasswordChar = false;
-            customerSearch.PlaceholderColor = Color.DarkGray;
-            customerSearch.PlaceholderText = "Search for a customer";
-            customerSearch.Size = new Size(403, 51);
-            customerSearch.TabIndex = 0;
-            customerSearch.UnderlinedStyle = false;
+            FirstNameLabel.AutoSize = true;
+            FirstNameLabel.Font = new Font("Segoe UI", 13.915966F);
+            FirstNameLabel.ForeColor = Color.White;
+            FirstNameLabel.Location = new Point(3, 0);
+            FirstNameLabel.Name = "FirstNameLabel";
+            FirstNameLabel.Size = new Size(124, 31);
+            FirstNameLabel.TabIndex = 0;
+            FirstNameLabel.Text = "First Name";
+            // 
+            // LastNameLabel
+            // 
+            LastNameLabel.AutoSize = true;
+            LastNameLabel.Font = new Font("Segoe UI", 13.915966F);
+            LastNameLabel.ForeColor = Color.White;
+            LastNameLabel.Location = new Point(580, 0);
+            LastNameLabel.Name = "LastNameLabel";
+            LastNameLabel.Size = new Size(122, 31);
+            LastNameLabel.TabIndex = 1;
+            LastNameLabel.Text = "Last Name";
+            // 
+            // FirstNameInput
+            // 
+            FirstNameInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            FirstNameInput.BackColor = Color.FromArgb(25, 26, 63);
+            FirstNameInput.BorderColor = Color.FromArgb(25, 26, 63);
+            FirstNameInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            FirstNameInput.BorderRadius = 26;
+            FirstNameInput.BorderSize = 2;
+            FirstNameInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FirstNameInput.ForeColor = Color.White;
+            FirstNameInput.Location = new Point(0, 39);
+            FirstNameInput.Margin = new Padding(0);
+            FirstNameInput.Multiline = false;
+            FirstNameInput.Name = "FirstNameInput";
+            FirstNameInput.Padding = new Padding(20, 15, 20, 15);
+            FirstNameInput.PasswordChar = false;
+            FirstNameInput.PlaceholderColor = Color.DarkGray;
+            FirstNameInput.PlaceholderText = "John";
+            FirstNameInput.Size = new Size(561, 51);
+            FirstNameInput.TabIndex = 19;
+            FirstNameInput.UnderlinedStyle = false;
+            // 
+            // LastNameInput
+            // 
+            LastNameInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            LastNameInput.BackColor = Color.FromArgb(25, 26, 63);
+            LastNameInput.BorderColor = Color.FromArgb(25, 26, 63);
+            LastNameInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            LastNameInput.BorderRadius = 26;
+            LastNameInput.BorderSize = 2;
+            LastNameInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LastNameInput.ForeColor = Color.White;
+            LastNameInput.Location = new Point(577, 39);
+            LastNameInput.Margin = new Padding(0);
+            LastNameInput.Multiline = false;
+            LastNameInput.Name = "LastNameInput";
+            LastNameInput.Padding = new Padding(20, 15, 20, 15);
+            LastNameInput.PasswordChar = false;
+            LastNameInput.PlaceholderColor = Color.DarkGray;
+            LastNameInput.PlaceholderText = "Doe";
+            LastNameInput.Size = new Size(562, 51);
+            LastNameInput.TabIndex = 20;
+            LastNameInput.UnderlinedStyle = false;
             // 
             // addCustomer
-            // 
-            addCustomer.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addCustomer.BackColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BackgroundColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BorderColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BorderRadius = 26;
-            addCustomer.BorderSize = 0;
-            addCustomer.FlatAppearance.BorderSize = 0;
-            addCustomer.FlatStyle = FlatStyle.Flat;
-            addCustomer.ForeColor = Color.White;
-            addCustomer.Location = new Point(0, 5);
-            addCustomer.Margin = new Padding(0);
-            addCustomer.Name = "addCustomer";
-            addCustomer.Size = new Size(267, 50);
-            addCustomer.TabIndex = 1;
-            addCustomer.Text = "Add Customer";
-            addCustomer.TextColor = Color.White;
-            addCustomer.UseVisualStyleBackColor = false;
-            addCustomer.Click += addCustomer_Click;
-            // 
-            // customerScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -542,9 +892,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "customerScreen";
+            Name = "addCustomer";
             Size = new Size(1301, 805);
-            Load += customerScreen_Load;
+            Load += addCustomer_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -566,8 +916,15 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).EndInit();
+            tableLayoutPanel4.PerformLayout();
+            tableLayoutPanel9.ResumeLayout(false);
+            tableLayoutPanel9.PerformLayout();
+            tableLayoutPanel8.ResumeLayout(false);
+            tableLayoutPanel8.PerformLayout();
+            tableLayoutPanel7.ResumeLayout(false);
+            tableLayoutPanel7.PerformLayout();
             tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -598,16 +955,35 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
-        private DataGridView EmpDataView;
-
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
 
         private TableLayoutPanel tableLayoutPanel4;
+        private TableLayoutPanel tableLayoutPanel9;
+        private TableLayoutPanel tableLayoutPanel8;
+        private TableLayoutPanel tableLayoutPanel7;
         private TableLayoutPanel tableLayoutPanel6;
 
-        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private CustomControls.RoundedButton.RoundedButton addCustomer;
+        private Label FirstNameLabel;
+        private Label LastNameLabel;
+        private Label AddressLabel;
+        private Label CityLabel;
+        private Label ProvinceLabel;
+        private Label PostalCodeLabel;
+        private Label EmailLabel;
+        private Label PhoneLabel;
+
+        private CustomControls.RoundedTextBox.RoundedTextBox FirstNameInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox LastNameInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox AddressInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox CityInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox ProvinceInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox PostalCodeInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox EmailInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox PhoneNumberInput;
+
+        private CustomControls.RoundedButton.RoundedButton addCustomerButton;
+        private CustomControls.RoundedButton.RoundedButton addPhoneNumberButton;
     }
 }
