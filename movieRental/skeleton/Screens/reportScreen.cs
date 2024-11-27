@@ -11,16 +11,25 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
 using System.Configuration;
+using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class mainMenu : UserControl
+    public partial class reportScreen : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
+        // Data
         public List<Customer> Customers;
         public List<Movie> Movies;
-        public mainMenu()
+
+        // Custom Fonts
+        private Font outfitFontS30Bold;
+        private Font outfitFontS10Bold;
+        private Font outfitFontS8Bold;
+
+        private Font outfitFontS12;
+        public reportScreen()
         {
             InitializeComponent();
 
@@ -28,8 +37,39 @@ namespace movieRental
             Movies = RetrieveMovies();
             EmpDataView.DataSource = Customers;
 
+            LoadCustomFont();
+            ApplyFonts();
         }
 
+        //Custom Fonts
+        private void LoadCustomFont()
+        {
+            PrivateFontCollection pfcOutfit = new PrivateFontCollection();
+            string outfitFontPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Outfit-VariableFont_wght.ttf");
+            pfcOutfit.AddFontFile(outfitFontPath);
+
+            outfitFontS30Bold = new Font(pfcOutfit.Families[0], 30f, FontStyle.Bold);
+            outfitFontS10Bold = new Font(pfcOutfit.Families[0], 10f, FontStyle.Bold);
+            outfitFontS8Bold = new Font(pfcOutfit.Families[0], 8f, FontStyle.Bold);
+
+            outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
+        }
+
+        private void ApplyFonts()
+        {
+            EmpTabName.Font = outfitFontS30Bold;
+
+            CustomerLabel.Font = outfitFontS8Bold;
+            MovieLabel.Font = outfitFontS8Bold;
+            RentalLabel.Font = outfitFontS8Bold;
+            ReportLabel.Font = outfitFontS8Bold;
+            LogoutLabel.Font = outfitFontS8Bold;
+
+            customerSearch.Font = outfitFontS12;
+            addCustomerButton.Font = outfitFontS10Bold;
+        }
+
+        // Data Source
         private List<Movie> RetrieveMovies()
         {
             var movies = new List<Movie>();
@@ -114,7 +154,7 @@ namespace movieRental
 
         }
 
-        private void mainMenu_Load(object sender, EventArgs e)
+        private void reportScreen_Load(object sender, EventArgs e)
         {
 
         }
@@ -125,52 +165,54 @@ namespace movieRental
 
         private void CustomersButton_Click(object sender, EventArgs e)
         {
-            //Menu Styles
-            ResetContainerColors();
-            CustomersContainer.BackColor = Color.FromArgb(84, 80, 164);
+            customerScreen customerScreenInstance = new customerScreen();
+            Form parentForm = this.FindForm();
 
-            // Header Styles
-            EmpTabName.Text = "Customers";
-            SectionIcon.Image = Properties.Resources.customers;
-
-
-            EmpDataView.DataSource = Customers;
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(customerScreenInstance);
+                customerScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void MoviesButton_Click(object sender, EventArgs e)
         {
-            //Menu Styles
-            ResetContainerColors();
-            MoviesContainer.BackColor = Color.FromArgb(84, 80, 164);
+            moviesScreen moviesScreenInstance = new moviesScreen();
+            Form parentForm = this.FindForm();
 
-            // Header Styles
-            EmpTabName.Text = "Movies";
-            SectionIcon.Image = Properties.Resources.movies;
-
-            EmpDataView.DataSource = Movies;
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(moviesScreenInstance);
+                moviesScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void RentalsButton_Click(object sender, EventArgs e)
         {
-            //Menu Styles
-            ResetContainerColors();
-            RentalContainer.BackColor = Color.FromArgb(84, 80, 164);
+            rentalScreen rentalScreenInstance = new rentalScreen();
+            Form parentForm = this.FindForm();
 
-
-            // Header Styles
-            EmpTabName.Text = "Rentals";
-            SectionIcon.Image = Properties.Resources.rental;
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(rentalScreenInstance);
+                rentalScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void ReportsButton_Click(object sender, EventArgs e)
         {
-            //Menu Styles
-            ResetContainerColors();
-            ReportsContainer.BackColor = Color.FromArgb(84, 80, 164);
+            reportScreen reportScreenInstance = new reportScreen();
+            Form parentForm = this.FindForm();
 
-            // Header Styles
-            EmpTabName.Text = "Reports";
-            SectionIcon.Image = Properties.Resources.report;
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(reportScreenInstance);
+                reportScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void ResetContainerColors()
@@ -179,6 +221,26 @@ namespace movieRental
             MoviesContainer.BackColor = Color.Transparent;
             RentalContainer.BackColor = Color.Transparent;
             ReportsContainer.BackColor = Color.Transparent;
+        }
+
+        private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void roundedPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
