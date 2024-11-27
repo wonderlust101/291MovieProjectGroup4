@@ -55,7 +55,7 @@
             EmpDataView = new DataGridView();
             tableLayoutPanel6 = new TableLayoutPanel();
             movieSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addMovieButton = new CustomControls.RoundedButton.RoundedButton();
+            addMovieButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -515,20 +515,14 @@
             // 
             addMovieButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             addMovieButton.BackColor = Color.FromArgb(84, 80, 164);
-            addMovieButton.BackgroundColor = Color.FromArgb(84, 80, 164);
-            addMovieButton.BorderColor = Color.FromArgb(84, 80, 164);
-            addMovieButton.BorderRadius = 26;
-            addMovieButton.BorderSize = 0;
             addMovieButton.FlatAppearance.BorderSize = 0;
             addMovieButton.FlatStyle = FlatStyle.Flat;
             addMovieButton.ForeColor = Color.White;
-            addMovieButton.Location = new Point(0, 5);
-            addMovieButton.Margin = new Padding(0);
+            addMovieButton.Location = new Point(3, 5);
             addMovieButton.Name = "addMovieButton";
-            addMovieButton.Size = new Size(267, 50);
-            addMovieButton.TabIndex = 1;
+            addMovieButton.Size = new Size(261, 50);
+            addMovieButton.TabIndex = 20;
             addMovieButton.Text = "Add Movie";
-            addMovieButton.TextColor = Color.White;
             addMovieButton.UseVisualStyleBackColor = false;
             // 
             // moviesScreen
@@ -605,6 +599,6 @@
         private TableLayoutPanel tableLayoutPanel6;
 
         private CustomControls.RoundedTextBox.RoundedTextBox movieSearch;
-        private CustomControls.RoundedButton.RoundedButton addMovieButton;
+        private Button addMovieButton;
     }
 }
