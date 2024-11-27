@@ -46,8 +46,8 @@
             tableLayoutPanel8 = new TableLayoutPanel();
             pictureBox3 = new PictureBox();
             passWord = new CustomControls.RoundedTextBox.RoundedTextBox();
-            loginButton = new CustomControls.RoundedButton.RoundedButton();
-            CreateAccount = new CustomControls.RoundedButton.RoundedButton();
+            loginButton = new Button();
+            CreateAccount = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
@@ -202,10 +202,10 @@
             tableLayoutPanel5.AutoSize = true;
             tableLayoutPanel5.ColumnCount = 1;
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Controls.Add(CreateAccount, 0, 3);
             tableLayoutPanel5.Controls.Add(tableLayoutPanel3, 0, 0);
             tableLayoutPanel5.Controls.Add(tableLayoutPanel4, 0, 1);
             tableLayoutPanel5.Controls.Add(loginButton, 0, 2);
-            tableLayoutPanel5.Controls.Add(CreateAccount, 0, 3);
             tableLayoutPanel5.Location = new Point(720, 204);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 4;
@@ -352,19 +352,14 @@
             // 
             loginButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             loginButton.BackColor = Color.FromArgb(84, 80, 164);
-            loginButton.BackgroundColor = Color.FromArgb(84, 80, 164);
-            loginButton.BorderColor = Color.FromArgb(84, 80, 164);
-            loginButton.BorderRadius = 25;
-            loginButton.BorderSize = 0;
             loginButton.FlatAppearance.BorderSize = 0;
             loginButton.FlatStyle = FlatStyle.Flat;
             loginButton.ForeColor = Color.White;
             loginButton.Location = new Point(3, 298);
             loginButton.Name = "loginButton";
             loginButton.Size = new Size(510, 50);
-            loginButton.TabIndex = 15;
+            loginButton.TabIndex = 17;
             loginButton.Text = "Login";
-            loginButton.TextColor = Color.White;
             loginButton.UseVisualStyleBackColor = false;
             loginButton.Click += loginClick;
             // 
@@ -372,23 +367,18 @@
             // 
             CreateAccount.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             CreateAccount.BackColor = Color.FromArgb(84, 80, 164);
-            CreateAccount.BackgroundColor = Color.FromArgb(84, 80, 164);
-            CreateAccount.BorderColor = Color.FromArgb(84, 80, 164);
-            CreateAccount.BorderRadius = 25;
-            CreateAccount.BorderSize = 0;
             CreateAccount.FlatAppearance.BorderSize = 0;
             CreateAccount.FlatStyle = FlatStyle.Flat;
             CreateAccount.ForeColor = Color.White;
             CreateAccount.Location = new Point(3, 373);
             CreateAccount.Name = "CreateAccount";
             CreateAccount.Size = new Size(510, 50);
-            CreateAccount.TabIndex = 16;
-            CreateAccount.Text = "Create a New Account";
-            CreateAccount.TextColor = Color.White;
+            CreateAccount.TabIndex = 18;
+            CreateAccount.Text = "Create an Account";
             CreateAccount.UseVisualStyleBackColor = false;
             CreateAccount.Click += CreateAccount_Click;
             // 
-            // Form1
+            // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -396,7 +386,7 @@
             ClientSize = new Size(1305, 800);
             Controls.Add(tableLayoutPanel1);
             ForeColor = Color.FromArgb(118, 119, 141);
-            Name = "Form1";
+            Name = "Login";
             Text = "Movie Rental System";
             Load += formLoad;
             tableLayoutPanel1.ResumeLayout(false);
@@ -438,9 +428,9 @@
         private PictureBox pictureBox2;
         private TableLayoutPanel tableLayoutPanel8;
         private PictureBox pictureBox3;
-        private CustomControls.RoundedButton.RoundedButton loginButton;
-        private CustomControls.RoundedButton.RoundedButton CreateAccount;
         private CustomControls.RoundedTextBox.RoundedTextBox userName;
         private CustomControls.RoundedTextBox.RoundedTextBox passWord;
+        private Button CreateAccount;
+        private Button loginButton;
     }
 }

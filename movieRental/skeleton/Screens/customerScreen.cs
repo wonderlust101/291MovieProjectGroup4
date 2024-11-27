@@ -65,7 +65,7 @@ namespace movieRental
             LogoutLabel.Font = outfitFontS8Bold;
 
             customerSearch.Font = outfitFontS12;
-            addCustomer.Font = outfitFontS10Bold;
+            addCustomerButton.Font = outfitFontS10Bold;
         }
 
         // Data Source
