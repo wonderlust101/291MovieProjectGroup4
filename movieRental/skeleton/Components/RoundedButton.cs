@@ -94,8 +94,13 @@ namespace CustomControls.RoundedButton
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            base.OnPaint(pevent);
+            if (this.Parent == null)
+            {
+                // Skip painting if no parent exists
+                return;
+            }
 
+            base.OnPaint(pevent);
 
             Rectangle rectSurface = this.ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);

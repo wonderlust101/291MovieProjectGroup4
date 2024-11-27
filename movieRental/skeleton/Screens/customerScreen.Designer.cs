@@ -55,7 +55,7 @@
             EmpDataView = new DataGridView();
             tableLayoutPanel6 = new TableLayoutPanel();
             customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addCustomer = new CustomControls.RoundedButton.RoundedButton();
+            addCustomerButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -481,8 +481,8 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
+            tableLayoutPanel6.Controls.Add(addCustomerButton, 0, 0);
             tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
-            tableLayoutPanel6.Controls.Add(addCustomer, 0, 0);
             tableLayoutPanel6.Location = new Point(0, 0);
             tableLayoutPanel6.Margin = new Padding(0);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -513,26 +513,19 @@
             customerSearch.TabIndex = 0;
             customerSearch.UnderlinedStyle = false;
             // 
-            // addCustomer
+            // addCustomerButton
             // 
-            addCustomer.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addCustomer.BackColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BackgroundColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BorderColor = Color.FromArgb(84, 80, 164);
-            addCustomer.BorderRadius = 26;
-            addCustomer.BorderSize = 0;
-            addCustomer.FlatAppearance.BorderSize = 0;
-            addCustomer.FlatStyle = FlatStyle.Flat;
-            addCustomer.ForeColor = Color.White;
-            addCustomer.Location = new Point(0, 5);
-            addCustomer.Margin = new Padding(0);
-            addCustomer.Name = "addCustomer";
-            addCustomer.Size = new Size(267, 50);
-            addCustomer.TabIndex = 1;
-            addCustomer.Text = "Add Customer";
-            addCustomer.TextColor = Color.White;
-            addCustomer.UseVisualStyleBackColor = false;
-            addCustomer.Click += addCustomer_Click;
+            addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addCustomerButton.BackColor = Color.FromArgb(84, 80, 164);
+            addCustomerButton.FlatAppearance.BorderSize = 0;
+            addCustomerButton.FlatStyle = FlatStyle.Flat;
+            addCustomerButton.ForeColor = Color.White;
+            addCustomerButton.Location = new Point(3, 5);
+            addCustomerButton.Name = "addCustomerButton";
+            addCustomerButton.Size = new Size(261, 50);
+            addCustomerButton.TabIndex = 20;
+            addCustomerButton.Text = "Add Customer";
+            addCustomerButton.UseVisualStyleBackColor = false;
             // 
             // customerScreen
             // 
@@ -608,6 +601,6 @@
         private TableLayoutPanel tableLayoutPanel6;
 
         private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private CustomControls.RoundedButton.RoundedButton addCustomer;
+        private Button addCustomerButton;
     }
 }

@@ -55,7 +55,7 @@
             EmpDataView = new DataGridView();
             tableLayoutPanel6 = new TableLayoutPanel();
             customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addCustomerButton = new CustomControls.RoundedButton.RoundedButton();
+            addCustomerButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -479,8 +479,8 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
-            tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
             tableLayoutPanel6.Controls.Add(addCustomerButton, 0, 0);
+            tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
             tableLayoutPanel6.Location = new Point(0, 0);
             tableLayoutPanel6.Margin = new Padding(0);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -515,20 +515,14 @@
             // 
             addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             addCustomerButton.BackColor = Color.FromArgb(84, 80, 164);
-            addCustomerButton.BackgroundColor = Color.FromArgb(84, 80, 164);
-            addCustomerButton.BorderColor = Color.FromArgb(84, 80, 164);
-            addCustomerButton.BorderRadius = 26;
-            addCustomerButton.BorderSize = 0;
             addCustomerButton.FlatAppearance.BorderSize = 0;
             addCustomerButton.FlatStyle = FlatStyle.Flat;
             addCustomerButton.ForeColor = Color.White;
-            addCustomerButton.Location = new Point(0, 5);
-            addCustomerButton.Margin = new Padding(0);
+            addCustomerButton.Location = new Point(3, 5);
             addCustomerButton.Name = "addCustomerButton";
-            addCustomerButton.Size = new Size(267, 50);
-            addCustomerButton.TabIndex = 1;
+            addCustomerButton.Size = new Size(261, 50);
+            addCustomerButton.TabIndex = 21;
             addCustomerButton.Text = "Add Customer";
-            addCustomerButton.TextColor = Color.White;
             addCustomerButton.UseVisualStyleBackColor = false;
             // 
             // rentalScreen
@@ -605,6 +599,6 @@
         private TableLayoutPanel tableLayoutPanel6;
 
         private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private CustomControls.RoundedButton.RoundedButton addCustomerButton;
+        private Button addCustomerButton;
     }
 }

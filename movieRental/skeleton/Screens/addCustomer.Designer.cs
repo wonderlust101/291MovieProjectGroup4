@@ -52,13 +52,11 @@
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            addCustomerButton = new CustomControls.RoundedButton.RoundedButton();
             tableLayoutPanel9 = new TableLayoutPanel();
             EmailLabel = new Label();
             PhoneLabel = new Label();
             EmailInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             PhoneNumberInput = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addPhoneNumberButton = new CustomControls.RoundedButton.RoundedButton();
             tableLayoutPanel8 = new TableLayoutPanel();
             CityLabel = new Label();
             ProvinceLabel = new Label();
@@ -74,6 +72,8 @@
             LastNameLabel = new Label();
             FirstNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             LastNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            addCustomerButton = new Button();
+            addPhoneNumberButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -469,11 +469,11 @@
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.ColumnCount = 1;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(addCustomerButton, 0, 5);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel9, 0, 3);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel8, 0, 2);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel7, 0, 1);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 0);
+            tableLayoutPanel4.Controls.Add(addCustomerButton, 0, 5);
             tableLayoutPanel4.Location = new Point(16, 16);
             tableLayoutPanel4.Margin = new Padding(0);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -487,26 +487,6 @@
             tableLayoutPanel4.Size = new Size(1139, 656);
             tableLayoutPanel4.TabIndex = 0;
             tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
-            // 
-            // addCustomerButton
-            // 
-            addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addCustomerButton.BackColor = Color.MediumSlateBlue;
-            addCustomerButton.BackgroundColor = Color.MediumSlateBlue;
-            addCustomerButton.BorderColor = Color.Transparent;
-            addCustomerButton.BorderRadius = 26;
-            addCustomerButton.BorderSize = 0;
-            addCustomerButton.FlatAppearance.BorderSize = 0;
-            addCustomerButton.FlatStyle = FlatStyle.Flat;
-            addCustomerButton.ForeColor = Color.White;
-            addCustomerButton.Location = new Point(0, 601);
-            addCustomerButton.Margin = new Padding(0);
-            addCustomerButton.Name = "addCustomerButton";
-            addCustomerButton.Size = new Size(1139, 50);
-            addCustomerButton.TabIndex = 1;
-            addCustomerButton.Text = "Add Customer";
-            addCustomerButton.TextColor = Color.White;
-            addCustomerButton.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel9
             // 
@@ -599,26 +579,6 @@
             PhoneNumberInput.Size = new Size(562, 51);
             PhoneNumberInput.TabIndex = 21;
             PhoneNumberInput.UnderlinedStyle = false;
-            // 
-            // addPhoneNumberButton
-            // 
-            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addPhoneNumberButton.BackColor = Color.MediumSlateBlue;
-            addPhoneNumberButton.BackgroundColor = Color.MediumSlateBlue;
-            addPhoneNumberButton.BorderColor = Color.Transparent;
-            addPhoneNumberButton.BorderRadius = 16;
-            addPhoneNumberButton.BorderSize = 0;
-            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
-            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
-            addPhoneNumberButton.ForeColor = Color.White;
-            addPhoneNumberButton.Location = new Point(577, 98);
-            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
-            addPhoneNumberButton.Name = "addPhoneNumberButton";
-            addPhoneNumberButton.Size = new Size(562, 30);
-            addPhoneNumberButton.TabIndex = 22;
-            addPhoneNumberButton.Text = "Add Phone Number";
-            addPhoneNumberButton.TextColor = Color.White;
-            addPhoneNumberButton.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel8
             // 
@@ -884,6 +844,35 @@
             LastNameInput.TabIndex = 20;
             LastNameInput.UnderlinedStyle = false;
             // 
+            // addCustomerButton
+            // 
+            addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addCustomerButton.BackColor = Color.FromArgb(84, 80, 164);
+            addCustomerButton.FlatAppearance.BorderSize = 0;
+            addCustomerButton.FlatStyle = FlatStyle.Flat;
+            addCustomerButton.ForeColor = Color.White;
+            addCustomerButton.Location = new Point(3, 601);
+            addCustomerButton.Name = "addCustomerButton";
+            addCustomerButton.Size = new Size(1133, 50);
+            addCustomerButton.TabIndex = 19;
+            addCustomerButton.Text = "Add Customer";
+            addCustomerButton.UseVisualStyleBackColor = false;
+            // 
+            // addPhoneNumberButton
+            // 
+            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addPhoneNumberButton.BackColor = Color.FromArgb(84, 80, 164);
+            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
+            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
+            addPhoneNumberButton.ForeColor = Color.White;
+            addPhoneNumberButton.Location = new Point(577, 98);
+            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
+            addPhoneNumberButton.Name = "addPhoneNumberButton";
+            addPhoneNumberButton.Size = new Size(562, 30);
+            addPhoneNumberButton.TabIndex = 20;
+            addPhoneNumberButton.Text = "Add Phone Number";
+            addPhoneNumberButton.UseVisualStyleBackColor = false;
+            // 
             // addCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -982,8 +971,7 @@
         private CustomControls.RoundedTextBox.RoundedTextBox PostalCodeInput;
         private CustomControls.RoundedTextBox.RoundedTextBox EmailInput;
         private CustomControls.RoundedTextBox.RoundedTextBox PhoneNumberInput;
-
-        private CustomControls.RoundedButton.RoundedButton addCustomerButton;
-        private CustomControls.RoundedButton.RoundedButton addPhoneNumberButton;
+        private Button addPhoneNumberButton;
+        private Button addCustomerButton;
     }
 }
