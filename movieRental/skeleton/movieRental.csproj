@@ -9,10 +9,44 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Outfit-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Outfit-VariableFont_wght.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Screens\editMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\addMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\editCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\addCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\customerQueue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\reportScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\rentalScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\moviesScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

@@ -14,9 +14,7 @@ C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\refint\mo
 C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.pdb
 C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\movieRental.genruntimeconfig.cache
 C:\Users\moses\Desktop\skel\skeleton\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
-C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.exe
-C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.deps.json
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.runtimeconfig.json
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll
@@ -43,35 +41,6 @@ C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.mainMenu.resources
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.Properties.Resources.resources
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.exe
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.deps.json
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.runtimeconfig.json
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.pdb
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.AssemblyReference.cache
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\skeleton.Form1.resources
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.mainMenu.resources
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.Properties.Resources.resources
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.GenerateResource.cache
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.GeneratedMSBuildEditorConfig.editorconfig
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfoInputs.cache
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfo.cs
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.CoreCompileInputs.cache
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.sourcelink.json
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRen.99647C79.Up2Date
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\refint\movieRental.dll
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.pdb
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.genruntimeconfig.cache
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
 C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.exe
 C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.deps.json
 C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.runtimeconfig.json
@@ -101,3 +70,47 @@ C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\
 C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\skeleton.Form1.resources
 C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.CustomerMenu.resources
 C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AccountCreation.resources
+C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AccountCreation.resources
+C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.CustomerMenu.resources
+C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
+C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.exe
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\Resources\Outfit-VariableFont_wght.ttf
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.deps.json
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.runtimeconfig.json
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.pdb
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.AssemblyReference.cache
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\CustomControls.RoundedTextBox.RoundedTextBox.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.Properties.Resources.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AccountCreation.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addCustomer.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.customerScreen.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.editCustomer.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\skeleton.Login.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.moviesScreen.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.rentalScreen.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.reportScreen.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.GenerateResource.cache
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.GeneratedMSBuildEditorConfig.editorconfig
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfoInputs.cache
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AssemblyInfo.cs
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.csproj.CoreCompileInputs.cache
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.sourcelink.json
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRen.99647C79.Up2Date
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\refint\movieRental.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.pdb
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.genruntimeconfig.cache
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addMovie.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.editMovie.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.customerQueue.resources
