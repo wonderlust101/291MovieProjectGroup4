@@ -114,3 +114,5 @@ F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-win
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addMovie.resources
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.editMovie.resources
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.customerQueue.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addActor.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.actorScreen.resources
