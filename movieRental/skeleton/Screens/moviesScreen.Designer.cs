@@ -524,6 +524,7 @@
             addMovieButton.TabIndex = 20;
             addMovieButton.Text = "Add Movie";
             addMovieButton.UseVisualStyleBackColor = false;
+            addMovieButton.Click += addMovieButton_Click;
             // 
             // moviesScreen
             // 

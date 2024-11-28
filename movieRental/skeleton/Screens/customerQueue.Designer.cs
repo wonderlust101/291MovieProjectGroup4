@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class editMovie
+    partial class customerQueue
     {
         /// <summary> 
         /// Required designer variable.
@@ -52,30 +52,8 @@
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            tableLayoutPanel12 = new TableLayoutPanel();
-            deleteMovieButton = new Button();
-            saveChangesButton = new Button();
-            tableLayoutPanel5 = new TableLayoutPanel();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            tableLayoutPanel9 = new TableLayoutPanel();
-            distributionFeesLabel = new Label();
-            distributionFeesInput = new CustomControls.RoundedTextBox.RoundedTextBox();
-            tableLayoutPanel8 = new TableLayoutPanel();
-            genreLabel = new Label();
-            genreInput = new CustomControls.RoundedTextBox.RoundedTextBox();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            titleLabel = new Label();
-            titleInput = new CustomControls.RoundedTextBox.RoundedTextBox();
-            tableLayoutPanel13 = new TableLayoutPanel();
-            tableLayoutPanel14 = new TableLayoutPanel();
-            copiesAvailableLabel = new Label();
-            numOfCopies = new Label();
-            tableLayoutPanel10 = new TableLayoutPanel();
-            totalCopiesLabel = new Label();
-            initialCopiesInput = new CustomControls.RoundedTextBox.RoundedTextBox();
-            tableLayoutPanel11 = new TableLayoutPanel();
-            movieCastLabel = new Label();
-            addActorButton = new Button();
+            movieSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
+            customerQueueDataView = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -94,16 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
-            tableLayoutPanel12.SuspendLayout();
-            tableLayoutPanel5.SuspendLayout();
-            tableLayoutPanel6.SuspendLayout();
-            tableLayoutPanel9.SuspendLayout();
-            tableLayoutPanel8.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
-            tableLayoutPanel13.SuspendLayout();
-            tableLayoutPanel14.SuspendLayout();
-            tableLayoutPanel10.SuspendLayout();
-            tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)customerQueueDataView).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -302,7 +271,7 @@
             // RentalContainer
             // 
             RentalContainer.Anchor = AnchorStyles.None;
-            RentalContainer.BackColor = Color.Transparent;
+            RentalContainer.BackColor = Color.FromArgb(84, 80, 164);
             RentalContainer.BorderColor = Color.Transparent;
             RentalContainer.BorderRadius = 10;
             RentalContainer.BorderSize = 0;
@@ -346,7 +315,7 @@
             // MoviesContainer
             // 
             MoviesContainer.Anchor = AnchorStyles.None;
-            MoviesContainer.BackColor = Color.FromArgb(84, 80, 164);
+            MoviesContainer.BackColor = Color.Transparent;
             MoviesContainer.BorderColor = Color.Transparent;
             MoviesContainer.BorderRadius = 10;
             MoviesContainer.BorderSize = 0;
@@ -435,14 +404,13 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Edit Movie";
+            EmpTabName.Text = "x's Queue";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
-            EmpTabName.Click += EmpTabName_Click;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.addMovie;
+            SectionIcon.Image = Properties.Resources.movies;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -477,408 +445,53 @@
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.ColumnCount = 1;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel12, 0, 1);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 0);
-            tableLayoutPanel4.Location = new Point(16, 16);
-            tableLayoutPanel4.Margin = new Padding(0);
+            tableLayoutPanel4.Controls.Add(movieSearch, 0, 0);
+            tableLayoutPanel4.Controls.Add(customerQueueDataView, 0, 1);
+            tableLayoutPanel4.Location = new Point(19, 19);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.Size = new Size(1139, 656);
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Size = new Size(1133, 650);
             tableLayoutPanel4.TabIndex = 0;
             tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
-            // tableLayoutPanel12
+            // movieSearch
             // 
-            tableLayoutPanel12.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel12.ColumnCount = 3;
-            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel12.Controls.Add(deleteMovieButton, 0, 0);
-            tableLayoutPanel12.Controls.Add(saveChangesButton, 2, 0);
-            tableLayoutPanel12.Location = new Point(3, 599);
-            tableLayoutPanel12.Name = "tableLayoutPanel12";
-            tableLayoutPanel12.RowCount = 1;
-            tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel12.Size = new Size(1133, 54);
-            tableLayoutPanel12.TabIndex = 21;
+            movieSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            movieSearch.BackColor = Color.FromArgb(25, 26, 63);
+            movieSearch.BorderColor = Color.FromArgb(25, 26, 63);
+            movieSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            movieSearch.BorderRadius = 26;
+            movieSearch.BorderSize = 2;
+            movieSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            movieSearch.ForeColor = Color.White;
+            movieSearch.Location = new Point(0, 4);
+            movieSearch.Margin = new Padding(0);
+            movieSearch.Multiline = false;
+            movieSearch.Name = "movieSearch";
+            movieSearch.Padding = new Padding(20, 15, 20, 15);
+            movieSearch.PasswordChar = false;
+            movieSearch.PlaceholderColor = Color.DarkGray;
+            movieSearch.PlaceholderText = "Search for a movie";
+            movieSearch.Size = new Size(1133, 51);
+            movieSearch.TabIndex = 5;
+            movieSearch.UnderlinedStyle = false;
             // 
-            // deleteMovieButton
+            // customerQueueDataView
             // 
-            deleteMovieButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            deleteMovieButton.BackColor = Color.FromArgb(193, 70, 72);
-            deleteMovieButton.FlatAppearance.BorderSize = 0;
-            deleteMovieButton.FlatStyle = FlatStyle.Flat;
-            deleteMovieButton.ForeColor = Color.White;
-            deleteMovieButton.Location = new Point(0, 8);
-            deleteMovieButton.Margin = new Padding(0, 8, 0, 0);
-            deleteMovieButton.Name = "deleteMovieButton";
-            deleteMovieButton.Size = new Size(558, 46);
-            deleteMovieButton.TabIndex = 23;
-            deleteMovieButton.Text = "Delete Movie";
-            deleteMovieButton.UseVisualStyleBackColor = false;
+            customerQueueDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            customerQueueDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            customerQueueDataView.BorderStyle = BorderStyle.None;
+            customerQueueDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            customerQueueDataView.Location = new Point(0, 68);
+            customerQueueDataView.Margin = new Padding(0, 8, 0, 0);
+            customerQueueDataView.Name = "customerQueueDataView";
+            customerQueueDataView.RowHeadersWidth = 51;
+            customerQueueDataView.Size = new Size(1133, 582);
+            customerQueueDataView.TabIndex = 4;
             // 
-            // saveChangesButton
-            // 
-            saveChangesButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            saveChangesButton.BackColor = Color.FromArgb(84, 80, 164);
-            saveChangesButton.FlatAppearance.BorderSize = 0;
-            saveChangesButton.FlatStyle = FlatStyle.Flat;
-            saveChangesButton.ForeColor = Color.White;
-            saveChangesButton.Location = new Point(574, 8);
-            saveChangesButton.Margin = new Padding(0, 8, 0, 0);
-            saveChangesButton.Name = "saveChangesButton";
-            saveChangesButton.Size = new Size(559, 46);
-            saveChangesButton.TabIndex = 22;
-            saveChangesButton.Text = "Save Changes";
-            saveChangesButton.UseVisualStyleBackColor = false;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel5.ColumnCount = 2;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 0);
-            tableLayoutPanel5.Controls.Add(tableLayoutPanel11, 1, 0);
-            tableLayoutPanel5.Location = new Point(3, 3);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 1;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel5.Size = new Size(1133, 590);
-            tableLayoutPanel5.TabIndex = 20;
-            // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel6.ColumnCount = 1;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Controls.Add(tableLayoutPanel9, 0, 2);
-            tableLayoutPanel6.Controls.Add(tableLayoutPanel8, 0, 1);
-            tableLayoutPanel6.Controls.Add(tableLayoutPanel7, 0, 0);
-            tableLayoutPanel6.Controls.Add(tableLayoutPanel13, 0, 3);
-            tableLayoutPanel6.Location = new Point(3, 3);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 5;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(560, 584);
-            tableLayoutPanel6.TabIndex = 0;
-            // 
-            // tableLayoutPanel9
-            // 
-            tableLayoutPanel9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel9.AutoSize = true;
-            tableLayoutPanel9.ColumnCount = 1;
-            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel9.Controls.Add(distributionFeesLabel, 0, 0);
-            tableLayoutPanel9.Controls.Add(distributionFeesInput, 0, 2);
-            tableLayoutPanel9.Location = new Point(0, 228);
-            tableLayoutPanel9.Margin = new Padding(0, 0, 0, 16);
-            tableLayoutPanel9.Name = "tableLayoutPanel9";
-            tableLayoutPanel9.RowCount = 3;
-            tableLayoutPanel9.RowStyles.Add(new RowStyle());
-            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel9.RowStyles.Add(new RowStyle());
-            tableLayoutPanel9.Size = new Size(560, 98);
-            tableLayoutPanel9.TabIndex = 5;
-            // 
-            // distributionFeesLabel
-            // 
-            distributionFeesLabel.AutoSize = true;
-            distributionFeesLabel.Font = new Font("Segoe UI", 13.915966F);
-            distributionFeesLabel.ForeColor = Color.White;
-            distributionFeesLabel.Location = new Point(3, 0);
-            distributionFeesLabel.Name = "distributionFeesLabel";
-            distributionFeesLabel.Size = new Size(186, 31);
-            distributionFeesLabel.TabIndex = 1;
-            distributionFeesLabel.Text = "Distribution Fees";
-            // 
-            // distributionFeesInput
-            // 
-            distributionFeesInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            distributionFeesInput.BackColor = Color.FromArgb(25, 26, 63);
-            distributionFeesInput.BorderColor = Color.FromArgb(25, 26, 63);
-            distributionFeesInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            distributionFeesInput.BorderRadius = 26;
-            distributionFeesInput.BorderSize = 2;
-            distributionFeesInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            distributionFeesInput.ForeColor = Color.White;
-            distributionFeesInput.Location = new Point(0, 39);
-            distributionFeesInput.Margin = new Padding(0, 0, 0, 8);
-            distributionFeesInput.Multiline = false;
-            distributionFeesInput.Name = "distributionFeesInput";
-            distributionFeesInput.Padding = new Padding(20, 15, 20, 15);
-            distributionFeesInput.PasswordChar = false;
-            distributionFeesInput.PlaceholderColor = Color.DarkGray;
-            distributionFeesInput.PlaceholderText = "$1000";
-            distributionFeesInput.Size = new Size(560, 51);
-            distributionFeesInput.TabIndex = 20;
-            distributionFeesInput.UnderlinedStyle = false;
-            // 
-            // tableLayoutPanel8
-            // 
-            tableLayoutPanel8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel8.AutoSize = true;
-            tableLayoutPanel8.ColumnCount = 1;
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel8.Controls.Add(genreLabel, 0, 0);
-            tableLayoutPanel8.Controls.Add(genreInput, 0, 2);
-            tableLayoutPanel8.Location = new Point(0, 114);
-            tableLayoutPanel8.Margin = new Padding(0, 0, 0, 16);
-            tableLayoutPanel8.Name = "tableLayoutPanel8";
-            tableLayoutPanel8.RowCount = 3;
-            tableLayoutPanel8.RowStyles.Add(new RowStyle());
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle());
-            tableLayoutPanel8.Size = new Size(560, 98);
-            tableLayoutPanel8.TabIndex = 4;
-            // 
-            // genreLabel
-            // 
-            genreLabel.AutoSize = true;
-            genreLabel.Font = new Font("Segoe UI", 13.915966F);
-            genreLabel.ForeColor = Color.White;
-            genreLabel.Location = new Point(3, 0);
-            genreLabel.Name = "genreLabel";
-            genreLabel.Size = new Size(75, 31);
-            genreLabel.TabIndex = 1;
-            genreLabel.Text = "Genre";
-            // 
-            // genreInput
-            // 
-            genreInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            genreInput.BackColor = Color.FromArgb(25, 26, 63);
-            genreInput.BorderColor = Color.FromArgb(25, 26, 63);
-            genreInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            genreInput.BorderRadius = 26;
-            genreInput.BorderSize = 2;
-            genreInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            genreInput.ForeColor = Color.White;
-            genreInput.Location = new Point(0, 39);
-            genreInput.Margin = new Padding(0, 0, 0, 8);
-            genreInput.Multiline = false;
-            genreInput.Name = "genreInput";
-            genreInput.Padding = new Padding(20, 15, 20, 15);
-            genreInput.PasswordChar = false;
-            genreInput.PlaceholderColor = Color.DarkGray;
-            genreInput.PlaceholderText = "Select a Genre";
-            genreInput.Size = new Size(560, 51);
-            genreInput.TabIndex = 20;
-            genreInput.UnderlinedStyle = false;
-            // 
-            // tableLayoutPanel7
-            // 
-            tableLayoutPanel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel7.AutoSize = true;
-            tableLayoutPanel7.ColumnCount = 1;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Controls.Add(titleLabel, 0, 0);
-            tableLayoutPanel7.Controls.Add(titleInput, 0, 2);
-            tableLayoutPanel7.Location = new Point(0, 0);
-            tableLayoutPanel7.Margin = new Padding(0, 0, 0, 16);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 3;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle());
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle());
-            tableLayoutPanel7.Size = new Size(560, 98);
-            tableLayoutPanel7.TabIndex = 3;
-            // 
-            // titleLabel
-            // 
-            titleLabel.AutoSize = true;
-            titleLabel.Font = new Font("Segoe UI", 13.915966F);
-            titleLabel.ForeColor = Color.White;
-            titleLabel.Location = new Point(3, 0);
-            titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(58, 31);
-            titleLabel.TabIndex = 1;
-            titleLabel.Text = "Title";
-            // 
-            // titleInput
-            // 
-            titleInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            titleInput.BackColor = Color.FromArgb(25, 26, 63);
-            titleInput.BorderColor = Color.FromArgb(25, 26, 63);
-            titleInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            titleInput.BorderRadius = 26;
-            titleInput.BorderSize = 2;
-            titleInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            titleInput.ForeColor = Color.White;
-            titleInput.Location = new Point(0, 39);
-            titleInput.Margin = new Padding(0, 0, 0, 8);
-            titleInput.Multiline = false;
-            titleInput.Name = "titleInput";
-            titleInput.Padding = new Padding(20, 15, 20, 15);
-            titleInput.PasswordChar = false;
-            titleInput.PlaceholderColor = Color.DarkGray;
-            titleInput.PlaceholderText = "Space Odyssey";
-            titleInput.Size = new Size(560, 51);
-            titleInput.TabIndex = 20;
-            titleInput.UnderlinedStyle = false;
-            // 
-            // tableLayoutPanel13
-            // 
-            tableLayoutPanel13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel13.ColumnCount = 2;
-            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel13.Controls.Add(tableLayoutPanel14, 1, 0);
-            tableLayoutPanel13.Controls.Add(tableLayoutPanel10, 0, 0);
-            tableLayoutPanel13.Location = new Point(3, 345);
-            tableLayoutPanel13.Name = "tableLayoutPanel13";
-            tableLayoutPanel13.RowCount = 1;
-            tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel13.Size = new Size(554, 124);
-            tableLayoutPanel13.TabIndex = 7;
-            // 
-            // tableLayoutPanel14
-            // 
-            tableLayoutPanel14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel14.AutoSize = true;
-            tableLayoutPanel14.ColumnCount = 1;
-            tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.Controls.Add(copiesAvailableLabel, 0, 0);
-            tableLayoutPanel14.Controls.Add(numOfCopies, 0, 2);
-            tableLayoutPanel14.Location = new Point(285, 0);
-            tableLayoutPanel14.Margin = new Padding(8, 0, 0, 16);
-            tableLayoutPanel14.Name = "tableLayoutPanel14";
-            tableLayoutPanel14.RowCount = 3;
-            tableLayoutPanel14.RowStyles.Add(new RowStyle());
-            tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel14.RowStyles.Add(new RowStyle());
-            tableLayoutPanel14.Size = new Size(269, 108);
-            tableLayoutPanel14.TabIndex = 7;
-            // 
-            // copiesAvailableLabel
-            // 
-            copiesAvailableLabel.AutoSize = true;
-            copiesAvailableLabel.Font = new Font("Segoe UI", 13.915966F);
-            copiesAvailableLabel.ForeColor = Color.White;
-            copiesAvailableLabel.Location = new Point(3, 0);
-            copiesAvailableLabel.Name = "copiesAvailableLabel";
-            copiesAvailableLabel.Size = new Size(183, 31);
-            copiesAvailableLabel.TabIndex = 1;
-            copiesAvailableLabel.Text = "Copies Available";
-            // 
-            // numOfCopies
-            // 
-            numOfCopies.Anchor = AnchorStyles.Left;
-            numOfCopies.AutoSize = true;
-            numOfCopies.Font = new Font("Segoe UI", 13.915966F);
-            numOfCopies.ForeColor = Color.White;
-            numOfCopies.Location = new Point(3, 58);
-            numOfCopies.Name = "numOfCopies";
-            numOfCopies.Size = new Size(60, 31);
-            numOfCopies.TabIndex = 2;
-            numOfCopies.Text = "num";
-            // 
-            // tableLayoutPanel10
-            // 
-            tableLayoutPanel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel10.AutoSize = true;
-            tableLayoutPanel10.ColumnCount = 1;
-            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel10.Controls.Add(totalCopiesLabel, 0, 0);
-            tableLayoutPanel10.Controls.Add(initialCopiesInput, 0, 2);
-            tableLayoutPanel10.Location = new Point(0, 0);
-            tableLayoutPanel10.Margin = new Padding(0, 0, 8, 16);
-            tableLayoutPanel10.Name = "tableLayoutPanel10";
-            tableLayoutPanel10.RowCount = 3;
-            tableLayoutPanel10.RowStyles.Add(new RowStyle());
-            tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel10.RowStyles.Add(new RowStyle());
-            tableLayoutPanel10.Size = new Size(269, 108);
-            tableLayoutPanel10.TabIndex = 6;
-            // 
-            // totalCopiesLabel
-            // 
-            totalCopiesLabel.AutoSize = true;
-            totalCopiesLabel.Font = new Font("Segoe UI", 13.915966F);
-            totalCopiesLabel.ForeColor = Color.White;
-            totalCopiesLabel.Location = new Point(3, 0);
-            totalCopiesLabel.Name = "totalCopiesLabel";
-            totalCopiesLabel.Size = new Size(138, 31);
-            totalCopiesLabel.TabIndex = 1;
-            totalCopiesLabel.Text = "Total Copies";
-            // 
-            // initialCopiesInput
-            // 
-            initialCopiesInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            initialCopiesInput.BackColor = Color.FromArgb(25, 26, 63);
-            initialCopiesInput.BorderColor = Color.FromArgb(25, 26, 63);
-            initialCopiesInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            initialCopiesInput.BorderRadius = 26;
-            initialCopiesInput.BorderSize = 2;
-            initialCopiesInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            initialCopiesInput.ForeColor = Color.White;
-            initialCopiesInput.Location = new Point(0, 44);
-            initialCopiesInput.Margin = new Padding(0, 0, 0, 8);
-            initialCopiesInput.Multiline = false;
-            initialCopiesInput.Name = "initialCopiesInput";
-            initialCopiesInput.Padding = new Padding(20, 15, 20, 15);
-            initialCopiesInput.PasswordChar = false;
-            initialCopiesInput.PlaceholderColor = Color.DarkGray;
-            initialCopiesInput.PlaceholderText = "10";
-            initialCopiesInput.Size = new Size(269, 51);
-            initialCopiesInput.TabIndex = 20;
-            initialCopiesInput.UnderlinedStyle = false;
-            // 
-            // tableLayoutPanel11
-            // 
-            tableLayoutPanel11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel11.ColumnCount = 1;
-            tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel11.Controls.Add(movieCastLabel, 0, 0);
-            tableLayoutPanel11.Controls.Add(addActorButton, 0, 2);
-            tableLayoutPanel11.Location = new Point(569, 3);
-            tableLayoutPanel11.Name = "tableLayoutPanel11";
-            tableLayoutPanel11.RowCount = 3;
-            tableLayoutPanel11.RowStyles.Add(new RowStyle());
-            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel11.Size = new Size(561, 584);
-            tableLayoutPanel11.TabIndex = 1;
-            // 
-            // movieCastLabel
-            // 
-            movieCastLabel.AutoSize = true;
-            movieCastLabel.Font = new Font("Segoe UI", 13.915966F);
-            movieCastLabel.ForeColor = Color.White;
-            movieCastLabel.Location = new Point(3, 0);
-            movieCastLabel.Name = "movieCastLabel";
-            movieCastLabel.Size = new Size(127, 31);
-            movieCastLabel.TabIndex = 22;
-            movieCastLabel.Text = "Movie Cast";
-            // 
-            // addActorButton
-            // 
-            addActorButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addActorButton.BackColor = Color.FromArgb(84, 80, 164);
-            addActorButton.FlatAppearance.BorderSize = 0;
-            addActorButton.FlatStyle = FlatStyle.Flat;
-            addActorButton.ForeColor = Color.White;
-            addActorButton.Location = new Point(0, 553);
-            addActorButton.Margin = new Padding(0, 8, 0, 0);
-            addActorButton.Name = "addActorButton";
-            addActorButton.Size = new Size(561, 30);
-            addActorButton.TabIndex = 21;
-            addActorButton.Text = "Add Actor to Movie Cast";
-            addActorButton.UseVisualStyleBackColor = false;
-            // 
-            // editMovie
+            // customerQueue
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -886,9 +499,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "editMovie";
+            Name = "customerQueue";
             Size = new Size(1301, 805);
-            Load += editMovie_Load;
+            Load += customerQueue_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -910,24 +523,7 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel12.ResumeLayout(false);
-            tableLayoutPanel5.ResumeLayout(false);
-            tableLayoutPanel6.ResumeLayout(false);
-            tableLayoutPanel6.PerformLayout();
-            tableLayoutPanel9.ResumeLayout(false);
-            tableLayoutPanel9.PerformLayout();
-            tableLayoutPanel8.ResumeLayout(false);
-            tableLayoutPanel8.PerformLayout();
-            tableLayoutPanel7.ResumeLayout(false);
-            tableLayoutPanel7.PerformLayout();
-            tableLayoutPanel13.ResumeLayout(false);
-            tableLayoutPanel13.PerformLayout();
-            tableLayoutPanel14.ResumeLayout(false);
-            tableLayoutPanel14.PerformLayout();
-            tableLayoutPanel10.ResumeLayout(false);
-            tableLayoutPanel10.PerformLayout();
-            tableLayoutPanel11.ResumeLayout(false);
-            tableLayoutPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)customerQueueDataView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -958,34 +554,13 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
+        private DataGridView customerQueueDataView;
+
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
 
         private TableLayoutPanel tableLayoutPanel4;
-        private TableLayoutPanel tableLayoutPanel5;
-        private TableLayoutPanel tableLayoutPanel6;
-        private TableLayoutPanel tableLayoutPanel10;
-        private Label totalCopiesLabel;
-        private CustomControls.RoundedTextBox.RoundedTextBox initialCopiesInput;
-        private TableLayoutPanel tableLayoutPanel9;
-        private Label distributionFeesLabel;
-        private CustomControls.RoundedTextBox.RoundedTextBox distributionFeesInput;
-        private TableLayoutPanel tableLayoutPanel8;
-        private Label genreLabel;
-        private CustomControls.RoundedTextBox.RoundedTextBox genreInput;
-        private TableLayoutPanel tableLayoutPanel7;
-        private Label titleLabel;
-        private TableLayoutPanel tableLayoutPanel11;
-        private Label movieCastLabel;
-        private Button addActorButton;
-        private CustomControls.RoundedTextBox.RoundedTextBox titleInput;
-        private TableLayoutPanel tableLayoutPanel12;
-        private Button deleteMovieButton;
-        private Button saveChangesButton;
-        private TableLayoutPanel tableLayoutPanel13;
-        private TableLayoutPanel tableLayoutPanel14;
-        private Label copiesAvailableLabel;
-        private Label numOfCopies;
+        private CustomControls.RoundedTextBox.RoundedTextBox movieSearch;
     }
 }

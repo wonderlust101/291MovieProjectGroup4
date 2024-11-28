@@ -165,6 +165,11 @@ namespace movieRental
             SwitchToScreen(new reportScreen());
         }
 
+        private void addMovieButton_Click(object sender, EventArgs e)
+        {
+            SwitchToScreen(new addMovie());
+        }
+
         private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
         {
 

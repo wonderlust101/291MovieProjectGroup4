@@ -52,10 +52,15 @@
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            EmpDataView = new DataGridView();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            report5Button = new Button();
+            report4Button = new Button();
+            report3Button = new Button();
+            report2Button = new Button();
+            report1Button = new Button();
             tableLayoutPanel6 = new TableLayoutPanel();
-            customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addCustomerButton = new Button();
+            reportDataView = new DataGridView();
+            reportNameLabel = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -74,8 +79,9 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)reportDataView).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -446,84 +452,157 @@
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel4.ColumnCount = 1;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(EmpDataView, 0, 1);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 0);
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 0);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 1, 0);
             tableLayoutPanel4.Location = new Point(19, 19);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.Size = new Size(1133, 650);
             tableLayoutPanel4.TabIndex = 0;
             tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
-            // EmpDataView
+            // tableLayoutPanel5
             // 
-            EmpDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EmpDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            EmpDataView.BorderStyle = BorderStyle.None;
-            EmpDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            EmpDataView.Location = new Point(0, 68);
-            EmpDataView.Margin = new Padding(0, 8, 0, 0);
-            EmpDataView.Name = "EmpDataView";
-            EmpDataView.RowHeadersWidth = 51;
-            EmpDataView.Size = new Size(1133, 582);
-            EmpDataView.TabIndex = 4;
+            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel5.AutoSize = true;
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Controls.Add(report5Button, 0, 4);
+            tableLayoutPanel5.Controls.Add(report4Button, 0, 3);
+            tableLayoutPanel5.Controls.Add(report3Button, 0, 2);
+            tableLayoutPanel5.Controls.Add(report2Button, 0, 1);
+            tableLayoutPanel5.Controls.Add(report1Button, 0, 0);
+            tableLayoutPanel5.Location = new Point(0, 0);
+            tableLayoutPanel5.Margin = new Padding(0, 0, 16, 0);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 5;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tableLayoutPanel5.Size = new Size(323, 400);
+            tableLayoutPanel5.TabIndex = 0;
+            // 
+            // report5Button
+            // 
+            report5Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            report5Button.BackColor = Color.FromArgb(84, 80, 164);
+            report5Button.FlatAppearance.BorderSize = 0;
+            report5Button.FlatStyle = FlatStyle.Flat;
+            report5Button.ForeColor = Color.White;
+            report5Button.Location = new Point(0, 335);
+            report5Button.Margin = new Padding(0);
+            report5Button.Name = "report5Button";
+            report5Button.Size = new Size(323, 50);
+            report5Button.TabIndex = 26;
+            report5Button.Text = "Report 5";
+            report5Button.UseVisualStyleBackColor = false;
+            // 
+            // report4Button
+            // 
+            report4Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            report4Button.BackColor = Color.FromArgb(84, 80, 164);
+            report4Button.FlatAppearance.BorderSize = 0;
+            report4Button.FlatStyle = FlatStyle.Flat;
+            report4Button.ForeColor = Color.White;
+            report4Button.Location = new Point(0, 255);
+            report4Button.Margin = new Padding(0);
+            report4Button.Name = "report4Button";
+            report4Button.Size = new Size(323, 50);
+            report4Button.TabIndex = 25;
+            report4Button.Text = "Report 4";
+            report4Button.UseVisualStyleBackColor = false;
+            // 
+            // report3Button
+            // 
+            report3Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            report3Button.BackColor = Color.FromArgb(84, 80, 164);
+            report3Button.FlatAppearance.BorderSize = 0;
+            report3Button.FlatStyle = FlatStyle.Flat;
+            report3Button.ForeColor = Color.White;
+            report3Button.Location = new Point(0, 175);
+            report3Button.Margin = new Padding(0);
+            report3Button.Name = "report3Button";
+            report3Button.Size = new Size(323, 50);
+            report3Button.TabIndex = 24;
+            report3Button.Text = "Report 3";
+            report3Button.UseVisualStyleBackColor = false;
+            // 
+            // report2Button
+            // 
+            report2Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            report2Button.BackColor = Color.FromArgb(84, 80, 164);
+            report2Button.FlatAppearance.BorderSize = 0;
+            report2Button.FlatStyle = FlatStyle.Flat;
+            report2Button.ForeColor = Color.White;
+            report2Button.Location = new Point(0, 95);
+            report2Button.Margin = new Padding(0);
+            report2Button.Name = "report2Button";
+            report2Button.Size = new Size(323, 50);
+            report2Button.TabIndex = 23;
+            report2Button.Text = "Report 2";
+            report2Button.UseVisualStyleBackColor = false;
+            // 
+            // report1Button
+            // 
+            report1Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            report1Button.BackColor = Color.FromArgb(84, 80, 164);
+            report1Button.FlatAppearance.BorderSize = 0;
+            report1Button.FlatStyle = FlatStyle.Flat;
+            report1Button.ForeColor = Color.White;
+            report1Button.Location = new Point(0, 15);
+            report1Button.Margin = new Padding(0);
+            report1Button.Name = "report1Button";
+            report1Button.Size = new Size(323, 50);
+            report1Button.TabIndex = 22;
+            report1Button.Text = "Report 1";
+            report1Button.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel6
             // 
             tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel6.ColumnCount = 3;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
-            tableLayoutPanel6.Controls.Add(addCustomerButton, 0, 0);
-            tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
-            tableLayoutPanel6.Location = new Point(0, 0);
+            tableLayoutPanel6.ColumnCount = 1;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Controls.Add(reportDataView, 0, 1);
+            tableLayoutPanel6.Controls.Add(reportNameLabel, 0, 0);
+            tableLayoutPanel6.Location = new Point(339, 0);
             tableLayoutPanel6.Margin = new Padding(0);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 1;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new Size(1133, 60);
-            tableLayoutPanel6.TabIndex = 5;
+            tableLayoutPanel6.RowCount = 2;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Size = new Size(794, 650);
+            tableLayoutPanel6.TabIndex = 1;
             // 
-            // customerSearch
+            // reportDataView
             // 
-            customerSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            customerSearch.BackColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            customerSearch.BorderRadius = 26;
-            customerSearch.BorderSize = 2;
-            customerSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            customerSearch.ForeColor = Color.White;
-            customerSearch.Location = new Point(730, 4);
-            customerSearch.Margin = new Padding(0);
-            customerSearch.Multiline = false;
-            customerSearch.Name = "customerSearch";
-            customerSearch.Padding = new Padding(20, 15, 20, 15);
-            customerSearch.PasswordChar = false;
-            customerSearch.PlaceholderColor = Color.DarkGray;
-            customerSearch.PlaceholderText = "Search for a customer";
-            customerSearch.Size = new Size(403, 51);
-            customerSearch.TabIndex = 0;
-            customerSearch.UnderlinedStyle = false;
+            reportDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            reportDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            reportDataView.BorderStyle = BorderStyle.None;
+            reportDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            reportDataView.Location = new Point(0, 76);
+            reportDataView.Margin = new Padding(0, 16, 0, 0);
+            reportDataView.Name = "reportDataView";
+            reportDataView.RowHeadersWidth = 51;
+            reportDataView.Size = new Size(794, 574);
+            reportDataView.TabIndex = 24;
             // 
-            // addCustomerButton
+            // reportNameLabel
             // 
-            addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addCustomerButton.BackColor = Color.FromArgb(84, 80, 164);
-            addCustomerButton.FlatAppearance.BorderSize = 0;
-            addCustomerButton.FlatStyle = FlatStyle.Flat;
-            addCustomerButton.ForeColor = Color.White;
-            addCustomerButton.Location = new Point(3, 5);
-            addCustomerButton.Name = "addCustomerButton";
-            addCustomerButton.Size = new Size(261, 50);
-            addCustomerButton.TabIndex = 21;
-            addCustomerButton.Text = "Add Customer";
-            addCustomerButton.UseVisualStyleBackColor = false;
+            reportNameLabel.Anchor = AnchorStyles.Left;
+            reportNameLabel.AutoSize = true;
+            reportNameLabel.Font = new Font("Segoe UI", 13.915966F);
+            reportNameLabel.ForeColor = Color.White;
+            reportNameLabel.Location = new Point(3, 14);
+            reportNameLabel.Name = "reportNameLabel";
+            reportNameLabel.Size = new Size(77, 31);
+            reportNameLabel.TabIndex = 23;
+            reportNameLabel.Text = "report";
             // 
             // reportScreen
             // 
@@ -557,8 +636,11 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).EndInit();
+            tableLayoutPanel4.PerformLayout();
+            tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)reportDataView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -589,16 +671,19 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
-        private DataGridView EmpDataView;
-
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
 
         private TableLayoutPanel tableLayoutPanel4;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Button report5Button;
+        private Button report4Button;
+        private Button report3Button;
+        private Button report2Button;
+        private Button report1Button;
         private TableLayoutPanel tableLayoutPanel6;
-
-        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private Button addCustomerButton;
+        private Label reportNameLabel;
+        private DataGridView reportDataView;
     }
 }

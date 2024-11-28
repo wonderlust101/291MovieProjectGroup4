@@ -127,6 +127,26 @@ namespace movieRental
             return movies;
         }
 
+        // Switch Screen
+        private void SwitchToScreen(UserControl newScreen)
+        {
+            Form parentForm = this.FindForm();
+
+            if (parentForm != null)
+            {
+                // Dispose of existing controls
+                foreach (Control control in parentForm.Controls.OfType<UserControl>().ToList())
+                {
+                    control.Dispose();
+                }
+
+                // Clear and add the new screen
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(newScreen);
+                newScreen.Dock = DockStyle.Fill;
+            }
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -148,54 +168,22 @@ namespace movieRental
 
         private void CustomersButton_Click(object sender, EventArgs e)
         {
-            customerScreen customerScreenInstance = new customerScreen();
-            Form parentForm = this.FindForm();
-
-            if (parentForm != null)
-            {
-                parentForm.Controls.Clear();
-                parentForm.Controls.Add(customerScreenInstance);
-                customerScreenInstance.Dock = DockStyle.Fill;
-            }
+            SwitchToScreen(new customerScreen());
         }
 
         private void MoviesButton_Click(object sender, EventArgs e)
         {
-            moviesScreen moviesScreenInstance = new moviesScreen();
-            Form parentForm = this.FindForm();
-
-            if (parentForm != null)
-            {
-                parentForm.Controls.Clear();
-                parentForm.Controls.Add(moviesScreenInstance);
-                moviesScreenInstance.Dock = DockStyle.Fill;
-            }
+            SwitchToScreen(new moviesScreen());
         }
 
         private void RentalsButton_Click(object sender, EventArgs e)
         {
-            rentalScreen rentalScreenInstance = new rentalScreen();
-            Form parentForm = this.FindForm();
-
-            if (parentForm != null)
-            {
-                parentForm.Controls.Clear();
-                parentForm.Controls.Add(rentalScreenInstance);
-                rentalScreenInstance.Dock = DockStyle.Fill;
-            }
+            SwitchToScreen(new rentalScreen());
         }
 
         private void ReportsButton_Click(object sender, EventArgs e)
         {
-            reportScreen reportScreenInstance = new reportScreen();
-            Form parentForm = this.FindForm();
-
-            if (parentForm != null)
-            {
-                parentForm.Controls.Clear();
-                parentForm.Controls.Add(reportScreenInstance);
-                reportScreenInstance.Dock = DockStyle.Fill;
-            }
+            SwitchToScreen(new reportScreen());
         }
 
         private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)

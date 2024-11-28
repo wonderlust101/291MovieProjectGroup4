@@ -35,6 +35,9 @@
     <Compile Update="Screens\addCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Screens\customerQueue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Screens\reportScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
