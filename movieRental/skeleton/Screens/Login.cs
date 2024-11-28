@@ -33,6 +33,7 @@ namespace skeleton
                 MessageBox.Show("Connection String not found");
             }
             InitializeComponent();
+
             LoadCustomFont();
             ApplyFonts();
         }
@@ -80,6 +81,13 @@ namespace skeleton
 
                 if (parentForm != null)
                 {
+                    // Dispose of existing controls
+                    foreach (Control control in parentForm.Controls.OfType<UserControl>().ToList())
+                    {
+                        control.Dispose();
+                    }
+
+                    // Clear and add the new screen
                     parentForm.Controls.Clear();
                     parentForm.Controls.Add(customerScreenInstance);
                     customerScreenInstance.Dock = DockStyle.Fill;
@@ -89,7 +97,7 @@ namespace skeleton
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                String nameQuery = "SELECT * FROM Account " +
+                String nameQuery = "SELECT * FROM Employee " +
                     "WHERE UserName = " + $"\'{name}\'" +
                     " AND CONVERT(VARCHAR(MAX), DECRYPTBYPASSPHRASE(\'PSWD\', Password)) = " +
                     $"\'{password}\'";
@@ -117,20 +125,21 @@ namespace skeleton
                         return;
                     }
 
-                    Control mainMenuControl;
-                    if (UserType == "Employee")
-                    {
-                        MessageBox.Show($"Welcome back {name}!");
-                        customerScreen customerScreenInstance = new customerScreen();
-                        Form parentForm = this.FindForm();
+                    customerScreen customerScreenInstance = new customerScreen();
+                    Form parentForm = this.FindForm();
 
-                        if (parentForm != null)
+                    if (parentForm != null)
+                    {
+                        // Dispose of existing controls
+                        foreach (Control control in parentForm.Controls.OfType<UserControl>().ToList())
                         {
-                            parentForm.Controls.Clear();
-                            parentForm.Controls.Add(customerScreenInstance);
-                            customerScreenInstance.Dock = DockStyle.Fill;
+                            control.Dispose();
                         }
-                        return;
+
+                        // Clear and add the new screen
+                        parentForm.Controls.Clear();
+                        parentForm.Controls.Add(customerScreenInstance);
+                        customerScreenInstance.Dock = DockStyle.Fill;
                     }
                 }
             }

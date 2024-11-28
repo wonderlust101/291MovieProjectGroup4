@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\reportscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\reportscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\reportscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\reportscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\screens\\rentalscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\rentalscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\rentalscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\rentalscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\moviesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\moviesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\addcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\addcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\moviesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\moviesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\rentalscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\rentalscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\moviesscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\moviesscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,128 +30,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 290,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 255,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "reportScreen.cs [Design]",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\reportScreen.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\reportScreen.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\reportScreen.cs [Design]",
-              "RelativeToolTip": "skeleton\\Screens\\reportScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:36:34.237Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "rentalScreen.Designer.cs",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\rentalScreen.Designer.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\rentalScreen.Designer.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\rentalScreen.Designer.cs",
-              "RelativeToolTip": "skeleton\\Screens\\rentalScreen.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:34:57.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "editCustomer.cs [Design]",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\editCustomer.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\editCustomer.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\editCustomer.cs [Design]",
-              "RelativeToolTip": "skeleton\\Screens\\editCustomer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:36:07.838Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "customerScreen.cs [Design]",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\customerScreen.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\customerScreen.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\customerScreen.cs [Design]",
-              "RelativeToolTip": "skeleton\\Screens\\customerScreen.cs [Design]",
+              "Title": "login.cs",
+              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\login.cs",
+              "RelativeDocumentMoniker": "skeleton\\Screens\\login.cs",
+              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\login.cs",
+              "RelativeToolTip": "skeleton\\Screens\\login.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA0wFYAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:35:30.926Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "addCustomer.cs [Design]",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\addCustomer.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\addCustomer.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\addCustomer.cs [Design]",
-              "RelativeToolTip": "skeleton\\Screens\\addCustomer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:34:02.021Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "moviesScreen.cs [Design]",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\moviesScreen.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\moviesScreen.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\moviesScreen.cs [Design]",
-              "RelativeToolTip": "skeleton\\Screens\\moviesScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:33:45.113Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "moviesScreen.Designer.cs",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\moviesScreen.Designer.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\moviesScreen.Designer.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\moviesScreen.Designer.cs",
-              "RelativeToolTip": "skeleton\\Screens\\moviesScreen.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:33:44.19Z",
+              "WhenOpened": "2024-11-28T04:55:32.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "editCustomer.cs",
-              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\editCustomer.cs",
-              "RelativeDocumentMoniker": "skeleton\\Screens\\editCustomer.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\editCustomer.cs",
-              "RelativeToolTip": "skeleton\\Screens\\editCustomer.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAIwFcAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "reportScreen.cs",
+              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\reportScreen.cs",
+              "RelativeDocumentMoniker": "skeleton\\Screens\\reportScreen.cs",
+              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\reportScreen.cs",
+              "RelativeToolTip": "skeleton\\Screens\\reportScreen.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAxwJIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:33:20.067Z",
+              "WhenOpened": "2024-11-28T04:27:19.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "rentalScreen.cs [Design]",
+              "Title": "rentalScreen.cs",
               "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\rentalScreen.cs",
               "RelativeDocumentMoniker": "skeleton\\Screens\\rentalScreen.cs",
-              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\rentalScreen.cs [Design]",
-              "RelativeToolTip": "skeleton\\Screens\\rentalScreen.cs [Design]",
+              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\rentalScreen.cs",
+              "RelativeToolTip": "skeleton\\Screens\\rentalScreen.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAUwJoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T22:34:44.942Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-28T04:27:10.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "moviesScreen.cs",
+              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\moviesScreen.cs",
+              "RelativeDocumentMoniker": "skeleton\\Screens\\moviesScreen.cs",
+              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\moviesScreen.cs",
+              "RelativeToolTip": "skeleton\\Screens\\moviesScreen.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAA1wHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T04:26:58.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "customerScreen.cs",
+              "DocumentMoniker": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\customerScreen.cs",
+              "RelativeDocumentMoniker": "skeleton\\Screens\\customerScreen.cs",
+              "ToolTip": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\skeleton\\Screens\\customerScreen.cs",
+              "RelativeToolTip": "skeleton\\Screens\\customerScreen.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAIwHIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T04:24:30.21Z",
+              "EditorCaption": ""
             }
           ]
         }
