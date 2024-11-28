@@ -55,7 +55,7 @@
             tableLayoutPanel5 = new TableLayoutPanel();
             tableLayoutPanel6 = new TableLayoutPanel();
             tableLayoutPanel10 = new TableLayoutPanel();
-            initialCopiesLabel = new Label();
+            totalCopiesLabel = new Label();
             initialCopiesInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel9 = new TableLayoutPanel();
             distributionFeesLabel = new Label();
@@ -72,6 +72,10 @@
             tableLayoutPanel12 = new TableLayoutPanel();
             deleteMovieButton = new Button();
             saveChangesButton = new Button();
+            tableLayoutPanel13 = new TableLayoutPanel();
+            tableLayoutPanel14 = new TableLayoutPanel();
+            copiesAvailableLabel = new Label();
+            numOfCopies = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -98,6 +102,8 @@
             tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel11.SuspendLayout();
             tableLayoutPanel12.SuspendLayout();
+            tableLayoutPanel13.SuspendLayout();
+            tableLayoutPanel14.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -508,10 +514,10 @@
             tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel6.ColumnCount = 1;
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Controls.Add(tableLayoutPanel10, 0, 3);
             tableLayoutPanel6.Controls.Add(tableLayoutPanel9, 0, 2);
             tableLayoutPanel6.Controls.Add(tableLayoutPanel8, 0, 1);
             tableLayoutPanel6.Controls.Add(tableLayoutPanel7, 0, 0);
+            tableLayoutPanel6.Controls.Add(tableLayoutPanel13, 0, 3);
             tableLayoutPanel6.Location = new Point(3, 3);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 5;
@@ -525,32 +531,32 @@
             // 
             // tableLayoutPanel10
             // 
-            tableLayoutPanel10.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel10.AutoSize = true;
             tableLayoutPanel10.ColumnCount = 1;
             tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel10.Controls.Add(initialCopiesLabel, 0, 0);
+            tableLayoutPanel10.Controls.Add(totalCopiesLabel, 0, 0);
             tableLayoutPanel10.Controls.Add(initialCopiesInput, 0, 2);
-            tableLayoutPanel10.Location = new Point(0, 342);
-            tableLayoutPanel10.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel10.Location = new Point(0, 0);
+            tableLayoutPanel10.Margin = new Padding(0, 0, 8, 16);
             tableLayoutPanel10.Name = "tableLayoutPanel10";
             tableLayoutPanel10.RowCount = 3;
             tableLayoutPanel10.RowStyles.Add(new RowStyle());
             tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel10.RowStyles.Add(new RowStyle());
-            tableLayoutPanel10.Size = new Size(560, 98);
+            tableLayoutPanel10.Size = new Size(269, 108);
             tableLayoutPanel10.TabIndex = 6;
             // 
-            // initialCopiesLabel
+            // totalCopiesLabel
             // 
-            initialCopiesLabel.AutoSize = true;
-            initialCopiesLabel.Font = new Font("Segoe UI", 13.915966F);
-            initialCopiesLabel.ForeColor = Color.White;
-            initialCopiesLabel.Location = new Point(3, 0);
-            initialCopiesLabel.Name = "initialCopiesLabel";
-            initialCopiesLabel.Size = new Size(227, 31);
-            initialCopiesLabel.TabIndex = 1;
-            initialCopiesLabel.Text = "Initial Total of Copies";
+            totalCopiesLabel.AutoSize = true;
+            totalCopiesLabel.Font = new Font("Segoe UI", 13.915966F);
+            totalCopiesLabel.ForeColor = Color.White;
+            totalCopiesLabel.Location = new Point(3, 0);
+            totalCopiesLabel.Name = "totalCopiesLabel";
+            totalCopiesLabel.Size = new Size(138, 31);
+            totalCopiesLabel.TabIndex = 1;
+            totalCopiesLabel.Text = "Total Copies";
             // 
             // initialCopiesInput
             // 
@@ -562,7 +568,7 @@
             initialCopiesInput.BorderSize = 2;
             initialCopiesInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             initialCopiesInput.ForeColor = Color.White;
-            initialCopiesInput.Location = new Point(0, 39);
+            initialCopiesInput.Location = new Point(0, 44);
             initialCopiesInput.Margin = new Padding(0, 0, 0, 8);
             initialCopiesInput.Multiline = false;
             initialCopiesInput.Name = "initialCopiesInput";
@@ -570,7 +576,7 @@
             initialCopiesInput.PasswordChar = false;
             initialCopiesInput.PlaceholderColor = Color.DarkGray;
             initialCopiesInput.PlaceholderText = "10";
-            initialCopiesInput.Size = new Size(560, 51);
+            initialCopiesInput.Size = new Size(269, 51);
             initialCopiesInput.TabIndex = 20;
             initialCopiesInput.UnderlinedStyle = false;
             // 
@@ -815,6 +821,63 @@
             saveChangesButton.Text = "Save Changes";
             saveChangesButton.UseVisualStyleBackColor = false;
             // 
+            // tableLayoutPanel13
+            // 
+            tableLayoutPanel13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel13.ColumnCount = 2;
+            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel13.Controls.Add(tableLayoutPanel14, 1, 0);
+            tableLayoutPanel13.Controls.Add(tableLayoutPanel10, 0, 0);
+            tableLayoutPanel13.Location = new Point(3, 345);
+            tableLayoutPanel13.Name = "tableLayoutPanel13";
+            tableLayoutPanel13.RowCount = 1;
+            tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel13.Size = new Size(554, 124);
+            tableLayoutPanel13.TabIndex = 7;
+            // 
+            // tableLayoutPanel14
+            // 
+            tableLayoutPanel14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel14.AutoSize = true;
+            tableLayoutPanel14.ColumnCount = 1;
+            tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel14.Controls.Add(copiesAvailableLabel, 0, 0);
+            tableLayoutPanel14.Controls.Add(numOfCopies, 0, 2);
+            tableLayoutPanel14.Location = new Point(285, 0);
+            tableLayoutPanel14.Margin = new Padding(8, 0, 0, 16);
+            tableLayoutPanel14.Name = "tableLayoutPanel14";
+            tableLayoutPanel14.RowCount = 3;
+            tableLayoutPanel14.RowStyles.Add(new RowStyle());
+            tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel14.RowStyles.Add(new RowStyle());
+            tableLayoutPanel14.Size = new Size(269, 108);
+            tableLayoutPanel14.TabIndex = 7;
+            // 
+            // copiesAvailableLabel
+            // 
+            copiesAvailableLabel.AutoSize = true;
+            copiesAvailableLabel.Font = new Font("Segoe UI", 13.915966F);
+            copiesAvailableLabel.ForeColor = Color.White;
+            copiesAvailableLabel.Location = new Point(3, 0);
+            copiesAvailableLabel.Name = "copiesAvailableLabel";
+            copiesAvailableLabel.Size = new Size(183, 31);
+            copiesAvailableLabel.TabIndex = 1;
+            copiesAvailableLabel.Text = "Copies Available";
+            // 
+            // numOfCopies
+            // 
+            numOfCopies.Anchor = AnchorStyles.Left;
+            numOfCopies.AutoSize = true;
+            numOfCopies.Font = new Font("Segoe UI", 13.915966F);
+            numOfCopies.ForeColor = Color.White;
+            numOfCopies.Location = new Point(3, 58);
+            numOfCopies.Name = "numOfCopies";
+            numOfCopies.Size = new Size(60, 31);
+            numOfCopies.TabIndex = 2;
+            numOfCopies.Text = "num";
+            // 
             // editMovie
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -861,6 +924,10 @@
             tableLayoutPanel11.ResumeLayout(false);
             tableLayoutPanel11.PerformLayout();
             tableLayoutPanel12.ResumeLayout(false);
+            tableLayoutPanel13.ResumeLayout(false);
+            tableLayoutPanel13.PerformLayout();
+            tableLayoutPanel14.ResumeLayout(false);
+            tableLayoutPanel14.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -899,7 +966,7 @@
         private TableLayoutPanel tableLayoutPanel5;
         private TableLayoutPanel tableLayoutPanel6;
         private TableLayoutPanel tableLayoutPanel10;
-        private Label initialCopiesLabel;
+        private Label totalCopiesLabel;
         private CustomControls.RoundedTextBox.RoundedTextBox initialCopiesInput;
         private TableLayoutPanel tableLayoutPanel9;
         private Label distributionFeesLabel;
@@ -916,5 +983,9 @@
         private TableLayoutPanel tableLayoutPanel12;
         private Button deleteMovieButton;
         private Button saveChangesButton;
+        private TableLayoutPanel tableLayoutPanel13;
+        private TableLayoutPanel tableLayoutPanel14;
+        private Label copiesAvailableLabel;
+        private Label numOfCopies;
     }
 }
