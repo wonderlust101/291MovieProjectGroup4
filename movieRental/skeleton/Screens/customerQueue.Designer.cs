@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class rentalScreen
+    partial class customerQueue
     {
         /// <summary> 
         /// Required designer variable.
@@ -51,13 +51,9 @@
             EmpTabName = new Label();
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
-            tableLayoutPanel5 = new TableLayoutPanel();
-            customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            rentalHistoryLabel = new Label();
-            viewQueueButton = new Button();
-            customerDataView = new DataGridView();
-            rentalHistoryDataView = new DataGridView();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            movieSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
+            customerQueueDataView = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -75,10 +71,8 @@
             roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
-            tableLayoutPanel5.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)customerDataView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)rentalHistoryDataView).BeginInit();
+            tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)customerQueueDataView).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -305,6 +299,7 @@
             RentalButton.SizeMode = PictureBoxSizeMode.CenterImage;
             RentalButton.TabIndex = 0;
             RentalButton.TabStop = false;
+            RentalButton.Click += RentalsButton_Click;
             // 
             // RentalLabel
             // 
@@ -348,7 +343,6 @@
             MovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
             MovieButton.TabIndex = 0;
             MovieButton.TabStop = false;
-            MovieButton.Click += MoviesButton_Click;
             // 
             // MovieLabel
             // 
@@ -410,13 +404,13 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Rental";
+            EmpTabName.Text = "x's Queue";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.rental;
+            SectionIcon.Image = Properties.Resources.movies;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -435,7 +429,7 @@
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            roundedPanel2.Controls.Add(tableLayoutPanel5, 1, 1);
+            roundedPanel2.Controls.Add(tableLayoutPanel4, 1, 1);
             roundedPanel2.Location = new Point(0, 88);
             roundedPanel2.Margin = new Padding(0);
             roundedPanel2.Name = "roundedPanel2";
@@ -446,120 +440,58 @@
             roundedPanel2.Size = new Size(1171, 688);
             roundedPanel2.TabIndex = 8;
             // 
-            // tableLayoutPanel5
+            // tableLayoutPanel4
             // 
-            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel5.ColumnCount = 3;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.36364F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.636364F));
-            tableLayoutPanel5.Controls.Add(customerSearch, 0, 0);
-            tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 2, 0);
-            tableLayoutPanel5.Controls.Add(customerDataView, 0, 2);
-            tableLayoutPanel5.Controls.Add(rentalHistoryDataView, 2, 2);
-            tableLayoutPanel5.Location = new Point(19, 19);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 3;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new Size(1133, 650);
-            tableLayoutPanel5.TabIndex = 7;
-            tableLayoutPanel5.Paint += tableLayoutPanel5_Paint;
+            tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Controls.Add(movieSearch, 0, 0);
+            tableLayoutPanel4.Controls.Add(customerQueueDataView, 0, 1);
+            tableLayoutPanel4.Location = new Point(19, 19);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 2;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Size = new Size(1133, 650);
+            tableLayoutPanel4.TabIndex = 0;
+            tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
-            // customerSearch
+            // movieSearch
             // 
-            customerSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            customerSearch.BackColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            customerSearch.BorderRadius = 26;
-            customerSearch.BorderSize = 2;
-            customerSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            customerSearch.ForeColor = Color.White;
-            customerSearch.Location = new Point(0, 4);
-            customerSearch.Margin = new Padding(0);
-            customerSearch.Multiline = false;
-            customerSearch.Name = "customerSearch";
-            customerSearch.Padding = new Padding(20, 15, 20, 15);
-            customerSearch.PasswordChar = false;
-            customerSearch.PlaceholderColor = Color.DarkGray;
-            customerSearch.PlaceholderText = "Search for a customer";
-            customerSearch.Size = new Size(406, 51);
-            customerSearch.TabIndex = 0;
-            customerSearch.UnderlinedStyle = false;
+            movieSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            movieSearch.BackColor = Color.FromArgb(25, 26, 63);
+            movieSearch.BorderColor = Color.FromArgb(25, 26, 63);
+            movieSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            movieSearch.BorderRadius = 26;
+            movieSearch.BorderSize = 2;
+            movieSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            movieSearch.ForeColor = Color.White;
+            movieSearch.Location = new Point(0, 4);
+            movieSearch.Margin = new Padding(0);
+            movieSearch.Multiline = false;
+            movieSearch.Name = "movieSearch";
+            movieSearch.Padding = new Padding(20, 15, 20, 15);
+            movieSearch.PasswordChar = false;
+            movieSearch.PlaceholderColor = Color.DarkGray;
+            movieSearch.PlaceholderText = "Search for a movie";
+            movieSearch.Size = new Size(1133, 51);
+            movieSearch.TabIndex = 5;
+            movieSearch.UnderlinedStyle = false;
             // 
-            // tableLayoutPanel7
+            // customerQueueDataView
             // 
-            tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel7.ColumnCount = 2;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69.32953F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30.6704712F));
-            tableLayoutPanel7.Controls.Add(rentalHistoryLabel, 0, 0);
-            tableLayoutPanel7.Controls.Add(viewQueueButton, 1, 0);
-            tableLayoutPanel7.Location = new Point(422, 0);
-            tableLayoutPanel7.Margin = new Padding(0);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 1;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.Size = new Size(711, 60);
-            tableLayoutPanel7.TabIndex = 1;
+            customerQueueDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            customerQueueDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            customerQueueDataView.BorderStyle = BorderStyle.None;
+            customerQueueDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            customerQueueDataView.Location = new Point(0, 68);
+            customerQueueDataView.Margin = new Padding(0, 8, 0, 0);
+            customerQueueDataView.Name = "customerQueueDataView";
+            customerQueueDataView.RowHeadersWidth = 51;
+            customerQueueDataView.Size = new Size(1133, 582);
+            customerQueueDataView.TabIndex = 4;
             // 
-            // rentalHistoryLabel
-            // 
-            rentalHistoryLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            rentalHistoryLabel.AutoSize = true;
-            rentalHistoryLabel.Font = new Font("Segoe UI", 13.915966F);
-            rentalHistoryLabel.ForeColor = Color.White;
-            rentalHistoryLabel.Location = new Point(3, 14);
-            rentalHistoryLabel.Name = "rentalHistoryLabel";
-            rentalHistoryLabel.Size = new Size(486, 31);
-            rentalHistoryLabel.TabIndex = 22;
-            rentalHistoryLabel.Text = "x's Rental History";
-            // 
-            // viewQueueButton
-            // 
-            viewQueueButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            viewQueueButton.BackColor = Color.FromArgb(84, 80, 164);
-            viewQueueButton.FlatAppearance.BorderSize = 0;
-            viewQueueButton.FlatStyle = FlatStyle.Flat;
-            viewQueueButton.ForeColor = Color.White;
-            viewQueueButton.Location = new Point(495, 5);
-            viewQueueButton.Name = "viewQueueButton";
-            viewQueueButton.Size = new Size(213, 50);
-            viewQueueButton.TabIndex = 21;
-            viewQueueButton.Text = "View Queue";
-            viewQueueButton.UseVisualStyleBackColor = false;
-            viewQueueButton.Click += viewQueueButton_Click;
-            // 
-            // customerDataView
-            // 
-            customerDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            customerDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            customerDataView.BorderStyle = BorderStyle.None;
-            customerDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            customerDataView.Location = new Point(0, 84);
-            customerDataView.Margin = new Padding(0, 8, 0, 0);
-            customerDataView.Name = "customerDataView";
-            customerDataView.RowHeadersWidth = 51;
-            customerDataView.Size = new Size(406, 566);
-            customerDataView.TabIndex = 5;
-            // 
-            // rentalHistoryDataView
-            // 
-            rentalHistoryDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            rentalHistoryDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            rentalHistoryDataView.BorderStyle = BorderStyle.None;
-            rentalHistoryDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            rentalHistoryDataView.Location = new Point(422, 84);
-            rentalHistoryDataView.Margin = new Padding(0, 8, 0, 0);
-            rentalHistoryDataView.Name = "rentalHistoryDataView";
-            rentalHistoryDataView.RowHeadersWidth = 51;
-            rentalHistoryDataView.Size = new Size(711, 566);
-            rentalHistoryDataView.TabIndex = 6;
-            // 
-            // rentalScreen
+            // customerQueue
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -567,9 +499,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "rentalScreen";
+            Name = "customerQueue";
             Size = new Size(1301, 805);
-            Load += rentalScreen_Load;
+            Load += customerQueue_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -590,11 +522,8 @@
             roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
-            tableLayoutPanel5.ResumeLayout(false);
-            tableLayoutPanel7.ResumeLayout(false);
-            tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)customerDataView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)rentalHistoryDataView).EndInit();
+            tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)customerQueueDataView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -625,18 +554,13 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
-        private DataGridView EmpDataView;
+        private DataGridView customerQueueDataView;
 
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
-        private TableLayoutPanel tableLayoutPanel5;
-        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private TableLayoutPanel tableLayoutPanel7;
-        private Button viewQueueButton;
-        private Label rentalHistoryLabel;
-        private DataGridView customerDataView;
-        private DataGridView rentalHistoryDataView;
-        private Button addCustomerButton;
+
+        private TableLayoutPanel tableLayoutPanel4;
+        private CustomControls.RoundedTextBox.RoundedTextBox movieSearch;
     }
 }

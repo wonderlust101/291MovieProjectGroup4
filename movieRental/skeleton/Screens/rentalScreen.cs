@@ -20,8 +20,6 @@ namespace movieRental
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
         // Data
-        public List<Customer> Customers;
-        public List<Movie> Movies;
 
         // Custom Fonts
         private Font outfitFontS30Bold;
@@ -32,10 +30,6 @@ namespace movieRental
         public rentalScreen()
         {
             InitializeComponent();
-
-            Customers = RetrieveCustomers();
-            Movies = RetrieveMovies();
-            EmpDataView.DataSource = Customers;
 
             LoadCustomFont();
             ApplyFonts();
@@ -64,85 +58,9 @@ namespace movieRental
             RentalLabel.Font = outfitFontS8Bold;
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
-
-            customerSearch.Font = outfitFontS12;
-            addCustomerButton.Font = outfitFontS10Bold;
         }
 
         // Data Source
-        private List<Movie> RetrieveMovies()
-        {
-            var movies = new List<Movie>();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                String nameQuery = "SELECT * FROM Movie";
-                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
-                {
-
-                    try
-                    {
-                        SqlDataReader myReader = cmd.ExecuteReader();
-
-                        while (myReader.Read())
-                        {
-                            movies.Add(new Movie()
-                            {
-                                Title = myReader.GetString(1),
-                                Genre = myReader.GetString(2),
-                                Fee = myReader.GetDecimal(3),
-                                TotalCopies = myReader.GetInt32(4)
-                            });
-
-                        }
-
-                        myReader.Close();
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message);
-                    }
-                }
-            }
-            return movies;
-        }
-
-        private List<Customer>? RetrieveCustomers()
-        {
-            var customers = new List<Customer>();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                String nameQuery = "SELECT * FROM Customer";
-                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
-                {
-
-                    try
-                    {
-                        SqlDataReader myReader = cmd.ExecuteReader();
-
-                        while (myReader.Read())
-                        {
-                            customers.Add(new Customer()
-                            {
-                                Name = myReader.GetString(1) + " " + myReader.GetString(2),
-                                Email = myReader.GetString(8),
-                                AccountNumber = myReader.GetInt32(7),
-                                CreationDate = myReader.GetDateTime(12)
-                            });
-
-                        }
-
-                        myReader.Close();
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message);
-                    }
-                }
-            }
-            return customers;
-        }
 
         // Switch Screen
         private void SwitchToScreen(UserControl newScreen)
@@ -203,6 +121,11 @@ namespace movieRental
             SwitchToScreen(new reportScreen());
         }
 
+        private void viewQueueButton_Click(object sender, EventArgs e)
+        {
+            SwitchToScreen(new customerQueue());
+        }
+
         private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
         {
 
@@ -219,6 +142,11 @@ namespace movieRental
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -23,10 +23,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Screens\editMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\addMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Screens\editCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Screens\addCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\customerQueue.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Screens\reportScreen.cs">

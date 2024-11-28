@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class rentalScreen
+    partial class addMovie
     {
         /// <summary> 
         /// Required designer variable.
@@ -51,13 +51,25 @@
             EmpTabName = new Label();
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            addMovieButton = new Button();
             tableLayoutPanel5 = new TableLayoutPanel();
-            customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            tableLayoutPanel10 = new TableLayoutPanel();
+            initialCopiesLabel = new Label();
+            initialCopiesInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            tableLayoutPanel9 = new TableLayoutPanel();
+            distributionFeesLabel = new Label();
+            distributionFeesInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            tableLayoutPanel8 = new TableLayoutPanel();
+            genreLabel = new Label();
+            genreInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel7 = new TableLayoutPanel();
-            rentalHistoryLabel = new Label();
-            viewQueueButton = new Button();
-            customerDataView = new DataGridView();
-            rentalHistoryDataView = new DataGridView();
+            titleLabel = new Label();
+            titleInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            tableLayoutPanel11 = new TableLayoutPanel();
+            movieCastLabel = new Label();
+            addActorButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -75,10 +87,14 @@
             roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
+            tableLayoutPanel10.SuspendLayout();
+            tableLayoutPanel9.SuspendLayout();
+            tableLayoutPanel8.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)customerDataView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)rentalHistoryDataView).BeginInit();
+            tableLayoutPanel11.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -277,7 +293,7 @@
             // RentalContainer
             // 
             RentalContainer.Anchor = AnchorStyles.None;
-            RentalContainer.BackColor = Color.FromArgb(84, 80, 164);
+            RentalContainer.BackColor = Color.Transparent;
             RentalContainer.BorderColor = Color.Transparent;
             RentalContainer.BorderRadius = 10;
             RentalContainer.BorderSize = 0;
@@ -305,6 +321,7 @@
             RentalButton.SizeMode = PictureBoxSizeMode.CenterImage;
             RentalButton.TabIndex = 0;
             RentalButton.TabStop = false;
+            RentalButton.Click += RentalsButton_Click;
             // 
             // RentalLabel
             // 
@@ -320,7 +337,7 @@
             // MoviesContainer
             // 
             MoviesContainer.Anchor = AnchorStyles.None;
-            MoviesContainer.BackColor = Color.Transparent;
+            MoviesContainer.BackColor = Color.FromArgb(84, 80, 164);
             MoviesContainer.BorderColor = Color.Transparent;
             MoviesContainer.BorderRadius = 10;
             MoviesContainer.BorderSize = 0;
@@ -348,7 +365,6 @@
             MovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
             MovieButton.TabIndex = 0;
             MovieButton.TabStop = false;
-            MovieButton.Click += MoviesButton_Click;
             // 
             // MovieLabel
             // 
@@ -410,13 +426,14 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Rental";
+            EmpTabName.Text = "Add Movie";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
+            EmpTabName.Click += EmpTabName_Click;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.rental;
+            SectionIcon.Image = Properties.Resources.addMovie;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -435,7 +452,7 @@
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            roundedPanel2.Controls.Add(tableLayoutPanel5, 1, 1);
+            roundedPanel2.Controls.Add(tableLayoutPanel4, 1, 1);
             roundedPanel2.Location = new Point(0, 88);
             roundedPanel2.Margin = new Padding(0);
             roundedPanel2.Name = "roundedPanel2";
@@ -446,120 +463,324 @@
             roundedPanel2.Size = new Size(1171, 688);
             roundedPanel2.TabIndex = 8;
             // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Controls.Add(addMovieButton, 0, 1);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 0);
+            tableLayoutPanel4.Location = new Point(16, 16);
+            tableLayoutPanel4.Margin = new Padding(0);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 2;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.Size = new Size(1139, 656);
+            tableLayoutPanel4.TabIndex = 0;
+            tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
+            // 
+            // addMovieButton
+            // 
+            addMovieButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addMovieButton.BackColor = Color.FromArgb(84, 80, 164);
+            addMovieButton.FlatAppearance.BorderSize = 0;
+            addMovieButton.FlatStyle = FlatStyle.Flat;
+            addMovieButton.ForeColor = Color.White;
+            addMovieButton.Location = new Point(3, 601);
+            addMovieButton.Name = "addMovieButton";
+            addMovieButton.Size = new Size(1133, 50);
+            addMovieButton.TabIndex = 19;
+            addMovieButton.Text = "Add Movie";
+            addMovieButton.UseVisualStyleBackColor = false;
+            // 
             // tableLayoutPanel5
             // 
             tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel5.ColumnCount = 3;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.36364F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.636364F));
-            tableLayoutPanel5.Controls.Add(customerSearch, 0, 0);
-            tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 2, 0);
-            tableLayoutPanel5.Controls.Add(customerDataView, 0, 2);
-            tableLayoutPanel5.Controls.Add(rentalHistoryDataView, 2, 2);
-            tableLayoutPanel5.Location = new Point(19, 19);
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 0);
+            tableLayoutPanel5.Controls.Add(tableLayoutPanel11, 1, 0);
+            tableLayoutPanel5.Location = new Point(3, 3);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 3;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new Size(1133, 650);
-            tableLayoutPanel5.TabIndex = 7;
-            tableLayoutPanel5.Paint += tableLayoutPanel5_Paint;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel5.Size = new Size(1133, 590);
+            tableLayoutPanel5.TabIndex = 20;
             // 
-            // customerSearch
+            // tableLayoutPanel6
             // 
-            customerSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            customerSearch.BackColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            customerSearch.BorderRadius = 26;
-            customerSearch.BorderSize = 2;
-            customerSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            customerSearch.ForeColor = Color.White;
-            customerSearch.Location = new Point(0, 4);
-            customerSearch.Margin = new Padding(0);
-            customerSearch.Multiline = false;
-            customerSearch.Name = "customerSearch";
-            customerSearch.Padding = new Padding(20, 15, 20, 15);
-            customerSearch.PasswordChar = false;
-            customerSearch.PlaceholderColor = Color.DarkGray;
-            customerSearch.PlaceholderText = "Search for a customer";
-            customerSearch.Size = new Size(406, 51);
-            customerSearch.TabIndex = 0;
-            customerSearch.UnderlinedStyle = false;
+            tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel6.ColumnCount = 1;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Controls.Add(tableLayoutPanel10, 0, 3);
+            tableLayoutPanel6.Controls.Add(tableLayoutPanel9, 0, 2);
+            tableLayoutPanel6.Controls.Add(tableLayoutPanel8, 0, 1);
+            tableLayoutPanel6.Controls.Add(tableLayoutPanel7, 0, 0);
+            tableLayoutPanel6.Location = new Point(3, 3);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 5;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle());
+            tableLayoutPanel6.RowStyles.Add(new RowStyle());
+            tableLayoutPanel6.RowStyles.Add(new RowStyle());
+            tableLayoutPanel6.RowStyles.Add(new RowStyle());
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Size = new Size(560, 584);
+            tableLayoutPanel6.TabIndex = 0;
+            // 
+            // tableLayoutPanel10
+            // 
+            tableLayoutPanel10.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel10.AutoSize = true;
+            tableLayoutPanel10.ColumnCount = 1;
+            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel10.Controls.Add(initialCopiesLabel, 0, 0);
+            tableLayoutPanel10.Controls.Add(initialCopiesInput, 0, 2);
+            tableLayoutPanel10.Location = new Point(0, 342);
+            tableLayoutPanel10.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel10.Name = "tableLayoutPanel10";
+            tableLayoutPanel10.RowCount = 3;
+            tableLayoutPanel10.RowStyles.Add(new RowStyle());
+            tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel10.RowStyles.Add(new RowStyle());
+            tableLayoutPanel10.Size = new Size(560, 98);
+            tableLayoutPanel10.TabIndex = 6;
+            // 
+            // initialCopiesLabel
+            // 
+            initialCopiesLabel.AutoSize = true;
+            initialCopiesLabel.Font = new Font("Segoe UI", 13.915966F);
+            initialCopiesLabel.ForeColor = Color.White;
+            initialCopiesLabel.Location = new Point(3, 0);
+            initialCopiesLabel.Name = "initialCopiesLabel";
+            initialCopiesLabel.Size = new Size(227, 31);
+            initialCopiesLabel.TabIndex = 1;
+            initialCopiesLabel.Text = "Initial Total of Copies";
+            // 
+            // initialCopiesInput
+            // 
+            initialCopiesInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            initialCopiesInput.BackColor = Color.FromArgb(25, 26, 63);
+            initialCopiesInput.BorderColor = Color.FromArgb(25, 26, 63);
+            initialCopiesInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            initialCopiesInput.BorderRadius = 26;
+            initialCopiesInput.BorderSize = 2;
+            initialCopiesInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            initialCopiesInput.ForeColor = Color.White;
+            initialCopiesInput.Location = new Point(0, 39);
+            initialCopiesInput.Margin = new Padding(0, 0, 0, 8);
+            initialCopiesInput.Multiline = false;
+            initialCopiesInput.Name = "initialCopiesInput";
+            initialCopiesInput.Padding = new Padding(20, 15, 20, 15);
+            initialCopiesInput.PasswordChar = false;
+            initialCopiesInput.PlaceholderColor = Color.DarkGray;
+            initialCopiesInput.PlaceholderText = "10";
+            initialCopiesInput.Size = new Size(560, 51);
+            initialCopiesInput.TabIndex = 20;
+            initialCopiesInput.UnderlinedStyle = false;
+            // 
+            // tableLayoutPanel9
+            // 
+            tableLayoutPanel9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel9.AutoSize = true;
+            tableLayoutPanel9.ColumnCount = 1;
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel9.Controls.Add(distributionFeesLabel, 0, 0);
+            tableLayoutPanel9.Controls.Add(distributionFeesInput, 0, 2);
+            tableLayoutPanel9.Location = new Point(0, 228);
+            tableLayoutPanel9.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel9.Name = "tableLayoutPanel9";
+            tableLayoutPanel9.RowCount = 3;
+            tableLayoutPanel9.RowStyles.Add(new RowStyle());
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle());
+            tableLayoutPanel9.Size = new Size(560, 98);
+            tableLayoutPanel9.TabIndex = 5;
+            // 
+            // distributionFeesLabel
+            // 
+            distributionFeesLabel.AutoSize = true;
+            distributionFeesLabel.Font = new Font("Segoe UI", 13.915966F);
+            distributionFeesLabel.ForeColor = Color.White;
+            distributionFeesLabel.Location = new Point(3, 0);
+            distributionFeesLabel.Name = "distributionFeesLabel";
+            distributionFeesLabel.Size = new Size(186, 31);
+            distributionFeesLabel.TabIndex = 1;
+            distributionFeesLabel.Text = "Distribution Fees";
+            // 
+            // distributionFeesInput
+            // 
+            distributionFeesInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            distributionFeesInput.BackColor = Color.FromArgb(25, 26, 63);
+            distributionFeesInput.BorderColor = Color.FromArgb(25, 26, 63);
+            distributionFeesInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            distributionFeesInput.BorderRadius = 26;
+            distributionFeesInput.BorderSize = 2;
+            distributionFeesInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            distributionFeesInput.ForeColor = Color.White;
+            distributionFeesInput.Location = new Point(0, 39);
+            distributionFeesInput.Margin = new Padding(0, 0, 0, 8);
+            distributionFeesInput.Multiline = false;
+            distributionFeesInput.Name = "distributionFeesInput";
+            distributionFeesInput.Padding = new Padding(20, 15, 20, 15);
+            distributionFeesInput.PasswordChar = false;
+            distributionFeesInput.PlaceholderColor = Color.DarkGray;
+            distributionFeesInput.PlaceholderText = "$1000";
+            distributionFeesInput.Size = new Size(560, 51);
+            distributionFeesInput.TabIndex = 20;
+            distributionFeesInput.UnderlinedStyle = false;
+            // 
+            // tableLayoutPanel8
+            // 
+            tableLayoutPanel8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel8.AutoSize = true;
+            tableLayoutPanel8.ColumnCount = 1;
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel8.Controls.Add(genreLabel, 0, 0);
+            tableLayoutPanel8.Controls.Add(genreInput, 0, 2);
+            tableLayoutPanel8.Location = new Point(0, 114);
+            tableLayoutPanel8.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel8.Name = "tableLayoutPanel8";
+            tableLayoutPanel8.RowCount = 3;
+            tableLayoutPanel8.RowStyles.Add(new RowStyle());
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle());
+            tableLayoutPanel8.Size = new Size(560, 98);
+            tableLayoutPanel8.TabIndex = 4;
+            // 
+            // genreLabel
+            // 
+            genreLabel.AutoSize = true;
+            genreLabel.Font = new Font("Segoe UI", 13.915966F);
+            genreLabel.ForeColor = Color.White;
+            genreLabel.Location = new Point(3, 0);
+            genreLabel.Name = "genreLabel";
+            genreLabel.Size = new Size(75, 31);
+            genreLabel.TabIndex = 1;
+            genreLabel.Text = "Genre";
+            // 
+            // genreInput
+            // 
+            genreInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            genreInput.BackColor = Color.FromArgb(25, 26, 63);
+            genreInput.BorderColor = Color.FromArgb(25, 26, 63);
+            genreInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            genreInput.BorderRadius = 26;
+            genreInput.BorderSize = 2;
+            genreInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            genreInput.ForeColor = Color.White;
+            genreInput.Location = new Point(0, 39);
+            genreInput.Margin = new Padding(0, 0, 0, 8);
+            genreInput.Multiline = false;
+            genreInput.Name = "genreInput";
+            genreInput.Padding = new Padding(20, 15, 20, 15);
+            genreInput.PasswordChar = false;
+            genreInput.PlaceholderColor = Color.DarkGray;
+            genreInput.PlaceholderText = "Select a Genre";
+            genreInput.Size = new Size(560, 51);
+            genreInput.TabIndex = 20;
+            genreInput.UnderlinedStyle = false;
             // 
             // tableLayoutPanel7
             // 
-            tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel7.ColumnCount = 2;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69.32953F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30.6704712F));
-            tableLayoutPanel7.Controls.Add(rentalHistoryLabel, 0, 0);
-            tableLayoutPanel7.Controls.Add(viewQueueButton, 1, 0);
-            tableLayoutPanel7.Location = new Point(422, 0);
-            tableLayoutPanel7.Margin = new Padding(0);
+            tableLayoutPanel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel7.AutoSize = true;
+            tableLayoutPanel7.ColumnCount = 1;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Controls.Add(titleLabel, 0, 0);
+            tableLayoutPanel7.Controls.Add(titleInput, 0, 2);
+            tableLayoutPanel7.Location = new Point(0, 0);
+            tableLayoutPanel7.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 1;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.Size = new Size(711, 60);
-            tableLayoutPanel7.TabIndex = 1;
+            tableLayoutPanel7.RowCount = 3;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle());
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle());
+            tableLayoutPanel7.Size = new Size(560, 98);
+            tableLayoutPanel7.TabIndex = 3;
             // 
-            // rentalHistoryLabel
+            // titleLabel
             // 
-            rentalHistoryLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            rentalHistoryLabel.AutoSize = true;
-            rentalHistoryLabel.Font = new Font("Segoe UI", 13.915966F);
-            rentalHistoryLabel.ForeColor = Color.White;
-            rentalHistoryLabel.Location = new Point(3, 14);
-            rentalHistoryLabel.Name = "rentalHistoryLabel";
-            rentalHistoryLabel.Size = new Size(486, 31);
-            rentalHistoryLabel.TabIndex = 22;
-            rentalHistoryLabel.Text = "x's Rental History";
+            titleLabel.AutoSize = true;
+            titleLabel.Font = new Font("Segoe UI", 13.915966F);
+            titleLabel.ForeColor = Color.White;
+            titleLabel.Location = new Point(3, 0);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(58, 31);
+            titleLabel.TabIndex = 1;
+            titleLabel.Text = "Title";
             // 
-            // viewQueueButton
+            // titleInput
             // 
-            viewQueueButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            viewQueueButton.BackColor = Color.FromArgb(84, 80, 164);
-            viewQueueButton.FlatAppearance.BorderSize = 0;
-            viewQueueButton.FlatStyle = FlatStyle.Flat;
-            viewQueueButton.ForeColor = Color.White;
-            viewQueueButton.Location = new Point(495, 5);
-            viewQueueButton.Name = "viewQueueButton";
-            viewQueueButton.Size = new Size(213, 50);
-            viewQueueButton.TabIndex = 21;
-            viewQueueButton.Text = "View Queue";
-            viewQueueButton.UseVisualStyleBackColor = false;
-            viewQueueButton.Click += viewQueueButton_Click;
+            titleInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            titleInput.BackColor = Color.FromArgb(25, 26, 63);
+            titleInput.BorderColor = Color.FromArgb(25, 26, 63);
+            titleInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            titleInput.BorderRadius = 26;
+            titleInput.BorderSize = 2;
+            titleInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            titleInput.ForeColor = Color.White;
+            titleInput.Location = new Point(0, 39);
+            titleInput.Margin = new Padding(0, 0, 0, 8);
+            titleInput.Multiline = false;
+            titleInput.Name = "titleInput";
+            titleInput.Padding = new Padding(20, 15, 20, 15);
+            titleInput.PasswordChar = false;
+            titleInput.PlaceholderColor = Color.DarkGray;
+            titleInput.PlaceholderText = "Space Odyssey";
+            titleInput.Size = new Size(560, 51);
+            titleInput.TabIndex = 20;
+            titleInput.UnderlinedStyle = false;
             // 
-            // customerDataView
+            // tableLayoutPanel11
             // 
-            customerDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            customerDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            customerDataView.BorderStyle = BorderStyle.None;
-            customerDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            customerDataView.Location = new Point(0, 84);
-            customerDataView.Margin = new Padding(0, 8, 0, 0);
-            customerDataView.Name = "customerDataView";
-            customerDataView.RowHeadersWidth = 51;
-            customerDataView.Size = new Size(406, 566);
-            customerDataView.TabIndex = 5;
+            tableLayoutPanel11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel11.ColumnCount = 1;
+            tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel11.Controls.Add(movieCastLabel, 0, 0);
+            tableLayoutPanel11.Controls.Add(addActorButton, 0, 2);
+            tableLayoutPanel11.Location = new Point(569, 3);
+            tableLayoutPanel11.Name = "tableLayoutPanel11";
+            tableLayoutPanel11.RowCount = 3;
+            tableLayoutPanel11.RowStyles.Add(new RowStyle());
+            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel11.Size = new Size(561, 584);
+            tableLayoutPanel11.TabIndex = 1;
             // 
-            // rentalHistoryDataView
+            // movieCastLabel
             // 
-            rentalHistoryDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            rentalHistoryDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            rentalHistoryDataView.BorderStyle = BorderStyle.None;
-            rentalHistoryDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            rentalHistoryDataView.Location = new Point(422, 84);
-            rentalHistoryDataView.Margin = new Padding(0, 8, 0, 0);
-            rentalHistoryDataView.Name = "rentalHistoryDataView";
-            rentalHistoryDataView.RowHeadersWidth = 51;
-            rentalHistoryDataView.Size = new Size(711, 566);
-            rentalHistoryDataView.TabIndex = 6;
+            movieCastLabel.AutoSize = true;
+            movieCastLabel.Font = new Font("Segoe UI", 13.915966F);
+            movieCastLabel.ForeColor = Color.White;
+            movieCastLabel.Location = new Point(3, 0);
+            movieCastLabel.Name = "movieCastLabel";
+            movieCastLabel.Size = new Size(127, 31);
+            movieCastLabel.TabIndex = 22;
+            movieCastLabel.Text = "Movie Cast";
             // 
-            // rentalScreen
+            // addActorButton
+            // 
+            addActorButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addActorButton.BackColor = Color.FromArgb(84, 80, 164);
+            addActorButton.FlatAppearance.BorderSize = 0;
+            addActorButton.FlatStyle = FlatStyle.Flat;
+            addActorButton.ForeColor = Color.White;
+            addActorButton.Location = new Point(0, 553);
+            addActorButton.Margin = new Padding(0, 8, 0, 0);
+            addActorButton.Name = "addActorButton";
+            addActorButton.Size = new Size(561, 30);
+            addActorButton.TabIndex = 21;
+            addActorButton.Text = "Add Actor to Movie Cast";
+            addActorButton.UseVisualStyleBackColor = false;
+            // 
+            // addMovie
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -567,9 +788,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "rentalScreen";
+            Name = "addMovie";
             Size = new Size(1301, 805);
-            Load += rentalScreen_Load;
+            Load += addMovie_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -590,11 +811,20 @@
             roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
+            tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel6.PerformLayout();
+            tableLayoutPanel10.ResumeLayout(false);
+            tableLayoutPanel10.PerformLayout();
+            tableLayoutPanel9.ResumeLayout(false);
+            tableLayoutPanel9.PerformLayout();
+            tableLayoutPanel8.ResumeLayout(false);
+            tableLayoutPanel8.PerformLayout();
             tableLayoutPanel7.ResumeLayout(false);
             tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)customerDataView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)rentalHistoryDataView).EndInit();
+            tableLayoutPanel11.ResumeLayout(false);
+            tableLayoutPanel11.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -625,18 +855,28 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
-        private DataGridView EmpDataView;
-
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
+
+        private TableLayoutPanel tableLayoutPanel4;
+        private Button addMovieButton;
         private TableLayoutPanel tableLayoutPanel5;
-        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
+        private TableLayoutPanel tableLayoutPanel6;
+        private TableLayoutPanel tableLayoutPanel10;
+        private Label initialCopiesLabel;
+        private CustomControls.RoundedTextBox.RoundedTextBox initialCopiesInput;
+        private TableLayoutPanel tableLayoutPanel9;
+        private Label distributionFeesLabel;
+        private CustomControls.RoundedTextBox.RoundedTextBox distributionFeesInput;
+        private TableLayoutPanel tableLayoutPanel8;
+        private Label genreLabel;
+        private CustomControls.RoundedTextBox.RoundedTextBox genreInput;
         private TableLayoutPanel tableLayoutPanel7;
-        private Button viewQueueButton;
-        private Label rentalHistoryLabel;
-        private DataGridView customerDataView;
-        private DataGridView rentalHistoryDataView;
-        private Button addCustomerButton;
+        private Label titleLabel;
+        private CustomControls.RoundedTextBox.RoundedTextBox titleInput;
+        private TableLayoutPanel tableLayoutPanel11;
+        private Label movieCastLabel;
+        private Button addActorButton;
     }
 }

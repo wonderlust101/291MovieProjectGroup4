@@ -5,8 +5,6 @@ using movieRental;
 using System.Drawing.Text; 
 using System.Runtime.InteropServices; 
 
-
-
 namespace skeleton
 {
     public partial class Login : Form
@@ -70,28 +68,33 @@ namespace skeleton
             CreateAccount.Font = outfitFontS12Bold;
         }
 
+        // Switch Screen
+        private void SwitchToScreen(UserControl newScreen)
+        {
+            Form parentForm = this.FindForm();
+
+            if (parentForm != null)
+            {
+                // Dispose of existing controls
+                foreach (Control control in parentForm.Controls.OfType<UserControl>().ToList())
+                {
+                    control.Dispose();
+                }
+
+                // Clear and add the new screen
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(newScreen);
+                newScreen.Dock = DockStyle.Fill;
+            }
+        }
+
         private void loginClick(object sender, EventArgs e)
         {
             String name = userName.Text;
             string password = passWord.Text;
             if (name == "test")
             {
-                customerScreen customerScreenInstance = new customerScreen();
-                Form parentForm = this.FindForm();
-
-                if (parentForm != null)
-                {
-                    // Dispose of existing controls
-                    foreach (Control control in parentForm.Controls.OfType<UserControl>().ToList())
-                    {
-                        control.Dispose();
-                    }
-
-                    // Clear and add the new screen
-                    parentForm.Controls.Clear();
-                    parentForm.Controls.Add(customerScreenInstance);
-                    customerScreenInstance.Dock = DockStyle.Fill;
-                }
+                SwitchToScreen(new customerScreen());
             }
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -125,22 +128,8 @@ namespace skeleton
                         return;
                     }
 
-                    customerScreen customerScreenInstance = new customerScreen();
-                    Form parentForm = this.FindForm();
+                    SwitchToScreen(new customerScreen());
 
-                    if (parentForm != null)
-                    {
-                        // Dispose of existing controls
-                        foreach (Control control in parentForm.Controls.OfType<UserControl>().ToList())
-                        {
-                            control.Dispose();
-                        }
-
-                        // Clear and add the new screen
-                        parentForm.Controls.Clear();
-                        parentForm.Controls.Add(customerScreenInstance);
-                        customerScreenInstance.Dock = DockStyle.Fill;
-                    }
                 }
             }
         }

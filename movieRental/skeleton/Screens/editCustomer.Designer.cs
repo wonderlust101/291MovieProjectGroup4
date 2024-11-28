@@ -53,6 +53,7 @@
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
             tableLayoutPanel9 = new TableLayoutPanel();
+            addPhoneNumberButton = new Button();
             EmailLabel = new Label();
             PhoneLabel = new Label();
             EmailInput = new CustomControls.RoundedTextBox.RoundedTextBox();
@@ -73,9 +74,8 @@
             FirstNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             LastNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel10 = new TableLayoutPanel();
-            addPhoneNumberButton = new Button();
-            saveChangesButton = new Button();
             deleteCustomerButton = new Button();
+            saveChangesButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -517,6 +517,21 @@
             tableLayoutPanel9.Size = new Size(1139, 128);
             tableLayoutPanel9.TabIndex = 4;
             // 
+            // addPhoneNumberButton
+            // 
+            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addPhoneNumberButton.BackColor = Color.FromArgb(84, 80, 164);
+            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
+            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
+            addPhoneNumberButton.ForeColor = Color.White;
+            addPhoneNumberButton.Location = new Point(577, 98);
+            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
+            addPhoneNumberButton.Name = "addPhoneNumberButton";
+            addPhoneNumberButton.Size = new Size(562, 30);
+            addPhoneNumberButton.TabIndex = 21;
+            addPhoneNumberButton.Text = "Add Phone Number";
+            addPhoneNumberButton.UseVisualStyleBackColor = false;
+            // 
             // EmailLabel
             // 
             EmailLabel.AutoSize = true;
@@ -538,6 +553,7 @@
             PhoneLabel.Size = new Size(168, 31);
             PhoneLabel.TabIndex = 2;
             PhoneLabel.Text = "Phone Number";
+            PhoneLabel.Click += PhoneLabel_Click;
             // 
             // EmailInput
             // 
@@ -863,20 +879,20 @@
             tableLayoutPanel10.Size = new Size(1133, 54);
             tableLayoutPanel10.TabIndex = 5;
             // 
-            // addPhoneNumberButton
+            // deleteCustomerButton
             // 
-            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addPhoneNumberButton.BackColor = Color.FromArgb(84, 80, 164);
-            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
-            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
-            addPhoneNumberButton.ForeColor = Color.White;
-            addPhoneNumberButton.Location = new Point(577, 98);
-            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
-            addPhoneNumberButton.Name = "addPhoneNumberButton";
-            addPhoneNumberButton.Size = new Size(562, 30);
-            addPhoneNumberButton.TabIndex = 21;
-            addPhoneNumberButton.Text = "Add Phone Number";
-            addPhoneNumberButton.UseVisualStyleBackColor = false;
+            deleteCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            deleteCustomerButton.BackColor = Color.FromArgb(193, 70, 72);
+            deleteCustomerButton.FlatAppearance.BorderSize = 0;
+            deleteCustomerButton.FlatStyle = FlatStyle.Flat;
+            deleteCustomerButton.ForeColor = Color.White;
+            deleteCustomerButton.Location = new Point(0, 8);
+            deleteCustomerButton.Margin = new Padding(0, 8, 0, 0);
+            deleteCustomerButton.Name = "deleteCustomerButton";
+            deleteCustomerButton.Size = new Size(558, 46);
+            deleteCustomerButton.TabIndex = 23;
+            deleteCustomerButton.Text = "Delete Customer";
+            deleteCustomerButton.UseVisualStyleBackColor = false;
             // 
             // saveChangesButton
             // 
@@ -892,21 +908,6 @@
             saveChangesButton.TabIndex = 22;
             saveChangesButton.Text = "Save Changes";
             saveChangesButton.UseVisualStyleBackColor = false;
-            // 
-            // deleteCustomerButton
-            // 
-            deleteCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            deleteCustomerButton.BackColor = Color.FromArgb(193, 70, 72);
-            deleteCustomerButton.FlatAppearance.BorderSize = 0;
-            deleteCustomerButton.FlatStyle = FlatStyle.Flat;
-            deleteCustomerButton.ForeColor = Color.White;
-            deleteCustomerButton.Location = new Point(0, 8);
-            deleteCustomerButton.Margin = new Padding(0, 8, 0, 0);
-            deleteCustomerButton.Name = "deleteCustomerButton";
-            deleteCustomerButton.Size = new Size(558, 46);
-            deleteCustomerButton.TabIndex = 23;
-            deleteCustomerButton.Text = "Delete Customer";
-            deleteCustomerButton.UseVisualStyleBackColor = false;
             // 
             // editCustomer
             // 

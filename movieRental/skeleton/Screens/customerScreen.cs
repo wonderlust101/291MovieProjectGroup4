@@ -192,15 +192,7 @@ namespace movieRental
 
         private void addCustomer_Click(object sender, EventArgs e)
         {
-            addCustomer addCustomerInstance = new addCustomer();
-            Form parentForm = this.FindForm();
-
-            if (parentForm != null)
-            {
-                parentForm.Controls.Clear();
-                parentForm.Controls.Add(addCustomerInstance);
-                addCustomerInstance.Dock = DockStyle.Fill;
-            }
+            SwitchToScreen(new addCustomer());
         }
     }
 }
