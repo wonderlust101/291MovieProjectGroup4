@@ -5,8 +5,6 @@ using movieRental;
 using System.Drawing.Text; 
 using System.Runtime.InteropServices; 
 
-
-
 namespace skeleton
 {
     public partial class Login : Form

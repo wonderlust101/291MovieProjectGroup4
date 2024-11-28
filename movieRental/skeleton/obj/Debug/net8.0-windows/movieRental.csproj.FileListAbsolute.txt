@@ -111,3 +111,5 @@ F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-win
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.pdb
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.genruntimeconfig.cache
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\ref\movieRental.dll
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addMovie.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.editMovie.resources

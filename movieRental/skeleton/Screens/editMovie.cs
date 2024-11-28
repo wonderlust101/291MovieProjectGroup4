@@ -15,26 +15,27 @@ using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class customerScreen : UserControl
+    public partial class editMovie : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
-        //Data
-        public List<Customer> Customers;
+        // Data
+        public List<Movie> Movies;
 
         // Custom Fonts
         private Font outfitFontS30Bold;
+        private Font outfitFontS14Bold;
         private Font outfitFontS10Bold;
         private Font outfitFontS8Bold;
 
         private Font outfitFontS12;
+        private Font outfitFontS14;
 
-        public customerScreen()
+        public editMovie()
         {
             InitializeComponent();
 
-            Customers = RetrieveCustomers();
-            EmpDataView.DataSource = Customers;
+            Movies = RetrieveMovies();
 
             LoadCustomFont();
             ApplyFonts();
@@ -48,10 +49,12 @@ namespace movieRental
             pfcOutfit.AddFontFile(outfitFontPath);
 
             outfitFontS30Bold = new Font(pfcOutfit.Families[0], 30f, FontStyle.Bold);
+            outfitFontS14Bold = new Font(pfcOutfit.Families[0], 14f, FontStyle.Bold);
             outfitFontS10Bold = new Font(pfcOutfit.Families[0], 10f, FontStyle.Bold);
             outfitFontS8Bold = new Font(pfcOutfit.Families[0], 8f, FontStyle.Bold);
 
             outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
+            outfitFontS14 = new Font(pfcOutfit.Families[0], 14f, FontStyle.Regular);
         }
 
         private void ApplyFonts()
@@ -63,19 +66,16 @@ namespace movieRental
             RentalLabel.Font = outfitFontS8Bold;
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
-
-            customerSearch.Font = outfitFontS12;
-            addCustomerButton.Font = outfitFontS10Bold;
         }
 
         // Data Source
-        private List<Customer>? RetrieveCustomers()
+        private List<Movie> RetrieveMovies()
         {
-            var customers = new List<Customer>();
+            var movies = new List<Movie>();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                String nameQuery = "SELECT * FROM Customer";
+                String nameQuery = "SELECT * FROM Movie";
                 using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
                 {
 
@@ -85,12 +85,12 @@ namespace movieRental
 
                         while (myReader.Read())
                         {
-                            customers.Add(new Customer()
+                            movies.Add(new Movie()
                             {
-                                Name = myReader.GetString(1) + " " + myReader.GetString(2),
-                                Email = myReader.GetString(8),
-                                AccountNumber = myReader.GetInt32(7),
-                                CreationDate = myReader.GetDateTime(12)
+                                Title = myReader.GetString(1),
+                                Genre = myReader.GetString(2),
+                                Fee = myReader.GetDecimal(3),
+                                TotalCopies = myReader.GetInt32(4)
                             });
 
                         }
@@ -103,27 +103,7 @@ namespace movieRental
                     }
                 }
             }
-            return customers;
-        }
-
-        // Switch Screen
-        private void SwitchToScreen(UserControl newScreen)
-        {
-            Form parentForm = this.FindForm();
-
-            if (parentForm != null)
-            {
-                // Dispose of existing controls
-                foreach (Control control in parentForm.Controls.OfType<UserControl>().ToList())
-                {
-                    control.Dispose();
-                }
-
-                // Clear and add the new screen
-                parentForm.Controls.Clear();
-                parentForm.Controls.Add(newScreen);
-                newScreen.Dock = DockStyle.Fill;
-            }
+            return movies;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -136,7 +116,7 @@ namespace movieRental
 
         }
 
-        private void customerScreen_Load(object sender, EventArgs e)
+        private void editMovie_Load(object sender, EventArgs e)
         {
 
         }
@@ -147,22 +127,54 @@ namespace movieRental
 
         private void CustomersButton_Click(object sender, EventArgs e)
         {
-            SwitchToScreen(new customerScreen());
+            customerScreen customerScreenInstance = new customerScreen();
+            Form parentForm = this.FindForm();
+
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(customerScreenInstance);
+                customerScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void MoviesButton_Click(object sender, EventArgs e)
         {
-            SwitchToScreen(new moviesScreen());
+            moviesScreen moviesScreenInstance = new moviesScreen();
+            Form parentForm = this.FindForm();
+
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(moviesScreenInstance);
+                moviesScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void RentalsButton_Click(object sender, EventArgs e)
         {
-            SwitchToScreen(new rentalScreen());
+            rentalScreen rentalScreenInstance = new rentalScreen();
+            Form parentForm = this.FindForm();
+
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(rentalScreenInstance);
+                rentalScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void ReportsButton_Click(object sender, EventArgs e)
         {
-            SwitchToScreen(new reportScreen());
+            reportScreen reportScreenInstance = new reportScreen();
+            Form parentForm = this.FindForm();
+
+            if (parentForm != null)
+            {
+                parentForm.Controls.Clear();
+                parentForm.Controls.Add(reportScreenInstance);
+                reportScreenInstance.Dock = DockStyle.Fill;
+            }
         }
 
         private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
@@ -190,9 +202,9 @@ namespace movieRental
 
         }
 
-        private void addCustomer_Click(object sender, EventArgs e)
+        private void roundedTextBox1__TextChanged(object sender, EventArgs e)
         {
-            SwitchToScreen(new addCustomer());
+
         }
     }
 }
