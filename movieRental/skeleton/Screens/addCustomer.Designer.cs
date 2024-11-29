@@ -57,6 +57,7 @@
             PhoneLabel = new Label();
             EmailInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             PhoneNumberInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            addPhoneNumberButton = new Button();
             tableLayoutPanel8 = new TableLayoutPanel();
             CityLabel = new Label();
             ProvinceLabel = new Label();
@@ -73,7 +74,6 @@
             FirstNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             LastNameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             addCustomerButton = new Button();
-            addPhoneNumberButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -469,11 +469,11 @@
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.ColumnCount = 1;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Controls.Add(addCustomerButton, 0, 5);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel9, 0, 3);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel8, 0, 2);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel7, 0, 1);
             tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 0);
-            tableLayoutPanel4.Controls.Add(addCustomerButton, 0, 5);
             tableLayoutPanel4.Location = new Point(16, 16);
             tableLayoutPanel4.Margin = new Padding(0);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -501,7 +501,7 @@
             tableLayoutPanel9.Controls.Add(EmailInput, 0, 2);
             tableLayoutPanel9.Controls.Add(PhoneNumberInput, 2, 2);
             tableLayoutPanel9.Controls.Add(addPhoneNumberButton, 2, 3);
-            tableLayoutPanel9.Location = new Point(0, 318);
+            tableLayoutPanel9.Location = new Point(0, 321);
             tableLayoutPanel9.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 6;
@@ -511,7 +511,7 @@
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
-            tableLayoutPanel9.Size = new Size(1139, 128);
+            tableLayoutPanel9.Size = new Size(1139, 129);
             tableLayoutPanel9.TabIndex = 4;
             // 
             // EmailLabel
@@ -521,7 +521,7 @@
             EmailLabel.ForeColor = Color.White;
             EmailLabel.Location = new Point(3, 0);
             EmailLabel.Name = "EmailLabel";
-            EmailLabel.Size = new Size(79, 31);
+            EmailLabel.Size = new Size(81, 32);
             EmailLabel.TabIndex = 1;
             EmailLabel.Text = "E-mail";
             // 
@@ -532,7 +532,7 @@
             PhoneLabel.ForeColor = Color.White;
             PhoneLabel.Location = new Point(580, 0);
             PhoneLabel.Name = "PhoneLabel";
-            PhoneLabel.Size = new Size(168, 31);
+            PhoneLabel.Size = new Size(177, 32);
             PhoneLabel.TabIndex = 2;
             PhoneLabel.Text = "Phone Number";
             // 
@@ -546,7 +546,7 @@
             EmailInput.BorderSize = 2;
             EmailInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             EmailInput.ForeColor = Color.White;
-            EmailInput.Location = new Point(0, 39);
+            EmailInput.Location = new Point(0, 40);
             EmailInput.Margin = new Padding(0);
             EmailInput.Multiline = false;
             EmailInput.Name = "EmailInput";
@@ -568,7 +568,7 @@
             PhoneNumberInput.BorderSize = 2;
             PhoneNumberInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneNumberInput.ForeColor = Color.White;
-            PhoneNumberInput.Location = new Point(577, 39);
+            PhoneNumberInput.Location = new Point(577, 40);
             PhoneNumberInput.Margin = new Padding(0);
             PhoneNumberInput.Multiline = false;
             PhoneNumberInput.Name = "PhoneNumberInput";
@@ -579,6 +579,22 @@
             PhoneNumberInput.Size = new Size(562, 51);
             PhoneNumberInput.TabIndex = 21;
             PhoneNumberInput.UnderlinedStyle = false;
+            // 
+            // addPhoneNumberButton
+            // 
+            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addPhoneNumberButton.BackColor = Color.FromArgb(84, 80, 164);
+            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
+            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
+            addPhoneNumberButton.ForeColor = Color.White;
+            addPhoneNumberButton.Location = new Point(577, 99);
+            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
+            addPhoneNumberButton.Name = "addPhoneNumberButton";
+            addPhoneNumberButton.Size = new Size(562, 30);
+            addPhoneNumberButton.TabIndex = 20;
+            addPhoneNumberButton.Text = "Add Phone Number";
+            addPhoneNumberButton.UseVisualStyleBackColor = false;
+            addPhoneNumberButton.Click += addCustomerClick;
             // 
             // tableLayoutPanel8
             // 
@@ -596,14 +612,14 @@
             tableLayoutPanel8.Controls.Add(CityInput, 0, 2);
             tableLayoutPanel8.Controls.Add(ProvinceInput, 2, 2);
             tableLayoutPanel8.Controls.Add(PostalCodeInput, 4, 2);
-            tableLayoutPanel8.Location = new Point(0, 212);
+            tableLayoutPanel8.Location = new Point(0, 214);
             tableLayoutPanel8.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
             tableLayoutPanel8.RowCount = 3;
             tableLayoutPanel8.RowStyles.Add(new RowStyle());
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle());
-            tableLayoutPanel8.Size = new Size(1139, 90);
+            tableLayoutPanel8.Size = new Size(1139, 91);
             tableLayoutPanel8.TabIndex = 3;
             // 
             // CityLabel
@@ -613,7 +629,7 @@
             CityLabel.ForeColor = Color.White;
             CityLabel.Location = new Point(3, 0);
             CityLabel.Name = "CityLabel";
-            CityLabel.Size = new Size(53, 31);
+            CityLabel.Size = new Size(55, 32);
             CityLabel.TabIndex = 1;
             CityLabel.Text = "City";
             // 
@@ -624,7 +640,7 @@
             ProvinceLabel.ForeColor = Color.White;
             ProvinceLabel.Location = new Point(387, 0);
             ProvinceLabel.Name = "ProvinceLabel";
-            ProvinceLabel.Size = new Size(101, 31);
+            ProvinceLabel.Size = new Size(105, 32);
             ProvinceLabel.TabIndex = 2;
             ProvinceLabel.Text = "Province";
             // 
@@ -635,7 +651,7 @@
             PostalCodeLabel.ForeColor = Color.White;
             PostalCodeLabel.Location = new Point(772, 0);
             PostalCodeLabel.Name = "PostalCodeLabel";
-            PostalCodeLabel.Size = new Size(134, 31);
+            PostalCodeLabel.Size = new Size(139, 32);
             PostalCodeLabel.TabIndex = 3;
             PostalCodeLabel.Text = "Postal Code";
             // 
@@ -649,7 +665,7 @@
             CityInput.BorderSize = 2;
             CityInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CityInput.ForeColor = Color.White;
-            CityInput.Location = new Point(0, 39);
+            CityInput.Location = new Point(0, 40);
             CityInput.Margin = new Padding(0);
             CityInput.Multiline = false;
             CityInput.Name = "CityInput";
@@ -671,7 +687,7 @@
             ProvinceInput.BorderSize = 2;
             ProvinceInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ProvinceInput.ForeColor = Color.White;
-            ProvinceInput.Location = new Point(384, 39);
+            ProvinceInput.Location = new Point(384, 40);
             ProvinceInput.Margin = new Padding(0);
             ProvinceInput.Multiline = false;
             ProvinceInput.Name = "ProvinceInput";
@@ -693,7 +709,7 @@
             PostalCodeInput.BorderSize = 2;
             PostalCodeInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PostalCodeInput.ForeColor = Color.White;
-            PostalCodeInput.Location = new Point(769, 39);
+            PostalCodeInput.Location = new Point(769, 40);
             PostalCodeInput.Margin = new Padding(0);
             PostalCodeInput.Multiline = false;
             PostalCodeInput.Name = "PostalCodeInput";
@@ -713,14 +729,14 @@
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel7.Controls.Add(AddressLabel, 0, 0);
             tableLayoutPanel7.Controls.Add(AddressInput, 0, 2);
-            tableLayoutPanel7.Location = new Point(0, 106);
+            tableLayoutPanel7.Location = new Point(0, 107);
             tableLayoutPanel7.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 3;
             tableLayoutPanel7.RowStyles.Add(new RowStyle());
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel7.RowStyles.Add(new RowStyle());
-            tableLayoutPanel7.Size = new Size(1139, 90);
+            tableLayoutPanel7.Size = new Size(1139, 91);
             tableLayoutPanel7.TabIndex = 2;
             // 
             // AddressLabel
@@ -730,7 +746,7 @@
             AddressLabel.ForeColor = Color.White;
             AddressLabel.Location = new Point(3, 0);
             AddressLabel.Name = "AddressLabel";
-            AddressLabel.Size = new Size(97, 31);
+            AddressLabel.Size = new Size(98, 32);
             AddressLabel.TabIndex = 1;
             AddressLabel.Text = "Address";
             // 
@@ -744,7 +760,7 @@
             AddressInput.BorderSize = 2;
             AddressInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddressInput.ForeColor = Color.White;
-            AddressInput.Location = new Point(0, 39);
+            AddressInput.Location = new Point(0, 40);
             AddressInput.Margin = new Padding(0);
             AddressInput.Multiline = false;
             AddressInput.Name = "AddressInput";
@@ -775,7 +791,7 @@
             tableLayoutPanel6.RowStyles.Add(new RowStyle());
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.Size = new Size(1139, 90);
+            tableLayoutPanel6.Size = new Size(1139, 91);
             tableLayoutPanel6.TabIndex = 1;
             // 
             // FirstNameLabel
@@ -785,7 +801,7 @@
             FirstNameLabel.ForeColor = Color.White;
             FirstNameLabel.Location = new Point(3, 0);
             FirstNameLabel.Name = "FirstNameLabel";
-            FirstNameLabel.Size = new Size(124, 31);
+            FirstNameLabel.Size = new Size(129, 32);
             FirstNameLabel.TabIndex = 0;
             FirstNameLabel.Text = "First Name";
             // 
@@ -796,7 +812,7 @@
             LastNameLabel.ForeColor = Color.White;
             LastNameLabel.Location = new Point(580, 0);
             LastNameLabel.Name = "LastNameLabel";
-            LastNameLabel.Size = new Size(122, 31);
+            LastNameLabel.Size = new Size(126, 32);
             LastNameLabel.TabIndex = 1;
             LastNameLabel.Text = "Last Name";
             // 
@@ -810,7 +826,7 @@
             FirstNameInput.BorderSize = 2;
             FirstNameInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FirstNameInput.ForeColor = Color.White;
-            FirstNameInput.Location = new Point(0, 39);
+            FirstNameInput.Location = new Point(0, 40);
             FirstNameInput.Margin = new Padding(0);
             FirstNameInput.Multiline = false;
             FirstNameInput.Name = "FirstNameInput";
@@ -832,7 +848,7 @@
             LastNameInput.BorderSize = 2;
             LastNameInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LastNameInput.ForeColor = Color.White;
-            LastNameInput.Location = new Point(577, 39);
+            LastNameInput.Location = new Point(577, 40);
             LastNameInput.Margin = new Padding(0);
             LastNameInput.Multiline = false;
             LastNameInput.Name = "LastNameInput";
@@ -851,27 +867,14 @@
             addCustomerButton.FlatAppearance.BorderSize = 0;
             addCustomerButton.FlatStyle = FlatStyle.Flat;
             addCustomerButton.ForeColor = Color.White;
-            addCustomerButton.Location = new Point(3, 601);
+            addCustomerButton.Location = new Point(0, 607);
+            addCustomerButton.Margin = new Padding(0, 8, 0, 0);
             addCustomerButton.Name = "addCustomerButton";
-            addCustomerButton.Size = new Size(1133, 50);
-            addCustomerButton.TabIndex = 19;
+            addCustomerButton.Size = new Size(1139, 46);
+            addCustomerButton.TabIndex = 23;
             addCustomerButton.Text = "Add Customer";
             addCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // addPhoneNumberButton
-            // 
-            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addPhoneNumberButton.BackColor = Color.FromArgb(84, 80, 164);
-            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
-            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
-            addPhoneNumberButton.ForeColor = Color.White;
-            addPhoneNumberButton.Location = new Point(577, 98);
-            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
-            addPhoneNumberButton.Name = "addPhoneNumberButton";
-            addPhoneNumberButton.Size = new Size(562, 30);
-            addPhoneNumberButton.TabIndex = 20;
-            addPhoneNumberButton.Text = "Add Phone Number";
-            addPhoneNumberButton.UseVisualStyleBackColor = false;
+            addCustomerButton.Click += this.addCustomerClick;
             // 
             // addCustomer
             // 
@@ -973,5 +976,6 @@
         private CustomControls.RoundedTextBox.RoundedTextBox PhoneNumberInput;
         private Button addPhoneNumberButton;
         private Button addCustomerButton;
+        
     }
 }
