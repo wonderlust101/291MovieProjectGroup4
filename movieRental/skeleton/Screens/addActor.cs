@@ -67,26 +67,7 @@ namespace movieRental
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
 
-            FirstNameLabel.Font = outfitFontS14Bold;
-            LastNameLabel.Font = outfitFontS14Bold;
-            AddressLabel.Font = outfitFontS14Bold;
-            CityLabel.Font = outfitFontS14Bold;
-            ProvinceLabel.Font = outfitFontS14Bold;
-            PostalCodeLabel.Font = outfitFontS14Bold;
-            EmailLabel.Font = outfitFontS14Bold;
-            PhoneLabel.Font = outfitFontS14Bold;
-
-            FirstNameInput.Font = outfitFontS14;
-            LastNameInput.Font = outfitFontS14;
-            AddressInput.Font = outfitFontS14;
-            CityInput.Font = outfitFontS14;
-            ProvinceInput.Font = outfitFontS14;
-            PostalCodeInput.Font = outfitFontS14;
-            EmailInput.Font = outfitFontS14;
-            PhoneNumberInput.Font = outfitFontS14;
-
             addActorButton.Font = outfitFontS10Bold;
-            addPhoneNumberButton.Font = outfitFontS8Bold;
         }
 
         // Data Source
