@@ -15,14 +15,12 @@ using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class editMovie : UserControl
+    public partial class addActor : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
         // Data
         public List<Movie> Movies;
-
-        private Movie movieToEdit;
 
         // Custom Fonts
         private Font outfitFontS30Bold;
@@ -33,7 +31,7 @@ namespace movieRental
         private Font outfitFontS12;
         private Font outfitFontS14;
 
-        public editMovie(Movie movie)
+        public addActor()
         {
             InitializeComponent();
 
@@ -68,6 +66,8 @@ namespace movieRental
             RentalLabel.Font = outfitFontS8Bold;
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
+
+            addActorButton.Font = outfitFontS10Bold;
         }
 
         // Data Source
@@ -138,7 +138,7 @@ namespace movieRental
 
         }
 
-        private void editMovie_Load(object sender, EventArgs e)
+        private void addActor_Load(object sender, EventArgs e)
         {
 
         }

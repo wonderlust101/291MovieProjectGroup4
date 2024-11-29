@@ -36,6 +36,9 @@ namespace movieRental
             Movies = RetrieveMovies();
             EmpDataView.DataSource = Movies;
 
+            AddEditButtonColumn();
+            EmpDataView.CellContentClick += EmpDataView_CellContentClick;
+
             LoadCustomFont();
             ApplyFonts();
         }
@@ -104,6 +107,29 @@ namespace movieRental
                 }
             }
             return movies;
+        }
+
+        // Add a button column for editing
+        private void AddEditButtonColumn()
+        {
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+
+            EmpDataView.Columns.Add(editButtonColumn);
+        }
+
+        // Handle the click event for the Edit button
+        private void EmpDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && EmpDataView.Columns[e.ColumnIndex].Name == "Edit")
+            {
+                Movie selectedMovie = (Movie)EmpDataView.Rows[e.RowIndex].DataBoundItem;
+                SwitchToScreen(new editMovie(selectedMovie));
+            }
         }
 
         // Switch Screen

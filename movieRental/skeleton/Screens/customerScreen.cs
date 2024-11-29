@@ -36,6 +36,10 @@ namespace movieRental
             Customers = RetrieveCustomers();
             EmpDataView.DataSource = Customers;
 
+            AddEditButtonColumn();
+            EmpDataView.CellContentClick += EmpDataView_CellContentClick;
+
+
             LoadCustomFont();
             ApplyFonts();
         }
@@ -104,6 +108,29 @@ namespace movieRental
                 }
             }
             return customers;
+        }
+
+        // Add a button column for editing
+        private void AddEditButtonColumn()
+        {
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+
+            EmpDataView.Columns.Add(editButtonColumn);
+        }
+
+        // Handle the click event for the Edit button
+        private void EmpDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && EmpDataView.Columns[e.ColumnIndex].Name == "Edit")
+            {
+                Customer selectedCustomer = (Customer)EmpDataView.Rows[e.RowIndex].DataBoundItem;
+                SwitchToScreen(new editCustomer(selectedCustomer));
+            }
         }
 
         // Switch Screen

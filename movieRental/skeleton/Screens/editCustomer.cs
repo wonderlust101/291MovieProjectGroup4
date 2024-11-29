@@ -22,6 +22,8 @@ namespace movieRental
         // Data
         public List<Movie> Movies;
 
+        private Movie customerToEdit;
+
         // Custom Fonts
         private Font outfitFontS30Bold;
         private Font outfitFontS14Bold;
@@ -31,7 +33,7 @@ namespace movieRental
         private Font outfitFontS12;
         private Font outfitFontS14;
 
-        public editCustomer()
+        public editCustomer(Customer customer)
         {
             InitializeComponent();
 

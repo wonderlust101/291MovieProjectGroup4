@@ -15,29 +15,26 @@ using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class editMovie : UserControl
+    public partial class actorScreen : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
         // Data
         public List<Movie> Movies;
 
-        private Movie movieToEdit;
-
         // Custom Fonts
         private Font outfitFontS30Bold;
-        private Font outfitFontS14Bold;
         private Font outfitFontS10Bold;
         private Font outfitFontS8Bold;
 
         private Font outfitFontS12;
-        private Font outfitFontS14;
 
-        public editMovie(Movie movie)
+        public actorScreen()
         {
             InitializeComponent();
 
             Movies = RetrieveMovies();
+            actorDataView.DataSource = Movies;
 
             LoadCustomFont();
             ApplyFonts();
@@ -51,12 +48,10 @@ namespace movieRental
             pfcOutfit.AddFontFile(outfitFontPath);
 
             outfitFontS30Bold = new Font(pfcOutfit.Families[0], 30f, FontStyle.Bold);
-            outfitFontS14Bold = new Font(pfcOutfit.Families[0], 14f, FontStyle.Bold);
             outfitFontS10Bold = new Font(pfcOutfit.Families[0], 10f, FontStyle.Bold);
             outfitFontS8Bold = new Font(pfcOutfit.Families[0], 8f, FontStyle.Bold);
 
             outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
-            outfitFontS14 = new Font(pfcOutfit.Families[0], 14f, FontStyle.Regular);
         }
 
         private void ApplyFonts()
@@ -68,6 +63,8 @@ namespace movieRental
             RentalLabel.Font = outfitFontS8Bold;
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
+
+            actorSearch.Font = outfitFontS12;
         }
 
         // Data Source
@@ -138,7 +135,7 @@ namespace movieRental
 
         }
 
-        private void editMovie_Load(object sender, EventArgs e)
+        private void addActor_Load(object sender, EventArgs e)
         {
 
         }
@@ -183,16 +180,6 @@ namespace movieRental
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EmpTabName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedTextBox1__TextChanged(object sender, EventArgs e)
         {
 
         }
