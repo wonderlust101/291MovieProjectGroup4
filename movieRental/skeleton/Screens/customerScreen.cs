@@ -34,14 +34,15 @@ namespace movieRental
             InitializeComponent();
 
             Customers = RetrieveCustomers();
-            EmpDataView.DataSource = Customers;
 
+            EmpDataView.AutoGenerateColumns = false;
+            EmpDataView.DataSource = Customers;
+            addAttributeColoumns();
             AddEditButtonColumn();
             EmpDataView.CellContentClick += EmpDataView_CellContentClick;
-
-
-            LoadCustomFont();
-            ApplyFonts();
+           
+            //LoadCustomFont();
+            //ApplyFonts();
         }
 
         //Custom Fonts
@@ -91,9 +92,10 @@ namespace movieRental
                         {
                             customers.Add(new Customer()
                             {
-                                Name = myReader.GetString(1) + " " + myReader.GetString(2),
-                                Email = myReader.GetString(8),
-                                AccountNumber = myReader.GetInt32(7),
+                                firstName = myReader.GetString(1),
+                                lastName = myReader.GetString(2),
+                                email = myReader.GetString(8),
+                                accountNumber = myReader.GetInt32(7),
                                 CreationDate = myReader.GetDateTime(12)
                             });
 
@@ -108,6 +110,43 @@ namespace movieRental
                 }
             }
             return customers;
+        }
+
+        // Add certain attribute coloumns manually
+
+        private void addAttributeColoumns()
+        {
+            //Manually adding coloumns
+
+            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "First Name",
+                DataPropertyName = "firstName", // Match the property name in the Customer class
+            });
+
+            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Last Name",
+                DataPropertyName = "lastName", // Match the property name in the Customer class
+            });
+
+            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Email",
+                DataPropertyName = "email", // Match the property name in the Customer class
+            });
+
+            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Address",
+                DataPropertyName = "address", // Match the property name in the Customer class
+            });
+
+            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Account Number",
+                DataPropertyName = "accountNumber", // Match the property name in the Customer class
+            });
         }
 
         // Add a button column for editing
