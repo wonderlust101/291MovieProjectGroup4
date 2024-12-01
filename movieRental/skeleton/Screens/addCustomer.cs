@@ -38,8 +38,8 @@ namespace movieRental
 
             Movies = RetrieveMovies();
 
-            LoadCustomFont();
-            ApplyFonts();
+            //LoadCustomFont();
+            //ApplyFonts();
         }
 
         //Custom Fonts

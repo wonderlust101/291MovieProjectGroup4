@@ -8,9 +8,16 @@ namespace movieRental
 {
     public class Customer
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public int AccountNumber { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string address { get; set; }
+        public string city { get; set; }
+        public string province { get; set; }
+        public string postalCode { get; set; }
+        public string email { get; set; }
+        public int accountNumber { get; set; }
+        public string creditCard { get; set; }
+
         public DateTime CreationDate { get; set; }
     }
 }
