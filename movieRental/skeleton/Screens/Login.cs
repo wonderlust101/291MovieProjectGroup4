@@ -32,8 +32,8 @@ namespace skeleton
             }
             InitializeComponent();
 
-            LoadCustomFont();
-            ApplyFonts();
+            //LoadCustomFont();
+            //ApplyFonts();
         }
 
         //Custom Fonts

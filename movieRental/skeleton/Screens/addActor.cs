@@ -15,34 +15,30 @@ using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class customerScreen : UserControl
+    public partial class addActor : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
-        //Data
-        public List<Customer> Customers;
+        // Data
+        public List<Movie> Movies;
 
         // Custom Fonts
         private Font outfitFontS30Bold;
+        private Font outfitFontS14Bold;
         private Font outfitFontS10Bold;
         private Font outfitFontS8Bold;
 
         private Font outfitFontS12;
+        private Font outfitFontS14;
 
-        public customerScreen()
+        public addActor()
         {
             InitializeComponent();
 
-            Customers = RetrieveCustomers();
+            Movies = RetrieveMovies();
 
-            EmpDataView.AutoGenerateColumns = false;
-            EmpDataView.DataSource = Customers;
-            addAttributeColoumns();
-            AddEditButtonColumn();
-            EmpDataView.CellContentClick += EmpDataView_CellContentClick;
-           
-            //LoadCustomFont();
-            //ApplyFonts();
+            LoadCustomFont();
+            ApplyFonts();
         }
 
         //Custom Fonts
@@ -53,10 +49,12 @@ namespace movieRental
             pfcOutfit.AddFontFile(outfitFontPath);
 
             outfitFontS30Bold = new Font(pfcOutfit.Families[0], 30f, FontStyle.Bold);
+            outfitFontS14Bold = new Font(pfcOutfit.Families[0], 14f, FontStyle.Bold);
             outfitFontS10Bold = new Font(pfcOutfit.Families[0], 10f, FontStyle.Bold);
             outfitFontS8Bold = new Font(pfcOutfit.Families[0], 8f, FontStyle.Bold);
 
             outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
+            outfitFontS14 = new Font(pfcOutfit.Families[0], 14f, FontStyle.Regular);
         }
 
         private void ApplyFonts()
@@ -69,18 +67,17 @@ namespace movieRental
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
 
-            customerSearch.Font = outfitFontS12;
-            addCustomerButton.Font = outfitFontS10Bold;
+            addActorButton.Font = outfitFontS10Bold;
         }
 
         // Data Source
-        private List<Customer>? RetrieveCustomers()
+        private List<Movie> RetrieveMovies()
         {
-            var customers = new List<Customer>();
+            var movies = new List<Movie>();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                String nameQuery = "SELECT * FROM Customer";
+                String nameQuery = "SELECT * FROM Movie";
                 using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
                 {
 
@@ -90,13 +87,12 @@ namespace movieRental
 
                         while (myReader.Read())
                         {
-                            customers.Add(new Customer()
+                            movies.Add(new Movie()
                             {
-                                firstName = myReader.GetString(1),
-                                lastName = myReader.GetString(2),
-                                email = myReader.GetString(8),
-                                accountNumber = myReader.GetInt32(7),
-                                CreationDate = myReader.GetDateTime(12)
+                                Title = myReader.GetString(1),
+                                Genre = myReader.GetString(2),
+                                Fee = myReader.GetDecimal(3),
+                                TotalCopies = myReader.GetInt32(4)
                             });
 
                         }
@@ -109,67 +105,7 @@ namespace movieRental
                     }
                 }
             }
-            return customers;
-        }
-
-        // Add certain attribute coloumns manually
-
-        private void addAttributeColoumns()
-        {
-            //Manually adding coloumns
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "First Name",
-                DataPropertyName = "firstName", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Last Name",
-                DataPropertyName = "lastName", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Email",
-                DataPropertyName = "email", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Address",
-                DataPropertyName = "address", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Account Number",
-                DataPropertyName = "accountNumber", // Match the property name in the Customer class
-            });
-        }
-
-        // Add a button column for editing
-        private void AddEditButtonColumn()
-        {
-            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
-
-            editButtonColumn.Name = "Edit";
-            editButtonColumn.HeaderText = "Edit";
-            editButtonColumn.Text = "Edit";
-            editButtonColumn.UseColumnTextForButtonValue = true;
-
-            EmpDataView.Columns.Add(editButtonColumn);
-        }
-
-        // Handle the click event for the Edit button
-        private void EmpDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && EmpDataView.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                Customer selectedCustomer = (Customer)EmpDataView.Rows[e.RowIndex].DataBoundItem;
-                SwitchToScreen(new editCustomer(selectedCustomer));
-            }
+            return movies;
         }
 
         // Switch Screen
@@ -202,7 +138,7 @@ namespace movieRental
 
         }
 
-        private void customerScreen_Load(object sender, EventArgs e)
+        private void addActor_Load(object sender, EventArgs e)
         {
 
         }
@@ -256,9 +192,9 @@ namespace movieRental
 
         }
 
-        private void addCustomer_Click(object sender, EventArgs e)
+        private void roundedTextBox1__TextChanged(object sender, EventArgs e)
         {
-            SwitchToScreen(new addCustomer());
+
         }
     }
 }

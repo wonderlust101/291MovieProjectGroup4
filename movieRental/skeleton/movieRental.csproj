@@ -23,6 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Screens\actorScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\addActor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Screens\editMovie.cs">
       <SubType>UserControl</SubType>
     </Compile>

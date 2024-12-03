@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class moviesScreen
+    partial class actorScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -52,10 +52,10 @@
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            EmpDataView = new DataGridView();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            movieSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
-            addMovieButton = new Button();
+            actorDataView = new DataGridView();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            addActorButton = new Button();
+            actorSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -74,8 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).BeginInit();
-            tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)actorDataView).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -274,7 +274,7 @@
             // RentalContainer
             // 
             RentalContainer.Anchor = AnchorStyles.None;
-            RentalContainer.BackColor = Color.Transparent;
+            RentalContainer.BackColor = Color.FromArgb(84, 80, 164);
             RentalContainer.BorderColor = Color.Transparent;
             RentalContainer.BorderRadius = 10;
             RentalContainer.BorderSize = 0;
@@ -318,7 +318,7 @@
             // MoviesContainer
             // 
             MoviesContainer.Anchor = AnchorStyles.None;
-            MoviesContainer.BackColor = Color.FromArgb(84, 80, 164);
+            MoviesContainer.BackColor = Color.Transparent;
             MoviesContainer.BorderColor = Color.Transparent;
             MoviesContainer.BorderRadius = 10;
             MoviesContainer.BorderSize = 0;
@@ -407,7 +407,7 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Movies";
+            EmpTabName.Text = "Add Actor to xxx";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // SectionIcon
@@ -448,8 +448,8 @@
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.ColumnCount = 1;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(EmpDataView, 0, 1);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 0);
+            tableLayoutPanel4.Controls.Add(actorDataView, 0, 1);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 0);
             tableLayoutPanel4.Location = new Point(19, 19);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
@@ -459,74 +459,72 @@
             tableLayoutPanel4.TabIndex = 0;
             tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
-            // EmpDataView
+            // actorDataView
             // 
-            EmpDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EmpDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            EmpDataView.BorderStyle = BorderStyle.None;
-            EmpDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            EmpDataView.Location = new Point(0, 68);
-            EmpDataView.Margin = new Padding(0, 8, 0, 0);
-            EmpDataView.Name = "EmpDataView";
-            EmpDataView.RowHeadersWidth = 51;
-            EmpDataView.Size = new Size(1133, 582);
-            EmpDataView.TabIndex = 4;
+            actorDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            actorDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            actorDataView.BorderStyle = BorderStyle.None;
+            actorDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            actorDataView.Location = new Point(0, 68);
+            actorDataView.Margin = new Padding(0, 8, 0, 0);
+            actorDataView.Name = "actorDataView";
+            actorDataView.RowHeadersWidth = 51;
+            actorDataView.Size = new Size(1133, 582);
+            actorDataView.TabIndex = 4;
             // 
-            // tableLayoutPanel6
+            // tableLayoutPanel5
             // 
-            tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel6.ColumnCount = 3;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
-            tableLayoutPanel6.Controls.Add(movieSearch, 2, 0);
-            tableLayoutPanel6.Controls.Add(addMovieButton, 0, 0);
-            tableLayoutPanel6.Location = new Point(0, 0);
-            tableLayoutPanel6.Margin = new Padding(0);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 1;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new Size(1133, 60);
-            tableLayoutPanel6.TabIndex = 5;
+            tableLayoutPanel5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 79.258606F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.741394F));
+            tableLayoutPanel5.Controls.Add(addActorButton, 1, 0);
+            tableLayoutPanel5.Controls.Add(actorSearch, 0, 0);
+            tableLayoutPanel5.Location = new Point(0, 0);
+            tableLayoutPanel5.Margin = new Padding(0);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(1133, 60);
+            tableLayoutPanel5.TabIndex = 5;
             // 
-            // movieSearch
+            // addActorButton
             // 
-            movieSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            movieSearch.BackColor = Color.FromArgb(25, 26, 63);
-            movieSearch.BorderColor = Color.FromArgb(25, 26, 63);
-            movieSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            movieSearch.BorderRadius = 26;
-            movieSearch.BorderSize = 2;
-            movieSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            movieSearch.ForeColor = Color.White;
-            movieSearch.Location = new Point(730, 4);
-            movieSearch.Margin = new Padding(0);
-            movieSearch.Multiline = false;
-            movieSearch.Name = "movieSearch";
-            movieSearch.Padding = new Padding(20, 15, 20, 15);
-            movieSearch.PasswordChar = false;
-            movieSearch.PlaceholderColor = Color.DarkGray;
-            movieSearch.PlaceholderText = "Search for a movie";
-            movieSearch.Size = new Size(403, 51);
-            movieSearch.TabIndex = 0;
-            movieSearch.UnderlinedStyle = false;
+            addActorButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            addActorButton.BackColor = Color.FromArgb(84, 80, 164);
+            addActorButton.FlatAppearance.BorderSize = 0;
+            addActorButton.FlatStyle = FlatStyle.Flat;
+            addActorButton.ForeColor = Color.White;
+            addActorButton.Location = new Point(901, 5);
+            addActorButton.Name = "addActorButton";
+            addActorButton.Size = new Size(229, 50);
+            addActorButton.TabIndex = 22;
+            addActorButton.Text = "Add Actor";
+            addActorButton.UseVisualStyleBackColor = false;
             // 
-            // addMovieButton
+            // actorSearch
             // 
-            addMovieButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addMovieButton.BackColor = Color.FromArgb(84, 80, 164);
-            addMovieButton.FlatAppearance.BorderSize = 0;
-            addMovieButton.FlatStyle = FlatStyle.Flat;
-            addMovieButton.ForeColor = Color.White;
-            addMovieButton.Location = new Point(3, 5);
-            addMovieButton.Name = "addMovieButton";
-            addMovieButton.Size = new Size(261, 50);
-            addMovieButton.TabIndex = 20;
-            addMovieButton.Text = "Add Movie";
-            addMovieButton.UseVisualStyleBackColor = false;
-            addMovieButton.Click += addMovieButton_Click;
+            actorSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            actorSearch.BackColor = Color.FromArgb(25, 26, 63);
+            actorSearch.BorderColor = Color.FromArgb(25, 26, 63);
+            actorSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            actorSearch.BorderRadius = 26;
+            actorSearch.BorderSize = 2;
+            actorSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            actorSearch.ForeColor = Color.White;
+            actorSearch.Location = new Point(0, 4);
+            actorSearch.Margin = new Padding(0, 0, 64, 0);
+            actorSearch.Multiline = false;
+            actorSearch.Name = "actorSearch";
+            actorSearch.Padding = new Padding(20, 15, 20, 15);
+            actorSearch.PasswordChar = false;
+            actorSearch.PlaceholderColor = Color.DarkGray;
+            actorSearch.PlaceholderText = "Search for an actor";
+            actorSearch.Size = new Size(834, 51);
+            actorSearch.TabIndex = 5;
+            actorSearch.UnderlinedStyle = false;
             // 
-            // moviesScreen
+            // actorScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -534,9 +532,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "moviesScreen";
+            Name = "actorScreen";
             Size = new Size(1301, 805);
-            Load += moviesScreen_Load;
+            Load += addActor_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -558,8 +556,8 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).EndInit();
-            tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)actorDataView).EndInit();
+            tableLayoutPanel5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -590,16 +588,15 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
-        private DataGridView EmpDataView;
+        private DataGridView actorDataView;
 
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
 
         private TableLayoutPanel tableLayoutPanel4;
-        private TableLayoutPanel tableLayoutPanel6;
-
-        private CustomControls.RoundedTextBox.RoundedTextBox movieSearch;
-        private Button addMovieButton;
+        private CustomControls.RoundedTextBox.RoundedTextBox actorSearch;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Button addActorButton;
     }
 }

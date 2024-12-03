@@ -22,6 +22,8 @@ namespace movieRental
         // Data
         public List<Movie> Movies;
 
+        private Customer customerToEdit;
+
         // Custom Fonts
         private Font outfitFontS30Bold;
         private Font outfitFontS14Bold;
@@ -31,14 +33,16 @@ namespace movieRental
         private Font outfitFontS12;
         private Font outfitFontS14;
 
-        public editCustomer()
+        public editCustomer(Customer customer)
         {
             InitializeComponent();
+            this.customerToEdit = customer;
 
             Movies = RetrieveMovies();
 
-            LoadCustomFont();
-            ApplyFonts();
+            //LoadCustomFont();
+            //ApplyFonts();
+            loadInfo();
         }
 
         //Custom Fonts
@@ -219,6 +223,87 @@ namespace movieRental
         private void PhoneLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void saveChangesClick(object sender, EventArgs e)
+        {
+            int x = 1;
+        }
+
+        private void ClearFormFields()
+        {
+            FirstNameInput.Text = string.Empty;
+            LastNameInput.Text = string.Empty;
+            AddressInput.Text = string.Empty;
+            CityInput.Text = string.Empty;
+            ProvinceInput.Text = string.Empty;
+            PostalCodeInput.Text = string.Empty;
+            EmailInput.Text = string.Empty;
+        }
+
+        private void loadInfo()
+        {
+            try
+            {
+                Customer? customer = null;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = $"SELECT * FROM Customer WHERE {customerToEdit.accountNumber} = AccountNumber";
+                    MessageBox.Show($"{customerToEdit.accountNumber}");
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+
+                        try
+                        {
+                            SqlDataReader myReader = cmd.ExecuteReader();
+
+                            if (myReader.Read())
+                            {
+                                customer = new Customer()
+                                {
+                                    
+                                    firstName = myReader.GetString(1),
+                                    lastName = myReader.GetString(2),
+                                    address = myReader.IsDBNull(3) ? "" : myReader.GetString(3), // Check for NULL
+                                    city = myReader.IsDBNull(4) ? "" : myReader.GetString(4),    // Check for NULL
+                                    province = myReader.IsDBNull(5) ? "" : myReader.GetString(5),// Check for NULL
+                                    postalCode = myReader.IsDBNull(6) ? "" : myReader.GetString(6), // Check for NULL
+                                    email = myReader.GetString(8),
+                                    CreationDate = myReader.GetDateTime(12)
+                                };
+
+
+                            }
+
+
+                            myReader.Close();
+                        }
+                        catch (Exception exception)
+                        {
+                            MessageBox.Show("EXCEPTION");
+                            MessageBox.Show(exception.Message);
+                        }
+                    }
+
+                    FirstNameInput.Text = customer.firstName;
+                    LastNameInput.Text = customer.lastName;
+                    AddressInput.Text = customer.address;
+                    CityInput.Text = customer.city;
+                    ProvinceInput.Text = customer.province;
+                    PostalCodeInput.Text = customer.postalCode;
+                    EmailInput.Text = customer.email;
+
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -15,12 +15,12 @@ using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class customerScreen : UserControl
+    public partial class actorScreen : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
-        //Data
-        public List<Customer> Customers;
+        // Data
+        public List<Movie> Movies;
 
         // Custom Fonts
         private Font outfitFontS30Bold;
@@ -29,20 +29,15 @@ namespace movieRental
 
         private Font outfitFontS12;
 
-        public customerScreen()
+        public actorScreen()
         {
             InitializeComponent();
 
-            Customers = RetrieveCustomers();
+            Movies = RetrieveMovies();
+            actorDataView.DataSource = Movies;
 
-            EmpDataView.AutoGenerateColumns = false;
-            EmpDataView.DataSource = Customers;
-            addAttributeColoumns();
-            AddEditButtonColumn();
-            EmpDataView.CellContentClick += EmpDataView_CellContentClick;
-           
-            //LoadCustomFont();
-            //ApplyFonts();
+            LoadCustomFont();
+            ApplyFonts();
         }
 
         //Custom Fonts
@@ -69,18 +64,17 @@ namespace movieRental
             ReportLabel.Font = outfitFontS8Bold;
             LogoutLabel.Font = outfitFontS8Bold;
 
-            customerSearch.Font = outfitFontS12;
-            addCustomerButton.Font = outfitFontS10Bold;
+            actorSearch.Font = outfitFontS12;
         }
 
         // Data Source
-        private List<Customer>? RetrieveCustomers()
+        private List<Movie> RetrieveMovies()
         {
-            var customers = new List<Customer>();
+            var movies = new List<Movie>();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                String nameQuery = "SELECT * FROM Customer";
+                String nameQuery = "SELECT * FROM Movie";
                 using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
                 {
 
@@ -90,13 +84,12 @@ namespace movieRental
 
                         while (myReader.Read())
                         {
-                            customers.Add(new Customer()
+                            movies.Add(new Movie()
                             {
-                                firstName = myReader.GetString(1),
-                                lastName = myReader.GetString(2),
-                                email = myReader.GetString(8),
-                                accountNumber = myReader.GetInt32(7),
-                                CreationDate = myReader.GetDateTime(12)
+                                Title = myReader.GetString(1),
+                                Genre = myReader.GetString(2),
+                                Fee = myReader.GetDecimal(3),
+                                TotalCopies = myReader.GetInt32(4)
                             });
 
                         }
@@ -109,67 +102,7 @@ namespace movieRental
                     }
                 }
             }
-            return customers;
-        }
-
-        // Add certain attribute coloumns manually
-
-        private void addAttributeColoumns()
-        {
-            //Manually adding coloumns
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "First Name",
-                DataPropertyName = "firstName", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Last Name",
-                DataPropertyName = "lastName", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Email",
-                DataPropertyName = "email", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Address",
-                DataPropertyName = "address", // Match the property name in the Customer class
-            });
-
-            EmpDataView.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Account Number",
-                DataPropertyName = "accountNumber", // Match the property name in the Customer class
-            });
-        }
-
-        // Add a button column for editing
-        private void AddEditButtonColumn()
-        {
-            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
-
-            editButtonColumn.Name = "Edit";
-            editButtonColumn.HeaderText = "Edit";
-            editButtonColumn.Text = "Edit";
-            editButtonColumn.UseColumnTextForButtonValue = true;
-
-            EmpDataView.Columns.Add(editButtonColumn);
-        }
-
-        // Handle the click event for the Edit button
-        private void EmpDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && EmpDataView.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                Customer selectedCustomer = (Customer)EmpDataView.Rows[e.RowIndex].DataBoundItem;
-                SwitchToScreen(new editCustomer(selectedCustomer));
-            }
+            return movies;
         }
 
         // Switch Screen
@@ -202,7 +135,7 @@ namespace movieRental
 
         }
 
-        private void customerScreen_Load(object sender, EventArgs e)
+        private void addActor_Load(object sender, EventArgs e)
         {
 
         }
@@ -249,16 +182,6 @@ namespace movieRental
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void EmpTabName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addCustomer_Click(object sender, EventArgs e)
-        {
-            SwitchToScreen(new addCustomer());
         }
     }
 }
