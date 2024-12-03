@@ -12,38 +12,33 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
 using System.Configuration;
 using System.Drawing.Text;
+using System.Globalization;
 
 namespace movieRental
 {
-    public partial class actorScreen : UserControl
+    public partial class prolificEmployee : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
         // Data
-        public List<Movie> Movies; // Actor
+        public List<Employee> employees;
 
-        public actorScreen()
+        public prolificEmployee()
         {
             InitializeComponent();
 
-            Movies = RetrieveMovies();
-            actorDataView.DataSource = Movies;
-        }
-
-        private void actorScreen_Load(object sender, EventArgs e)
-        {
-
+            PopulateMonthComboBox();
         }
 
         // Data Source
-        private List<Movie> RetrieveMovies()
+        private List<Employee>? retrieveTopEmployeesOfMonth(string selectedMonth)
         {
-            var movies = new List<Movie>();
+            var employees = new List<Employee>();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                String nameQuery = "SELECT * FROM Movie";
-                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
+                String query = "SELECT * FROM Employee"; // Insert Query here
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
 
                     try
@@ -52,12 +47,12 @@ namespace movieRental
 
                         while (myReader.Read())
                         {
-                            movies.Add(new Movie()
+                            employees.Add(new Employee()
                             {
-                                title = myReader.GetString(1),
-                                genre = myReader.GetString(2),
-                                fee = myReader.GetDecimal(3),
-                                totalCopies = myReader.GetInt32(4)
+                                socialSecurityNum = myReader.GetString(1),
+                                firstName = myReader.GetString(2),
+                                lastName = myReader.GetString(3),
+                                startDate = myReader.GetDateTime(10),
                             });
 
                         }
@@ -70,7 +65,12 @@ namespace movieRental
                     }
                 }
             }
-            return movies;
+            return employees;
+        }
+
+        private void prolificEmployee_Load(object sender, EventArgs e)
+        {
+
         }
 
         // Switch Screen
@@ -93,6 +93,51 @@ namespace movieRental
             }
         }
 
+        // Combo Box
+
+        private void PopulateMonthComboBox()
+        {
+            var months = DateTimeFormatInfo.CurrentInfo.MonthNames;
+
+            monthComboBox.Items.Clear();
+
+            foreach (var month in months)
+            {
+                if (!string.IsNullOrEmpty(month))
+                {
+                    monthComboBox.Items.Add(month);
+                }
+            }
+        }
+
+        private void monthComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedMonth = monthComboBox.SelectedItem.ToString();
+
+            topEmployeeDataView.DataSource = null;
+            topEmployeeDataView.Columns.Clear();
+
+            employees = retrieveTopEmployeesOfMonth(selectedMonth);
+
+            topEmployeeDataView.AutoGenerateColumns = false;
+            topEmployeeDataView.DataSource = employees;
+            addTopEmployeesAttributeColoumns();
+        }
+
+        private void addTopEmployeesAttributeColoumns()
+        {
+            topEmployeeDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Name",
+                DataPropertyName = "fullName",
+            });
+
+            topEmployeeDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Start Date",
+                DataPropertyName = "startDate",
+            });
+        }
 
         // Buttons
 
