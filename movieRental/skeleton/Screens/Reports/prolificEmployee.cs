@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
 using System.Configuration;
 using System.Drawing.Text;
+using System.Globalization;
 
 namespace movieRental
 {
@@ -19,9 +20,52 @@ namespace movieRental
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
+        // Data
+        public List<Employee> employees;
+
         public prolificEmployee()
         {
             InitializeComponent();
+
+            PopulateMonthComboBox();
+        }
+
+        // Data Source
+        private List<Employee>? retrieveTopEmployeesOfMonth(string selectedMonth)
+        {
+            var employees = new List<Employee>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                String query = "SELECT * FROM Employee"; // Insert Query here
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    try
+                    {
+                        SqlDataReader myReader = cmd.ExecuteReader();
+
+                        while (myReader.Read())
+                        {
+                            employees.Add(new Employee()
+                            {
+                                socialSecurityNum = myReader.GetString(1),
+                                firstName = myReader.GetString(2),
+                                lastName = myReader.GetString(3),
+                                startDate = myReader.GetDateTime(10),
+                            });
+
+                        }
+
+                        myReader.Close();
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message);
+                    }
+                }
+            }
+            return employees;
         }
 
         private void prolificEmployee_Load(object sender, EventArgs e)
@@ -49,6 +93,51 @@ namespace movieRental
             }
         }
 
+        // Combo Box
+
+        private void PopulateMonthComboBox()
+        {
+            var months = DateTimeFormatInfo.CurrentInfo.MonthNames;
+
+            monthComboBox.Items.Clear();
+
+            foreach (var month in months)
+            {
+                if (!string.IsNullOrEmpty(month))
+                {
+                    monthComboBox.Items.Add(month);
+                }
+            }
+        }
+
+        private void monthComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedMonth = monthComboBox.SelectedItem.ToString();
+
+            topEmployeeDataView.DataSource = null;
+            topEmployeeDataView.Columns.Clear();
+
+            employees = retrieveTopEmployeesOfMonth(selectedMonth);
+
+            topEmployeeDataView.AutoGenerateColumns = false;
+            topEmployeeDataView.DataSource = employees;
+            addTopEmployeesAttributeColoumns();
+        }
+
+        private void addTopEmployeesAttributeColoumns()
+        {
+            topEmployeeDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Name",
+                DataPropertyName = "fullName",
+            });
+
+            topEmployeeDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Start Date",
+                DataPropertyName = "startDate",
+            });
+        }
 
         // Buttons
 

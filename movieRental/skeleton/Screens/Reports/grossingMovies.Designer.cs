@@ -475,6 +475,7 @@
             topMovieDataView.RowHeadersWidth = 51;
             topMovieDataView.Size = new Size(1133, 566);
             topMovieDataView.TabIndex = 5;
+            topMovieDataView.DataBindingComplete += DataGridView_DataBindingComplete;
             // 
             // tableLayoutPanel7
             // 
@@ -516,6 +517,7 @@
             monthComboBox.Name = "monthComboBox";
             monthComboBox.Size = new Size(244, 28);
             monthComboBox.TabIndex = 23;
+            monthComboBox.SelectedIndexChanged += monthComboBox_SelectedIndexChanged;
             // 
             // grossingMovies
             // 

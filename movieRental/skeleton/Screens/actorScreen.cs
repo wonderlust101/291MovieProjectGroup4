@@ -54,10 +54,10 @@ namespace movieRental
                         {
                             movies.Add(new Movie()
                             {
-                                Title = myReader.GetString(1),
-                                Genre = myReader.GetString(2),
-                                Fee = myReader.GetDecimal(3),
-                                TotalCopies = myReader.GetInt32(4)
+                                title = myReader.GetString(1),
+                                genre = myReader.GetString(2),
+                                fee = myReader.GetDecimal(3),
+                                totalCopies = myReader.GetInt32(4)
                             });
 
                         }

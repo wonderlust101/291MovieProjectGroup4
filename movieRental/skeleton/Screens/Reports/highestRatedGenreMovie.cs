@@ -19,14 +19,124 @@ namespace movieRental
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
+        //Data
+        public List<Movie> actionMovies;
+        public List<Movie> comedyMovies;
+        public List<Movie> dramaMovies;
+        public List<Movie> foreignMovies;
+
         public highestRatedGenreMovie()
         {
             InitializeComponent();
+
+            actionMovies = retrieveMovies("Action");
+            comedyMovies = retrieveMovies("Comedy");
+            dramaMovies = retrieveMovies("Drama");
+            foreignMovies = retrieveMovies("Foreign");
+
+            topActionDataView.AutoGenerateColumns = false;
+            topComedyDataView.AutoGenerateColumns = false;
+            topDramaDataView.AutoGenerateColumns = false;
+            topForeignDataView.AutoGenerateColumns = false;
+
+            topActionDataView.DataSource = actionMovies;
+            topComedyDataView.DataSource = comedyMovies;
+            topDramaDataView.DataSource = dramaMovies;
+            topForeignDataView.DataSource = foreignMovies;
+
+            addMovieAttributeColoumns();
         }
 
         private void highestRatedGenreMovie_Load(object sender, EventArgs e)
         {
 
+        }
+
+        // Data Source
+        private List<Movie>? retrieveMovies(string genre)
+        {
+            var movies = new List<Movie>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                String query = $"SELECT * FROM Movie WHERE Type = '{genre}'";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    try
+                    {
+                        SqlDataReader myReader = cmd.ExecuteReader();
+
+                        while (myReader.Read())
+                        {
+                            movies.Add(new Movie()
+                            {
+                                title = myReader.GetString(1),
+                            });
+
+                        }
+
+                        myReader.Close();
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message);
+                    }
+                }
+            }
+            return movies;
+        }
+
+        // Add certain attribute coloumns manually
+        private void addMovieAttributeColoumns()
+        {
+            topActionDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Rank",
+                Name = "rank",
+            });
+
+            topComedyDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Rank",
+                Name = "rank",
+            });
+
+            topDramaDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Rank",
+                Name = "rank",
+            });
+
+            topForeignDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Rank",
+                Name = "rank",
+            });
+
+            topActionDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Title",
+                DataPropertyName = "title",
+            });
+
+            topComedyDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Title",
+                DataPropertyName = "title",
+            });
+
+            topDramaDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Title",
+                DataPropertyName = "title",
+            });
+
+            topForeignDataView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Title",
+                DataPropertyName = "title",
+            });
         }
 
         // Switch Screen
@@ -46,6 +156,20 @@ namespace movieRental
                 parentForm.Controls.Clear();
                 parentForm.Controls.Add(newScreen);
                 newScreen.Dock = DockStyle.Fill;
+            }
+        }
+
+        private void DataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            var dataGridView = sender as DataGridView;
+
+            if (dataGridView != null)
+            {
+                // Iterate through the rows and assign the index
+                for (int i = 0; i < dataGridView.Rows.Count; i++)
+                {
+                    dataGridView.Rows[i].Cells["Rank"].Value = i + 1;
+                }
             }
         }
 

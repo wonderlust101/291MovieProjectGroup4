@@ -8,9 +8,9 @@ namespace movieRental
 {
     public class Movie
     {
-        public string Title { get; set; }
-        public string Genre { get; set; }
-        public decimal Fee { get; set; }
-        public int TotalCopies { get; set; }
+        public string title { get; set; }
+        public string genre { get; set; }
+        public decimal fee { get; set; }
+        public int totalCopies { get; set; }
     }
 }

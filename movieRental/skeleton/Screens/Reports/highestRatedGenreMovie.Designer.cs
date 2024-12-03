@@ -60,7 +60,7 @@
             topDramaDataView = new DataGridView();
             tableLayoutPanel6 = new TableLayoutPanel();
             comedyLabel = new Label();
-            topComdeyDataView = new DataGridView();
+            topComedyDataView = new DataGridView();
             tableLayoutPanel5 = new TableLayoutPanel();
             actionLabel = new Label();
             topActionDataView = new DataGridView();
@@ -87,7 +87,7 @@
             tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)topDramaDataView).BeginInit();
             tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)topComdeyDataView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)topComedyDataView).BeginInit();
             tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)topActionDataView).BeginInit();
             SuspendLayout();
@@ -518,6 +518,7 @@
             topForeignDataView.RowHeadersWidth = 51;
             topForeignDataView.Size = new Size(278, 554);
             topForeignDataView.TabIndex = 24;
+            topForeignDataView.DataBindingComplete += DataGridView_DataBindingComplete;
             // 
             // tableLayoutPanel7
             // 
@@ -559,6 +560,7 @@
             topDramaDataView.RowHeadersWidth = 51;
             topDramaDataView.Size = new Size(277, 554);
             topDramaDataView.TabIndex = 24;
+            topDramaDataView.DataBindingComplete += DataGridView_DataBindingComplete;
             // 
             // tableLayoutPanel6
             // 
@@ -566,7 +568,7 @@
             tableLayoutPanel6.ColumnCount = 1;
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.Controls.Add(comedyLabel, 0, 0);
-            tableLayoutPanel6.Controls.Add(topComdeyDataView, 0, 2);
+            tableLayoutPanel6.Controls.Add(topComedyDataView, 0, 2);
             tableLayoutPanel6.Location = new Point(286, 3);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 3;
@@ -588,18 +590,19 @@
             comedyLabel.TabIndex = 23;
             comedyLabel.Text = "Top Comedy:";
             // 
-            // topComdeyDataView
+            // topComedyDataView
             // 
-            topComdeyDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            topComdeyDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            topComdeyDataView.BorderStyle = BorderStyle.None;
-            topComdeyDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            topComdeyDataView.Location = new Point(0, 90);
-            topComdeyDataView.Margin = new Padding(0, 8, 0, 0);
-            topComdeyDataView.Name = "topComdeyDataView";
-            topComdeyDataView.RowHeadersWidth = 51;
-            topComdeyDataView.Size = new Size(277, 554);
-            topComdeyDataView.TabIndex = 24;
+            topComedyDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            topComedyDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            topComedyDataView.BorderStyle = BorderStyle.None;
+            topComedyDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            topComedyDataView.Location = new Point(0, 90);
+            topComedyDataView.Margin = new Padding(0, 8, 0, 0);
+            topComedyDataView.Name = "topComedyDataView";
+            topComedyDataView.RowHeadersWidth = 51;
+            topComedyDataView.Size = new Size(277, 554);
+            topComedyDataView.TabIndex = 24;
+            topComedyDataView.DataBindingComplete += DataGridView_DataBindingComplete;
             // 
             // tableLayoutPanel5
             // 
@@ -641,6 +644,7 @@
             topActionDataView.RowHeadersWidth = 51;
             topActionDataView.Size = new Size(277, 554);
             topActionDataView.TabIndex = 24;
+            topActionDataView.DataBindingComplete += DataGridView_DataBindingComplete;
             // 
             // highestRatedGenreMovie
             // 
@@ -682,7 +686,7 @@
             ((System.ComponentModel.ISupportInitialize)topDramaDataView).EndInit();
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)topComdeyDataView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)topComedyDataView).EndInit();
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)topActionDataView).EndInit();
@@ -731,7 +735,7 @@
         private DataGridView topDramaDataView;
         private TableLayoutPanel tableLayoutPanel6;
         private Label comedyLabel;
-        private DataGridView topComdeyDataView;
+        private DataGridView topComedyDataView;
         private DataGridView topActionDataView;
     }
 }

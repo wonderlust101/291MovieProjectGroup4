@@ -475,6 +475,7 @@
             topEmployeeDataView.RowHeadersWidth = 51;
             topEmployeeDataView.Size = new Size(1133, 566);
             topEmployeeDataView.TabIndex = 5;
+            topEmployeeDataView.DataBindingComplete += DataGridView_DataBindingComplete;
             // 
             // tableLayoutPanel7
             // 
@@ -516,6 +517,7 @@
             monthComboBox.Name = "monthComboBox";
             monthComboBox.Size = new Size(244, 28);
             monthComboBox.TabIndex = 23;
+            monthComboBox.SelectedIndexChanged += monthComboBox_SelectedIndexChanged;
             // 
             // prolificEmployee
             // 

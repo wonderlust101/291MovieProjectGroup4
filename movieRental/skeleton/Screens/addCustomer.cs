@@ -20,9 +20,6 @@ namespace movieRental
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
-        // Data
-        public List<Movie> Movies;
-
         public addCustomer()
         {
             InitializeComponent();

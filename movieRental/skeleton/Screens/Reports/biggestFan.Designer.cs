@@ -528,6 +528,7 @@
             actorDataView.RowHeadersWidth = 51;
             actorDataView.Size = new Size(558, 566);
             actorDataView.TabIndex = 5;
+            actorDataView.CellContentClick += actorDataView_CellContentClick;
             // 
             // biggestFanDataView
             // 

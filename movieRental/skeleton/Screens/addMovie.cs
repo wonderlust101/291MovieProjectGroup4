@@ -25,46 +25,6 @@ namespace movieRental
         public addMovie()
         {
             InitializeComponent();
-
-            Movies = RetrieveMovies();
-        }
-
-        // Data Source
-        private List<Movie> RetrieveMovies()
-        {
-            var movies = new List<Movie>();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                String nameQuery = "SELECT * FROM Movie";
-                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
-                {
-
-                    try
-                    {
-                        SqlDataReader myReader = cmd.ExecuteReader();
-
-                        while (myReader.Read())
-                        {
-                            movies.Add(new Movie()
-                            {
-                                Title = myReader.GetString(1),
-                                Genre = myReader.GetString(2),
-                                Fee = myReader.GetDecimal(3),
-                                TotalCopies = myReader.GetInt32(4)
-                            });
-
-                        }
-
-                        myReader.Close();
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message);
-                    }
-                }
-            }
-            return movies;
         }
 
         // Switch Screen

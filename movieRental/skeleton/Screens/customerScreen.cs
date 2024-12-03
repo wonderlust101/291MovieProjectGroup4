@@ -58,7 +58,7 @@ namespace movieRental
                                 lastName = myReader.GetString(2),
                                 email = myReader.GetString(8),
                                 accountNumber = myReader.GetInt32(7),
-                                CreationDate = myReader.GetDateTime(12)
+                                CreationDate = myReader.GetDateTime(10)
                             });
 
                         }

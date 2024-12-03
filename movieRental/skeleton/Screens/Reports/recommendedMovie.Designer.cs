@@ -528,6 +528,7 @@
             customerDataView.RowHeadersWidth = 51;
             customerDataView.Size = new Size(558, 566);
             customerDataView.TabIndex = 5;
+            customerDataView.CellContentClick += customerDataView_CellContentClick;
             // 
             // recommendedMovieDataView
             // 

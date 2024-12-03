@@ -8,6 +8,7 @@ namespace movieRental
 {
     public class Customer
     {
+        public int id { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string address { get; set; }
@@ -19,5 +20,8 @@ namespace movieRental
         public string creditCard { get; set; }
 
         public DateTime CreationDate { get; set; }
+
+        // Computed property
+        public string fullName => $"{firstName} {lastName}";
     }
 }
