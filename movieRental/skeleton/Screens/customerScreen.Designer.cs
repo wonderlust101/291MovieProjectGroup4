@@ -521,7 +521,7 @@
             customerSearch.Padding = new Padding(20, 15, 20, 15);
             customerSearch.PasswordChar = false;
             customerSearch.PlaceholderColor = Color.DarkGray;
-            customerSearch.PlaceholderText = "Search for a customer";
+            customerSearch.PlaceholderText = "Search Customer (First/Last Name or Account #)";
             customerSearch.Size = new Size(403, 51);
             customerSearch.TabIndex = 0;
             customerSearch.UnderlinedStyle = false;

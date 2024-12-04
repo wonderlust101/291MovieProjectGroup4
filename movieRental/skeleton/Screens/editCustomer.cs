@@ -162,14 +162,14 @@ namespace movieRental
         {
             try
             {
-                MessageBox.Show($"{customerToEdit.firstName}");
+                //MessageBox.Show($"{customerToEdit.firstName}");
                 Customer? customer = null;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
                     string query = $"SELECT * FROM Customer WHERE {customerToEdit.accountNumber} = AccountNumber";
-                    MessageBox.Show($"{customerToEdit.accountNumber}");
+                    //MessageBox.Show($"{customerToEdit.accountNumber}");
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
 
@@ -236,16 +236,36 @@ namespace movieRental
    
             try
             {
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                using (SqlConnection yourSqlConnection = new SqlConnection(connectionString))
                 {
-                    string query = $"DELETE FROM Customer WHERE {customerToEdit.accountNumber} = Customer.AccountNumber";
+                    yourSqlConnection.Open(); // Open the connection
+
+                    string query = "DELETE FROM Customer WHERE AccountNumber = @accountNumber";
+                    using (SqlCommand cmd = new SqlCommand(query, yourSqlConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@accountNumber", customerToEdit.accountNumber);
+                        cmd.ExecuteNonQuery(); // Execute the delete command
+                    }
                 }
+                ClearFormFields();
             }
 
             catch
             {
                 MessageBox.Show("Failed to delete customer");
             }
+        }
+
+        private void ClearFormFields()
+        {
+            FirstNameInput.Text = string.Empty;
+            LastNameInput.Text = string.Empty;
+            AddressInput.Text = string.Empty;
+            CityInput.Text = string.Empty;
+            ProvinceInput.Text = string.Empty;
+            PostalCodeInput.Text = string.Empty;
+            EmailInput.Text = string.Empty;
+            PhoneNumberInput.Text = string.Empty;
         }
     }
 }

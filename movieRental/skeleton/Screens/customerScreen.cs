@@ -41,7 +41,6 @@ namespace movieRental
         // Data Source
         private List<Customer>? RetrieveCustomers()
         {
-            MessageBox.Show("IN RETRIEVE");
             var customers = new List<Customer>();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -214,7 +213,8 @@ namespace movieRental
             {
                 // Filter by firstName
                 filteredCustomers = Customers.Where(
-                    c => c.firstName.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                    c => c.firstName.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
+                    c.lastName.Contains(searchText, StringComparison.OrdinalIgnoreCase))
                     .ToList();
             }
 

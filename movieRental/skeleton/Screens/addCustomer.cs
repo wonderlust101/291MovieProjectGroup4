@@ -87,7 +87,7 @@ namespace movieRental
 
                         string creditCardNum = "4545";
 
-                        string query = "INSERT INTO Customer (FirstName, FamilyName, Address, City, Province, PostalCode, EmailAddress, CreditCardNum) VALUES (@firstName, @lastName, @address, @city, @province, @postalCode, @emailAddress, @creditCardNum)";
+                        string query = "INSERT INTO Customer (FirstName, FamilyName, Address, City, Province, PostalCode, AccountNumber,  EmailAddress, CreditCardNum) VALUES (@firstName, @lastName, @address, @city, @province, @postalCode, NEXT VALUE FOR Customer_AccountNumber, @emailAddress, @creditCardNum)";
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
                             // Add parameters to prevent SQL injection
