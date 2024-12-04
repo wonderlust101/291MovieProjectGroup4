@@ -13,11 +13,11 @@
     <Compile Update="Components\RoundedTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Screens\login.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Screens\customerScreen.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\Login.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

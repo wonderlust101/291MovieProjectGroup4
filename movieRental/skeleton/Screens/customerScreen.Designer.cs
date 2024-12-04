@@ -525,6 +525,7 @@
             customerSearch.Size = new Size(403, 51);
             customerSearch.TabIndex = 0;
             customerSearch.UnderlinedStyle = false;
+            customerSearch._TextChanged += customerSearch_TextChange;
             // 
             // customerScreen
             // 

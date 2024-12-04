@@ -892,6 +892,7 @@
             deleteCustomerButton.TabIndex = 23;
             deleteCustomerButton.Text = "Delete Customer";
             deleteCustomerButton.UseVisualStyleBackColor = false;
+            deleteCustomerButton.Click += deleteCustomerClick;
             // 
             // saveChangesButton
             // 
