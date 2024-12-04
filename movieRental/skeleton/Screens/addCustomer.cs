@@ -85,12 +85,9 @@ namespace movieRental
                     {
                         connection.Open();
 
-                        string accountNumber = "2552221";
                         string creditCardNum = "4545";
-                        string creditCardExp = "2022";
-                        string creditCardCvv = "455";
 
-                        string query = "INSERT INTO Customer (FirstName, FamilyName, Address, City, Province, PostalCode, AccountNumber, EmailAddress, CreditCardNum, CreditCardExp, CreditCardCvv) VALUES (@firstName, @lastName, @address, @city, @province, @postalCode, @accountNumber, @emailAddress, @creditCardNum, @creditCardExp, @creditCardCvv)";
+                        string query = "INSERT INTO Customer (FirstName, FamilyName, Address, City, Province, PostalCode, AccountNumber,  EmailAddress, CreditCardNum) VALUES (@firstName, @lastName, @address, @city, @province, @postalCode, NEXT VALUE FOR Customer_AccountNumber, @emailAddress, @creditCardNum)";
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
                             // Add parameters to prevent SQL injection
@@ -100,11 +97,8 @@ namespace movieRental
                             command.Parameters.AddWithValue("@city", CityInput.Text);
                             command.Parameters.AddWithValue("@province", ProvinceInput.Text);
                             command.Parameters.AddWithValue("@postalCode", PostalCodeInput.Text);
-                            command.Parameters.AddWithValue("@accountNumber", accountNumber);
                             command.Parameters.AddWithValue("@emailAddress", EmailInput.Text);
                             command.Parameters.AddWithValue("@creditCardNum", creditCardNum);
-                            command.Parameters.AddWithValue("@creditCardExp", creditCardExp);
-                            command.Parameters.AddWithValue("@creditCardCvv", creditCardCvv);
 
 
                             int rowsAffected = command.ExecuteNonQuery();

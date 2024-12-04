@@ -33,6 +33,9 @@ namespace movieRental
             addAttributeColoumns();
             AddEditButtonColumn();
             EmpDataView.CellContentClick += EmpDataView_CellContentClick;
+
+            //LoadCustomFont();
+            //ApplyFonts();
         }
 
         // Data Source
@@ -187,6 +190,36 @@ namespace movieRental
         private void addCustomer_Click(object sender, EventArgs e)
         {
             SwitchToScreen(new addCustomer());
+        }
+
+        private void customerSearch_TextChange(object sender, EventArgs e)
+        {
+
+            string searchText = customerSearch.Text;
+
+            // Check if the search text contains numbers
+            bool containsNumbers = searchText.Any(char.IsDigit);
+
+            List<Customer> filteredCustomers;
+
+            if (containsNumbers)
+            {
+                // Filter by a numeric field, e.g., accountNumber
+                filteredCustomers = Customers.Where(
+                    c => c.accountNumber.ToString().Contains(searchText))
+                    .ToList();
+            }
+            else
+            {
+                // Filter by firstName
+                filteredCustomers = Customers.Where(
+                    c => c.firstName.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
+                    c.lastName.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+            }
+
+            // Update the DataGridView data source
+            EmpDataView.DataSource = filteredCustomers;
         }
     }
 }
