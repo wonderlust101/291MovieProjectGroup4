@@ -475,6 +475,7 @@
             topEmployeeDataView.RowHeadersWidth = 51;
             topEmployeeDataView.Size = new Size(1133, 566);
             topEmployeeDataView.TabIndex = 5;
+            
             // 
             // tableLayoutPanel7
             // 
