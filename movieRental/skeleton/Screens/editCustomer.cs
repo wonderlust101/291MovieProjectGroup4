@@ -233,7 +233,7 @@ namespace movieRental
             {
                 return;
             }
-   
+
             try
             {
                 using (SqlConnection yourSqlConnection = new SqlConnection(connectionString))
@@ -265,7 +265,7 @@ namespace movieRental
             ProvinceInput.Text = string.Empty;
             PostalCodeInput.Text = string.Empty;
             EmailInput.Text = string.Empty;
-            PhoneNumberInput.Text = string.Empty;
+            PhoneNumberInput1.Text = string.Empty;
         }
     }
 }
