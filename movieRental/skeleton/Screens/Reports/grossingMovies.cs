@@ -161,7 +161,8 @@ namespace movieRental
 
         private void viewQueueButton_Click(object sender, EventArgs e)
         {
-            SwitchToScreen(new customerQueue());
+            // Where is this button? Delete?
+            //SwitchToScreen(new customerQueue());
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
