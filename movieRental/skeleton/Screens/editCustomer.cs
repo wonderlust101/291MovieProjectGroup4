@@ -87,33 +87,89 @@ namespace movieRental
 
         }
 
+        // Incomplete but framework in place to edit customer details in database
         private void saveChangesClick(object sender, EventArgs e)
         {
-            int x = 1;
+            if (fieldValidation())
+            {
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        int accountNumber = customerToEdit.accountNumber;
+
+                        string query = @"
+                                        UPDATE Customer
+                                        SET 
+                                            FirstName = @firstName,
+                                            FamilyName = @lastName,
+                                            Address = @address,
+                                            City = @city,
+                                            Province = @province,
+                                            PostalCode = @postalCode,
+                                            EmailAddress = @emailAddress
+                                        WHERE AccountNumber = @accountNumber";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            // Add parameters to prevent SQL injection
+                            command.Parameters.AddWithValue("@firstName", FirstNameInput.Text);
+                            command.Parameters.AddWithValue("@lastName", LastNameInput.Text);
+                            command.Parameters.AddWithValue("@address", AddressInput.Text);
+                            command.Parameters.AddWithValue("@city", CityInput.Text);
+                            command.Parameters.AddWithValue("@province", ProvinceInput.Text);
+                            command.Parameters.AddWithValue("@postalCode", PostalCodeInput.Text);
+                            command.Parameters.AddWithValue("@accountNumber", accountNumber);
+                            command.Parameters.AddWithValue("@emailAddress", EmailInput.Text);
+
+
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No records were inserted.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
         }
 
-        private void ClearFormFields()
+        private bool fieldValidation()
         {
-            FirstNameInput.Text = string.Empty;
-            LastNameInput.Text = string.Empty;
-            AddressInput.Text = string.Empty;
-            CityInput.Text = string.Empty;
-            ProvinceInput.Text = string.Empty;
-            PostalCodeInput.Text = string.Empty;
-            EmailInput.Text = string.Empty;
+            if (!string.IsNullOrEmpty(FirstNameInput.Text) &&
+                !string.IsNullOrEmpty(LastNameInput.Text) &&
+                !string.IsNullOrEmpty(EmailInput.Text))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void loadInfo()
         {
             try
             {
+                //MessageBox.Show($"{customerToEdit.firstName}");
                 Customer? customer = null;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
                     string query = $"SELECT * FROM Customer WHERE {customerToEdit.accountNumber} = AccountNumber";
-                    MessageBox.Show($"{customerToEdit.accountNumber}");
+                    //MessageBox.Show($"{customerToEdit.accountNumber}");
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
 
@@ -125,7 +181,7 @@ namespace movieRental
                             {
                                 customer = new Customer()
                                 {
-                                    
+
                                     firstName = myReader.GetString(1),
                                     lastName = myReader.GetString(2),
                                     address = myReader.IsDBNull(3) ? "" : myReader.GetString(3), // Check for NULL
@@ -133,7 +189,7 @@ namespace movieRental
                                     province = myReader.IsDBNull(5) ? "" : myReader.GetString(5),// Check for NULL
                                     postalCode = myReader.IsDBNull(6) ? "" : myReader.GetString(6), // Check for NULL
                                     email = myReader.GetString(8),
-                                    CreationDate = myReader.GetDateTime(12)
+                                    CreationDate = myReader.GetDateTime(10)
                                 };
 
 
@@ -162,6 +218,54 @@ namespace movieRental
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void deleteCustomerClick(object sender, EventArgs e)
+        {
+            // Message Box with yes and no button options
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to delete this customer?",
+            "Confirm Delete",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+   
+            try
+            {
+                using (SqlConnection yourSqlConnection = new SqlConnection(connectionString))
+                {
+                    yourSqlConnection.Open(); // Open the connection
+
+                    string query = "DELETE FROM Customer WHERE AccountNumber = @accountNumber";
+                    using (SqlCommand cmd = new SqlCommand(query, yourSqlConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@accountNumber", customerToEdit.accountNumber);
+                        cmd.ExecuteNonQuery(); // Execute the delete command
+                    }
+                }
+                ClearFormFields();
+            }
+
+            catch
+            {
+                MessageBox.Show("Failed to delete customer");
+            }
+        }
+
+        private void ClearFormFields()
+        {
+            FirstNameInput.Text = string.Empty;
+            LastNameInput.Text = string.Empty;
+            AddressInput.Text = string.Empty;
+            CityInput.Text = string.Empty;
+            ProvinceInput.Text = string.Empty;
+            PostalCodeInput.Text = string.Empty;
+            EmailInput.Text = string.Empty;
+            PhoneNumberInput.Text = string.Empty;
         }
     }
 }

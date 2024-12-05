@@ -92,7 +92,6 @@ namespace skeleton
                         MessageBox.Show(exception.Message);
                         return;
                     }
-
                     SwitchToScreen(new customerScreen());
 
                 }
