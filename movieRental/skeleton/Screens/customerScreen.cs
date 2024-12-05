@@ -33,9 +33,6 @@ namespace movieRental
             addAttributeColoumns();
             AddEditButtonColumn();
             EmpDataView.CellContentClick += EmpDataView_CellContentClick;
-
-            //LoadCustomFont();
-            //ApplyFonts();
         }
 
         // Data Source
