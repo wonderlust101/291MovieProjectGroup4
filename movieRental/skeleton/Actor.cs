@@ -17,5 +17,10 @@ namespace movieRental
 
         // Computed property
         public string fullName => $"{firstName} {lastName}";
+
+        public override string ToString()
+        {
+            return fullName;
+        }
     }
 }

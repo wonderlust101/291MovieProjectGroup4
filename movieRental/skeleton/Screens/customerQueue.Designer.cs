@@ -504,6 +504,7 @@
             // employeeSelector
             // 
             employeeSelector.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            employeeSelector.DropDownStyle = ComboBoxStyle.DropDownList;
             employeeSelector.FormattingEnabled = true;
             employeeSelector.Location = new Point(977, 48);
             employeeSelector.Name = "employeeSelector";
