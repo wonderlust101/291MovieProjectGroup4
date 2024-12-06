@@ -20,11 +20,110 @@ namespace movieRental
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
         // Data
-        public List<Movie> Movies; // Actor
+        private List<Actor> Actors; // Actor
+        private List<Actor> SelectedActors = new List<Actor>();
+        private List<string> Genre = new List<string>()
+        {
+            "Comedy",
+            "Drama",
+            "Action",
+            "Foreign"
+        };
 
         public addMovie()
         {
             InitializeComponent();
+
+            genreSelector.DataSource = Genre;
+
+            // Sets data source for selecting actors. No data source method
+            Actors = RetrieveActors();
+            foreach (var actor in Actors)
+            {
+                actorCheckBox.Items.Add(actor);
+            }
+
+        }
+
+        // Data Source
+        private List<Actor> RetrieveActors()
+        {
+            var actors = new List<Actor>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                String nameQuery =
+                    "SELECT * FROM Actor";
+                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
+                {
+
+                    try
+                    {
+                        SqlDataReader myReader = cmd.ExecuteReader();
+
+                        while (myReader.Read())
+                        {
+                            actors.Add(new Actor()
+                            {
+                                id = myReader.GetInt32(0),
+                                firstName = myReader.GetString(1),
+                                lastName = myReader.GetString(2),
+                                gender = myReader.GetString(3),
+                                dateOfBirth = myReader.GetDateTime(4),
+                            });
+
+                        }
+
+                        myReader.Close();
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message);
+                    }
+                }
+            }
+            return actors;
+        }
+
+        // Create query string
+        private string MovieQueryStringBuilder()
+        {
+            string query = 
+                $"INSERT INTO Movie (Name, Type, DistributionFee, NumOfCopies) " +
+                $"VALUES (\'{titleInput.Text}\', \'{genreSelector.SelectedItem}\', {feeInput.Text}, {copiesInput.Text});";
+
+            foreach(var actor in SelectedActors)
+            {
+                query +=
+                    $"INSERT INTO AppearsIn (ActorID, MovieID) " +
+                    $"VALUES ({actor.id}, (select max(MID) from Movie));";
+            }
+
+            return query;
+        }
+        // Insert new movie
+        private bool ExecuteQuery(string query)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                String nameQuery = query;
+                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
+                {
+
+                    try
+                    {
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show($"Movie was added!");
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message);
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
         // Switch Screen
@@ -70,6 +169,31 @@ namespace movieRental
         private void ReportsButton_Click(object sender, EventArgs e)
         {
             SwitchToScreen(new reportScreen());
+        }
+
+        private void addActorButton_Click(object sender, EventArgs e)
+        {
+            SelectedActors = actorCheckBox.CheckedItems.Cast<Actor>().ToList();
+
+            string ActorsToAdd = "Actors (" +
+                string.Join(", ", SelectedActors) +
+                ") will be added when movie is created!";
+
+            MessageBox.Show(ActorsToAdd);
+        }
+
+        private void addMovieButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(titleInput.Text) ||
+                string.IsNullOrEmpty(feeInput.Text) ||
+                string.IsNullOrEmpty(copiesInput.Text))
+            {
+                MessageBox.Show("Fields Cannot be left empty!");
+                return;
+            }
+            string query = MovieQueryStringBuilder();
+            bool suscessfulQuery = ExecuteQuery(query);
+            if (suscessfulQuery) SwitchToScreen(new moviesScreen());
         }
     }
 }
