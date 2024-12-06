@@ -27,6 +27,10 @@ namespace movieRental
             InitializeComponent();
 
             Movies = RetrieveMovies();
+            foreach(var movie in Movies)
+            {
+                movie.actorsList = RetrieveActors(movie.MovieID);
+            }
             EmpDataView.DataSource = Movies;
 
             AddEditButtonColumn();
@@ -45,7 +49,8 @@ namespace movieRental
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                String nameQuery = "SELECT * FROM Movie";
+                String nameQuery = "SELECT Movie.Name, Movie.Type, Movie.DistributionFee, Movie.NumOfCopies, " +
+                    "(Movie.NumOfCopies - (SELECT COUNT(*) FROM Ordered WHERE Ordered.MovieID = Movie.MID AND ReturnDate is null)) as CopiesAvailable, MID FROM Movie";
                 using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
                 {
 
@@ -57,10 +62,12 @@ namespace movieRental
                         {
                             movies.Add(new Movie()
                             {
-                                title = myReader.GetString(1),
-                                genre = myReader.GetString(2),
-                                fee = myReader.GetDecimal(3),
-                                totalCopies = myReader.GetInt32(4)
+                                title = myReader.GetString(0),
+                                genre = myReader.GetString(1),
+                                fee = myReader.GetDecimal(2),
+                                totalCopies = myReader.GetInt32(3),
+                                availableCopies = myReader.GetInt32(4),
+                                MovieID = myReader.GetInt32(5)
                             });
 
                         }
@@ -74,6 +81,44 @@ namespace movieRental
                 }
             }
             return movies;
+        }
+
+        private List<Actor> RetrieveActors(int MID)
+        {
+            var actors = new List<Actor>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                String nameQuery =
+                    $"select Actor.* from AppearsIn, Actor where AppearsIn.ActorID = Actor.AID and MovieID = {MID}";
+                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
+                {
+
+                    try
+                    {
+                        SqlDataReader myReader = cmd.ExecuteReader();
+
+                        while (myReader.Read())
+                        {
+                            actors.Add(new Actor()
+                            {
+                                id = myReader.GetInt32(0),
+                                firstName = myReader.GetString(1),
+                                lastName = myReader.GetString(2),
+                                gender = myReader.GetString(3),
+                                dateOfBirth = myReader.GetDateTime(4),
+                            });
+                        }
+
+                        myReader.Close();
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message);
+                    }
+                }
+            }
+            return actors;
         }
 
         // Add a button column for editing
@@ -146,6 +191,14 @@ namespace movieRental
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
+        }
+
+        private void movieSearch__TextChanged(object sender, EventArgs e)
+        {
+            var temp = Movies.Where(
+                c => c.title.Contains(movieSearch.Text))
+                .ToList();
+            EmpDataView.DataSource = temp;
         }
     }
 }

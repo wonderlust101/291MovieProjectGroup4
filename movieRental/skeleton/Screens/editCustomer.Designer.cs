@@ -53,11 +53,14 @@
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
             tableLayoutPanel9 = new TableLayoutPanel();
-            addPhoneNumberButton = new Button();
-            EmailLabel = new Label();
+            label1 = new Label();
             PhoneLabel = new Label();
+            PhoneNumberInput3 = new CustomControls.RoundedTextBox.RoundedTextBox();
+            EmailLabel = new Label();
             EmailInput = new CustomControls.RoundedTextBox.RoundedTextBox();
-            PhoneNumberInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            creditCardInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            PhoneNumberInput2 = new CustomControls.RoundedTextBox.RoundedTextBox();
+            PhoneNumberInput1 = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel8 = new TableLayoutPanel();
             CityLabel = new Label();
             ProvinceLabel = new Label();
@@ -494,15 +497,20 @@
             // 
             tableLayoutPanel9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel9.AutoSize = true;
-            tableLayoutPanel9.ColumnCount = 3;
-            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.99999F));
+            tableLayoutPanel9.ColumnCount = 5;
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.0000076F));
-            tableLayoutPanel9.Controls.Add(addPhoneNumberButton, 2, 3);
-            tableLayoutPanel9.Controls.Add(EmailLabel, 0, 0);
-            tableLayoutPanel9.Controls.Add(PhoneLabel, 2, 0);
-            tableLayoutPanel9.Controls.Add(EmailInput, 0, 2);
-            tableLayoutPanel9.Controls.Add(PhoneNumberInput, 2, 2);
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33334F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel9.Controls.Add(label1, 0, 0);
+            tableLayoutPanel9.Controls.Add(PhoneLabel, 4, 0);
+            tableLayoutPanel9.Controls.Add(PhoneNumberInput3, 4, 5);
+            tableLayoutPanel9.Controls.Add(EmailLabel, 2, 0);
+            tableLayoutPanel9.Controls.Add(EmailInput, 2, 2);
+            tableLayoutPanel9.Controls.Add(creditCardInput, 0, 2);
+            tableLayoutPanel9.Controls.Add(PhoneNumberInput2, 4, 4);
+            tableLayoutPanel9.Controls.Add(PhoneNumberInput1, 4, 2);
             tableLayoutPanel9.Location = new Point(0, 318);
             tableLayoutPanel9.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -513,46 +521,64 @@
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
-            tableLayoutPanel9.Size = new Size(1139, 128);
+            tableLayoutPanel9.Size = new Size(1139, 240);
             tableLayoutPanel9.TabIndex = 4;
             // 
-            // addPhoneNumberButton
+            // label1
             // 
-            addPhoneNumberButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addPhoneNumberButton.BackColor = Color.FromArgb(84, 80, 164);
-            addPhoneNumberButton.FlatAppearance.BorderSize = 0;
-            addPhoneNumberButton.FlatStyle = FlatStyle.Flat;
-            addPhoneNumberButton.ForeColor = Color.White;
-            addPhoneNumberButton.Location = new Point(577, 98);
-            addPhoneNumberButton.Margin = new Padding(0, 8, 0, 0);
-            addPhoneNumberButton.Name = "addPhoneNumberButton";
-            addPhoneNumberButton.Size = new Size(562, 30);
-            addPhoneNumberButton.TabIndex = 21;
-            addPhoneNumberButton.Text = "Add Phone Number";
-            addPhoneNumberButton.UseVisualStyleBackColor = false;
-            // 
-            // EmailLabel
-            // 
-            EmailLabel.AutoSize = true;
-            EmailLabel.Font = new Font("Segoe UI", 13.915966F);
-            EmailLabel.ForeColor = Color.White;
-            EmailLabel.Location = new Point(3, 0);
-            EmailLabel.Name = "EmailLabel";
-            EmailLabel.Size = new Size(79, 31);
-            EmailLabel.TabIndex = 1;
-            EmailLabel.Text = "E-mail";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.915966F);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(220, 31);
+            label1.TabIndex = 25;
+            label1.Text = "Credit Card Number";
             // 
             // PhoneLabel
             // 
             PhoneLabel.AutoSize = true;
             PhoneLabel.Font = new Font("Segoe UI", 13.915966F);
             PhoneLabel.ForeColor = Color.White;
-            PhoneLabel.Location = new Point(580, 0);
+            PhoneLabel.Location = new Point(772, 0);
             PhoneLabel.Name = "PhoneLabel";
             PhoneLabel.Size = new Size(168, 31);
             PhoneLabel.TabIndex = 2;
             PhoneLabel.Text = "Phone Number";
             PhoneLabel.Click += PhoneLabel_Click;
+            // 
+            // PhoneNumberInput3
+            // 
+            PhoneNumberInput3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            PhoneNumberInput3.BackColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput3.BorderColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput3.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            PhoneNumberInput3.BorderRadius = 26;
+            PhoneNumberInput3.BorderSize = 2;
+            PhoneNumberInput3.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PhoneNumberInput3.ForeColor = Color.White;
+            PhoneNumberInput3.Location = new Point(769, 173);
+            PhoneNumberInput3.Margin = new Padding(0, 0, 0, 16);
+            PhoneNumberInput3.Multiline = false;
+            PhoneNumberInput3.Name = "PhoneNumberInput3";
+            PhoneNumberInput3.Padding = new Padding(20, 15, 20, 15);
+            PhoneNumberInput3.PasswordChar = false;
+            PhoneNumberInput3.PlaceholderColor = Color.DarkGray;
+            PhoneNumberInput3.PlaceholderText = "";
+            PhoneNumberInput3.Size = new Size(370, 51);
+            PhoneNumberInput3.TabIndex = 23;
+            PhoneNumberInput3.UnderlinedStyle = false;
+            // 
+            // EmailLabel
+            // 
+            EmailLabel.AutoSize = true;
+            EmailLabel.Font = new Font("Segoe UI", 13.915966F);
+            EmailLabel.ForeColor = Color.White;
+            EmailLabel.Location = new Point(387, 0);
+            EmailLabel.Name = "EmailLabel";
+            EmailLabel.Size = new Size(79, 31);
+            EmailLabel.TabIndex = 1;
+            EmailLabel.Text = "E-mail";
             // 
             // EmailInput
             // 
@@ -564,7 +590,7 @@
             EmailInput.BorderSize = 2;
             EmailInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             EmailInput.ForeColor = Color.White;
-            EmailInput.Location = new Point(0, 39);
+            EmailInput.Location = new Point(384, 47);
             EmailInput.Margin = new Padding(0);
             EmailInput.Multiline = false;
             EmailInput.Name = "EmailInput";
@@ -572,31 +598,75 @@
             EmailInput.PasswordChar = false;
             EmailInput.PlaceholderColor = Color.DarkGray;
             EmailInput.PlaceholderText = "";
-            EmailInput.Size = new Size(561, 51);
+            EmailInput.Size = new Size(369, 51);
             EmailInput.TabIndex = 20;
             EmailInput.UnderlinedStyle = false;
             // 
-            // PhoneNumberInput
+            // creditCardInput
             // 
-            PhoneNumberInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            PhoneNumberInput.BackColor = Color.FromArgb(25, 26, 63);
-            PhoneNumberInput.BorderColor = Color.FromArgb(25, 26, 63);
-            PhoneNumberInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            PhoneNumberInput.BorderRadius = 26;
-            PhoneNumberInput.BorderSize = 2;
-            PhoneNumberInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PhoneNumberInput.ForeColor = Color.White;
-            PhoneNumberInput.Location = new Point(577, 39);
-            PhoneNumberInput.Margin = new Padding(0);
-            PhoneNumberInput.Multiline = false;
-            PhoneNumberInput.Name = "PhoneNumberInput";
-            PhoneNumberInput.Padding = new Padding(20, 15, 20, 15);
-            PhoneNumberInput.PasswordChar = false;
-            PhoneNumberInput.PlaceholderColor = Color.DarkGray;
-            PhoneNumberInput.PlaceholderText = "";
-            PhoneNumberInput.Size = new Size(562, 51);
-            PhoneNumberInput.TabIndex = 21;
-            PhoneNumberInput.UnderlinedStyle = false;
+            creditCardInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            creditCardInput.BackColor = Color.FromArgb(25, 26, 63);
+            creditCardInput.BorderColor = Color.FromArgb(25, 26, 63);
+            creditCardInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            creditCardInput.BorderRadius = 26;
+            creditCardInput.BorderSize = 2;
+            creditCardInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            creditCardInput.ForeColor = Color.White;
+            creditCardInput.Location = new Point(0, 39);
+            creditCardInput.Margin = new Padding(0, 0, 0, 16);
+            creditCardInput.Multiline = false;
+            creditCardInput.Name = "creditCardInput";
+            creditCardInput.Padding = new Padding(20, 15, 20, 15);
+            creditCardInput.PasswordChar = false;
+            creditCardInput.PlaceholderColor = Color.DarkGray;
+            creditCardInput.PlaceholderText = "";
+            creditCardInput.Size = new Size(368, 51);
+            creditCardInput.TabIndex = 24;
+            creditCardInput.UnderlinedStyle = false;
+            // 
+            // PhoneNumberInput2
+            // 
+            PhoneNumberInput2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            PhoneNumberInput2.BackColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput2.BorderColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput2.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            PhoneNumberInput2.BorderRadius = 26;
+            PhoneNumberInput2.BorderSize = 2;
+            PhoneNumberInput2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PhoneNumberInput2.ForeColor = Color.White;
+            PhoneNumberInput2.Location = new Point(769, 106);
+            PhoneNumberInput2.Margin = new Padding(0, 0, 0, 16);
+            PhoneNumberInput2.Multiline = false;
+            PhoneNumberInput2.Name = "PhoneNumberInput2";
+            PhoneNumberInput2.Padding = new Padding(20, 15, 20, 15);
+            PhoneNumberInput2.PasswordChar = false;
+            PhoneNumberInput2.PlaceholderColor = Color.DarkGray;
+            PhoneNumberInput2.PlaceholderText = "";
+            PhoneNumberInput2.Size = new Size(370, 51);
+            PhoneNumberInput2.TabIndex = 22;
+            PhoneNumberInput2.UnderlinedStyle = false;
+            // 
+            // PhoneNumberInput1
+            // 
+            PhoneNumberInput1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            PhoneNumberInput1.BackColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput1.BorderColor = Color.FromArgb(25, 26, 63);
+            PhoneNumberInput1.BorderFocusColor = Color.FromArgb(84, 80, 164);
+            PhoneNumberInput1.BorderRadius = 26;
+            PhoneNumberInput1.BorderSize = 2;
+            PhoneNumberInput1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PhoneNumberInput1.ForeColor = Color.White;
+            PhoneNumberInput1.Location = new Point(769, 39);
+            PhoneNumberInput1.Margin = new Padding(0, 0, 0, 16);
+            PhoneNumberInput1.Multiline = false;
+            PhoneNumberInput1.Name = "PhoneNumberInput1";
+            PhoneNumberInput1.Padding = new Padding(20, 15, 20, 15);
+            PhoneNumberInput1.PasswordChar = false;
+            PhoneNumberInput1.PlaceholderColor = Color.DarkGray;
+            PhoneNumberInput1.PlaceholderText = "";
+            PhoneNumberInput1.Size = new Size(370, 51);
+            PhoneNumberInput1.TabIndex = 21;
+            PhoneNumberInput1.UnderlinedStyle = false;
             // 
             // tableLayoutPanel8
             // 
@@ -999,7 +1069,6 @@
         private Label CityLabel;
         private Label ProvinceLabel;
         private Label PostalCodeLabel;
-        private Label EmailLabel;
         private Label PhoneLabel;
 
         private CustomControls.RoundedTextBox.RoundedTextBox FirstNameInput;
@@ -1009,9 +1078,13 @@
         private CustomControls.RoundedTextBox.RoundedTextBox ProvinceInput;
         private CustomControls.RoundedTextBox.RoundedTextBox PostalCodeInput;
         private CustomControls.RoundedTextBox.RoundedTextBox EmailInput;
-        private CustomControls.RoundedTextBox.RoundedTextBox PhoneNumberInput;
-        private Button addPhoneNumberButton;
+        private CustomControls.RoundedTextBox.RoundedTextBox PhoneNumberInput1;
         private Button deleteCustomerButton;
         private Button saveChangesButton;
+        private Label EmailLabel;
+        private CustomControls.RoundedTextBox.RoundedTextBox PhoneNumberInput2;
+        private CustomControls.RoundedTextBox.RoundedTextBox PhoneNumberInput3;
+        private Label label1;
+        private CustomControls.RoundedTextBox.RoundedTextBox creditCardInput;
     }
 }
