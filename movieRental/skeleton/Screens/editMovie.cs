@@ -39,9 +39,9 @@ namespace movieRental
 
             // Filling fields with Selected Movie
             movieToEdit = movie;
-            titleInput.PlaceholderText = movieToEdit.title;
-            feesInput.PlaceholderText = movieToEdit.fee.ToString();
-            copiesInput.PlaceholderText = movieToEdit.totalCopies.ToString();
+            titleInput.Text = movieToEdit.title;
+            feesInput.Text = movieToEdit.fee.ToString();
+            copiesInput.Text = movieToEdit.totalCopies.ToString();
             minCopies = movieToEdit.totalCopies - movieToEdit.availableCopies;
             numOfCopies.Text = minCopies.ToString();
 
