@@ -71,10 +71,8 @@ C:\Users\Alan\Source\Repos\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AccountCreation.resources
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.exe
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\Resources\Outfit-VariableFont_wght.ttf
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.deps.json
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.runtimeconfig.json
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll
@@ -135,3 +133,5 @@ C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.highestRatedGenreMovie.resources
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.prolificEmployee.resources
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.recommendedMovie.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
