@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
 using System.Configuration;
 using System.Drawing.Text;
+using skeleton;
 
 namespace movieRental
 {
@@ -218,6 +219,23 @@ namespace movieRental
 
             // Update the DataGridView data source
             EmpDataView.DataSource = filteredCustomers;
+        }
+
+        private void logOutClick(object sender, EventArgs e)
+        {
+            // Dispose of current controls if needed
+            foreach (Control control in this.Controls.OfType<UserControl>().ToList())
+            {
+                control.Dispose();
+            }
+
+            // Clear all controls on the current form
+            this.Controls.Clear();
+
+            // Create and add the Login control back to the form
+            LoginUserControl loginScreen = new LoginUserControl();
+            this.Controls.Add(loginScreen);
+            loginScreen.Dock = DockStyle.Fill;
         }
     }
 }

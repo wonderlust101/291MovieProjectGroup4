@@ -196,6 +196,7 @@
             LogOutButton.SizeMode = PictureBoxSizeMode.CenterImage;
             LogOutButton.TabIndex = 4;
             LogOutButton.TabStop = false;
+            LogOutButton.Click += logOutClick;
             // 
             // LogoutLabel
             // 

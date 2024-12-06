@@ -506,5 +506,22 @@ namespace movieRental
                 e.Handled = true; // Reject further input if max length is reached
             }
         }
+
+        private void logOutClick(object sender, EventArgs e)
+        {
+            // Dispose of current controls if needed
+            foreach (Control control in this.Controls.OfType<UserControl>().ToList())
+            {
+                control.Dispose();
+            }
+
+            // Clear all controls on the current form
+            this.Controls.Clear();
+
+            // Create and add the Login control back to the form
+            LoginUserControl loginScreen = new LoginUserControl();
+            this.Controls.Add(loginScreen);
+            loginScreen.Dock = DockStyle.Fill;
+        }
     }
 }
