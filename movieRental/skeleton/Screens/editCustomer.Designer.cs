@@ -196,6 +196,7 @@
             LogOutButton.SizeMode = PictureBoxSizeMode.CenterImage;
             LogOutButton.TabIndex = 4;
             LogOutButton.TabStop = false;
+            LogOutButton.Click += logOutClick;
             // 
             // LogoutLabel
             // 
@@ -511,7 +512,7 @@
             tableLayoutPanel9.Controls.Add(creditCardInput, 0, 2);
             tableLayoutPanel9.Controls.Add(PhoneNumberInput2, 4, 4);
             tableLayoutPanel9.Controls.Add(PhoneNumberInput1, 4, 2);
-            tableLayoutPanel9.Location = new Point(0, 318);
+            tableLayoutPanel9.Location = new Point(0, 321);
             tableLayoutPanel9.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 6;
@@ -521,7 +522,7 @@
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
             tableLayoutPanel9.RowStyles.Add(new RowStyle());
-            tableLayoutPanel9.Size = new Size(1139, 240);
+            tableLayoutPanel9.Size = new Size(1139, 241);
             tableLayoutPanel9.TabIndex = 4;
             // 
             // label1
@@ -531,7 +532,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(220, 31);
+            label1.Size = new Size(229, 32);
             label1.TabIndex = 25;
             label1.Text = "Credit Card Number";
             // 
@@ -542,7 +543,7 @@
             PhoneLabel.ForeColor = Color.White;
             PhoneLabel.Location = new Point(772, 0);
             PhoneLabel.Name = "PhoneLabel";
-            PhoneLabel.Size = new Size(168, 31);
+            PhoneLabel.Size = new Size(177, 32);
             PhoneLabel.TabIndex = 2;
             PhoneLabel.Text = "Phone Number";
             PhoneLabel.Click += PhoneLabel_Click;
@@ -557,7 +558,7 @@
             PhoneNumberInput3.BorderSize = 2;
             PhoneNumberInput3.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneNumberInput3.ForeColor = Color.White;
-            PhoneNumberInput3.Location = new Point(769, 173);
+            PhoneNumberInput3.Location = new Point(769, 174);
             PhoneNumberInput3.Margin = new Padding(0, 0, 0, 16);
             PhoneNumberInput3.Multiline = false;
             PhoneNumberInput3.Name = "PhoneNumberInput3";
@@ -568,6 +569,7 @@
             PhoneNumberInput3.Size = new Size(370, 51);
             PhoneNumberInput3.TabIndex = 23;
             PhoneNumberInput3.UnderlinedStyle = false;
+            PhoneNumberInput3.KeyPress += phoneNumber3Press;
             // 
             // EmailLabel
             // 
@@ -576,7 +578,7 @@
             EmailLabel.ForeColor = Color.White;
             EmailLabel.Location = new Point(387, 0);
             EmailLabel.Name = "EmailLabel";
-            EmailLabel.Size = new Size(79, 31);
+            EmailLabel.Size = new Size(81, 32);
             EmailLabel.TabIndex = 1;
             EmailLabel.Text = "E-mail";
             // 
@@ -590,7 +592,7 @@
             EmailInput.BorderSize = 2;
             EmailInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             EmailInput.ForeColor = Color.White;
-            EmailInput.Location = new Point(384, 47);
+            EmailInput.Location = new Point(384, 48);
             EmailInput.Margin = new Padding(0);
             EmailInput.Multiline = false;
             EmailInput.Name = "EmailInput";
@@ -601,6 +603,8 @@
             EmailInput.Size = new Size(369, 51);
             EmailInput.TabIndex = 20;
             EmailInput.UnderlinedStyle = false;
+            EmailInput.KeyPress += emailPress;
+            EmailInput.Validating += emailValidation;
             // 
             // creditCardInput
             // 
@@ -612,7 +616,7 @@
             creditCardInput.BorderSize = 2;
             creditCardInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             creditCardInput.ForeColor = Color.White;
-            creditCardInput.Location = new Point(0, 39);
+            creditCardInput.Location = new Point(0, 40);
             creditCardInput.Margin = new Padding(0, 0, 0, 16);
             creditCardInput.Multiline = false;
             creditCardInput.Name = "creditCardInput";
@@ -623,6 +627,7 @@
             creditCardInput.Size = new Size(368, 51);
             creditCardInput.TabIndex = 24;
             creditCardInput.UnderlinedStyle = false;
+            creditCardInput.KeyPress += creditCardKeyPress;
             // 
             // PhoneNumberInput2
             // 
@@ -634,7 +639,7 @@
             PhoneNumberInput2.BorderSize = 2;
             PhoneNumberInput2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneNumberInput2.ForeColor = Color.White;
-            PhoneNumberInput2.Location = new Point(769, 106);
+            PhoneNumberInput2.Location = new Point(769, 107);
             PhoneNumberInput2.Margin = new Padding(0, 0, 0, 16);
             PhoneNumberInput2.Multiline = false;
             PhoneNumberInput2.Name = "PhoneNumberInput2";
@@ -645,6 +650,7 @@
             PhoneNumberInput2.Size = new Size(370, 51);
             PhoneNumberInput2.TabIndex = 22;
             PhoneNumberInput2.UnderlinedStyle = false;
+            PhoneNumberInput2.KeyPress += phoneNumber2Press;
             // 
             // PhoneNumberInput1
             // 
@@ -656,7 +662,7 @@
             PhoneNumberInput1.BorderSize = 2;
             PhoneNumberInput1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneNumberInput1.ForeColor = Color.White;
-            PhoneNumberInput1.Location = new Point(769, 39);
+            PhoneNumberInput1.Location = new Point(769, 40);
             PhoneNumberInput1.Margin = new Padding(0, 0, 0, 16);
             PhoneNumberInput1.Multiline = false;
             PhoneNumberInput1.Name = "PhoneNumberInput1";
@@ -667,6 +673,7 @@
             PhoneNumberInput1.Size = new Size(370, 51);
             PhoneNumberInput1.TabIndex = 21;
             PhoneNumberInput1.UnderlinedStyle = false;
+            PhoneNumberInput1.KeyPress += phoneNumber1Press;
             // 
             // tableLayoutPanel8
             // 
@@ -684,14 +691,14 @@
             tableLayoutPanel8.Controls.Add(CityInput, 0, 2);
             tableLayoutPanel8.Controls.Add(ProvinceInput, 2, 2);
             tableLayoutPanel8.Controls.Add(PostalCodeInput, 4, 2);
-            tableLayoutPanel8.Location = new Point(0, 212);
+            tableLayoutPanel8.Location = new Point(0, 214);
             tableLayoutPanel8.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
             tableLayoutPanel8.RowCount = 3;
             tableLayoutPanel8.RowStyles.Add(new RowStyle());
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle());
-            tableLayoutPanel8.Size = new Size(1139, 90);
+            tableLayoutPanel8.Size = new Size(1139, 91);
             tableLayoutPanel8.TabIndex = 3;
             // 
             // CityLabel
@@ -701,7 +708,7 @@
             CityLabel.ForeColor = Color.White;
             CityLabel.Location = new Point(3, 0);
             CityLabel.Name = "CityLabel";
-            CityLabel.Size = new Size(53, 31);
+            CityLabel.Size = new Size(55, 32);
             CityLabel.TabIndex = 1;
             CityLabel.Text = "City";
             // 
@@ -712,7 +719,7 @@
             ProvinceLabel.ForeColor = Color.White;
             ProvinceLabel.Location = new Point(387, 0);
             ProvinceLabel.Name = "ProvinceLabel";
-            ProvinceLabel.Size = new Size(101, 31);
+            ProvinceLabel.Size = new Size(105, 32);
             ProvinceLabel.TabIndex = 2;
             ProvinceLabel.Text = "Province";
             // 
@@ -723,7 +730,7 @@
             PostalCodeLabel.ForeColor = Color.White;
             PostalCodeLabel.Location = new Point(772, 0);
             PostalCodeLabel.Name = "PostalCodeLabel";
-            PostalCodeLabel.Size = new Size(134, 31);
+            PostalCodeLabel.Size = new Size(139, 32);
             PostalCodeLabel.TabIndex = 3;
             PostalCodeLabel.Text = "Postal Code";
             // 
@@ -737,7 +744,7 @@
             CityInput.BorderSize = 2;
             CityInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CityInput.ForeColor = Color.White;
-            CityInput.Location = new Point(0, 39);
+            CityInput.Location = new Point(0, 40);
             CityInput.Margin = new Padding(0);
             CityInput.Multiline = false;
             CityInput.Name = "CityInput";
@@ -748,6 +755,7 @@
             CityInput.Size = new Size(368, 51);
             CityInput.TabIndex = 20;
             CityInput.UnderlinedStyle = false;
+            CityInput.KeyPress += cityPress;
             // 
             // ProvinceInput
             // 
@@ -759,7 +767,7 @@
             ProvinceInput.BorderSize = 2;
             ProvinceInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ProvinceInput.ForeColor = Color.White;
-            ProvinceInput.Location = new Point(384, 39);
+            ProvinceInput.Location = new Point(384, 40);
             ProvinceInput.Margin = new Padding(0);
             ProvinceInput.Multiline = false;
             ProvinceInput.Name = "ProvinceInput";
@@ -770,6 +778,7 @@
             ProvinceInput.Size = new Size(369, 51);
             ProvinceInput.TabIndex = 21;
             ProvinceInput.UnderlinedStyle = false;
+            ProvinceInput.KeyPress += provincePress;
             // 
             // PostalCodeInput
             // 
@@ -781,7 +790,7 @@
             PostalCodeInput.BorderSize = 2;
             PostalCodeInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PostalCodeInput.ForeColor = Color.White;
-            PostalCodeInput.Location = new Point(769, 39);
+            PostalCodeInput.Location = new Point(769, 40);
             PostalCodeInput.Margin = new Padding(0);
             PostalCodeInput.Multiline = false;
             PostalCodeInput.Name = "PostalCodeInput";
@@ -792,6 +801,8 @@
             PostalCodeInput.Size = new Size(370, 51);
             PostalCodeInput.TabIndex = 22;
             PostalCodeInput.UnderlinedStyle = false;
+            PostalCodeInput.KeyPress += postalCodePress;
+            PostalCodeInput.Validating += postalCodeValidation;
             // 
             // tableLayoutPanel7
             // 
@@ -801,14 +812,14 @@
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel7.Controls.Add(AddressLabel, 0, 0);
             tableLayoutPanel7.Controls.Add(AddressInput, 0, 2);
-            tableLayoutPanel7.Location = new Point(0, 106);
+            tableLayoutPanel7.Location = new Point(0, 107);
             tableLayoutPanel7.Margin = new Padding(0, 0, 0, 16);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 3;
             tableLayoutPanel7.RowStyles.Add(new RowStyle());
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel7.RowStyles.Add(new RowStyle());
-            tableLayoutPanel7.Size = new Size(1139, 90);
+            tableLayoutPanel7.Size = new Size(1139, 91);
             tableLayoutPanel7.TabIndex = 2;
             // 
             // AddressLabel
@@ -818,7 +829,7 @@
             AddressLabel.ForeColor = Color.White;
             AddressLabel.Location = new Point(3, 0);
             AddressLabel.Name = "AddressLabel";
-            AddressLabel.Size = new Size(97, 31);
+            AddressLabel.Size = new Size(98, 32);
             AddressLabel.TabIndex = 1;
             AddressLabel.Text = "Address";
             // 
@@ -832,7 +843,7 @@
             AddressInput.BorderSize = 2;
             AddressInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddressInput.ForeColor = Color.White;
-            AddressInput.Location = new Point(0, 39);
+            AddressInput.Location = new Point(0, 40);
             AddressInput.Margin = new Padding(0);
             AddressInput.Multiline = false;
             AddressInput.Name = "AddressInput";
@@ -843,6 +854,7 @@
             AddressInput.Size = new Size(1139, 51);
             AddressInput.TabIndex = 20;
             AddressInput.UnderlinedStyle = false;
+            AddressInput.KeyPress += addressPress;
             // 
             // tableLayoutPanel6
             // 
@@ -863,7 +875,7 @@
             tableLayoutPanel6.RowStyles.Add(new RowStyle());
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.Size = new Size(1139, 90);
+            tableLayoutPanel6.Size = new Size(1139, 91);
             tableLayoutPanel6.TabIndex = 1;
             // 
             // FirstNameLabel
@@ -873,7 +885,7 @@
             FirstNameLabel.ForeColor = Color.White;
             FirstNameLabel.Location = new Point(3, 0);
             FirstNameLabel.Name = "FirstNameLabel";
-            FirstNameLabel.Size = new Size(124, 31);
+            FirstNameLabel.Size = new Size(129, 32);
             FirstNameLabel.TabIndex = 0;
             FirstNameLabel.Text = "First Name";
             // 
@@ -884,7 +896,7 @@
             LastNameLabel.ForeColor = Color.White;
             LastNameLabel.Location = new Point(580, 0);
             LastNameLabel.Name = "LastNameLabel";
-            LastNameLabel.Size = new Size(122, 31);
+            LastNameLabel.Size = new Size(126, 32);
             LastNameLabel.TabIndex = 1;
             LastNameLabel.Text = "Last Name";
             // 
@@ -898,7 +910,7 @@
             FirstNameInput.BorderSize = 2;
             FirstNameInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FirstNameInput.ForeColor = Color.White;
-            FirstNameInput.Location = new Point(0, 39);
+            FirstNameInput.Location = new Point(0, 40);
             FirstNameInput.Margin = new Padding(0);
             FirstNameInput.Multiline = false;
             FirstNameInput.Name = "FirstNameInput";
@@ -909,6 +921,7 @@
             FirstNameInput.Size = new Size(561, 51);
             FirstNameInput.TabIndex = 19;
             FirstNameInput.UnderlinedStyle = false;
+            FirstNameInput.KeyPress += firstNamePress;
             // 
             // LastNameInput
             // 
@@ -920,7 +933,7 @@
             LastNameInput.BorderSize = 2;
             LastNameInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LastNameInput.ForeColor = Color.White;
-            LastNameInput.Location = new Point(577, 39);
+            LastNameInput.Location = new Point(577, 40);
             LastNameInput.Margin = new Padding(0);
             LastNameInput.Multiline = false;
             LastNameInput.Name = "LastNameInput";
@@ -931,6 +944,7 @@
             LastNameInput.Size = new Size(562, 51);
             LastNameInput.TabIndex = 20;
             LastNameInput.UnderlinedStyle = false;
+            LastNameInput.KeyPress += lastNamePress;
             // 
             // tableLayoutPanel10
             // 
