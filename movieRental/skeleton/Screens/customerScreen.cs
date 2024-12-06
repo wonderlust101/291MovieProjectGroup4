@@ -56,6 +56,7 @@ namespace movieRental
                             {
                                 firstName = myReader.GetString(1),
                                 lastName = myReader.GetString(2),
+                                address = myReader.GetString(3),
                                 email = myReader.GetString(8),
                                 accountNumber = myReader.GetInt32(7),
                                 CreationDate = myReader.GetDateTime(10)
