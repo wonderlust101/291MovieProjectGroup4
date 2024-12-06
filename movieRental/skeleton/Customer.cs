@@ -19,6 +19,11 @@ namespace movieRental
         public int accountNumber { get; set; }
         public string creditCard { get; set; }
 
+        public string phoneNumber1 { get; set; }
+        public string phoneNumber2 { get; set; }
+        public string phoneNumber3 { get; set; }
+
+
         public DateTime CreationDate { get; set; }
 
         // Computed property
